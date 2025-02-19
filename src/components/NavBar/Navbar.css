@@ -1,0 +1,38 @@
+.custom-Navbar{
+    background-color: var(--colorAzulOscuro);
+    border-bottom: 2px solid var(--colorRojo);
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+  }
+
+.navbar-toggler-icon {
+    filter: invert(1); /* Invierte el color para que sea blanco */
+}
+
+
+.custom-Navbar .nav-link,
+.custom-Navbar .nav-link.active {
+  color: var(--colorBeige) ; /* Color normal */
+}
+
+.custom-Navbar .nav-link:hover,
+.custom-Navbar .nav-link.active:hover {
+  color: white ; /* Color al pasar el mouse */
+}
+
+
+
+.Navbar-Perfil figure{
+    color: var(---colorGris);
+}
+
+.Navbar-Perfil img{
+    height: 50px;
+    width: auto;
+}
+
+
+
