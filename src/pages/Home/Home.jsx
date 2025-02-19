@@ -1,6 +1,16 @@
+import {Footer,NavBar,Destacadas,Categorias} from "../../components";
+
 function Home() {
   return (
-    <div>Home</div>
+    <>
+    <NavBar/>
+
+    <Destacadas/>
+
+    <Categorias/>
+    
+    <Footer/>
+    </>
   )
 }
 
