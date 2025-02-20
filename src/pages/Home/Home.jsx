@@ -8,6 +8,9 @@ function Home() {
     <Destacadas/>
 
     <Categorias/>
+    <Categorias/>
+    <Categorias/>
+    <Categorias/>
     
     <Footer/>
     </>
