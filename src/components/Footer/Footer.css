@@ -1,7 +1,22 @@
-.footer{
 
+.footer{
+    
+    margin-top: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--colorAzulOscuro);
+    border-top: 2px solid var(--colorRojo);
 }
 
-.redes{
-    
+.derechos{
+    color: white;
+}
+
+.img-footer{
+    height: 60px;
+    width: auto;
+    padding-bottom: 20px;
 }
