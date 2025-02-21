@@ -1,6 +1,5 @@
 
 .footer{
-    
     margin-top: 100%;
     padding-top: 10px;
     padding-left: 10px;
@@ -12,6 +11,8 @@
 }
 
 .derechos{
+    font-size: large;
+    font-weight: 500;
     color: white;
 }
 
@@ -20,3 +21,14 @@
     width: auto;
     padding-bottom: 20px;
 }
+
+
+.redes {
+    display: flex;
+    justify-content: center;
+}
+
+.fab{
+    color: var(--colorGris);
+}
+
