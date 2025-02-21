@@ -11,6 +11,7 @@ function Home() {
     <Categorias/>
     <Categorias/>
     <Categorias/>
+
     
     <Footer/>
     </>
