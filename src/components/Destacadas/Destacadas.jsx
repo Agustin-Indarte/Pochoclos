@@ -70,7 +70,9 @@ const Destacadas = () => {
             const genero =generos.find((g)=>g.id===id)
             return genero ? genero.name:null
         })
-        .filter(Boolean).join(" ")
+        .filter(Boolean)
+        .slice(0, 2)
+        .join(" | ")
     }
 
     //En caso de que la informacion este cargando muestra un spinner
@@ -80,29 +82,27 @@ const Destacadas = () => {
 
     //Creamos y renderizamos el contenedor de las peliculas destacadas con un carousel que recorrera las peliculas populares seleccionadas y muestre la informacion obtenida (fondo,titulo,descripcion,raiting y categoria) ademas de un boton para ver el trailer
     return (
-        <div className='container mt-4'>
-            <Carousel>
+        <Carousel className='CarouselDestacadas'>
                 {peliculas.map((pelicula)=>(
-                    <Carousel.Item key={pelicula.id}>
-                        <img className='w-100' 
+                    <Carousel.Item className='itemCarouselDestacadas' key={pelicula.id}>
+                        <img className='peliculaFondo'
                             src={pelicula.backdrop} 
                             alt={pelicula.title} 
                         />
-                        <CarouselCaption>
+                        <CarouselCaption className='DetallesPeliculas'>
                             <h2>{pelicula.title}</h2>
                             <p>{pelicula.overview}</p>
                             <div>
-                            <span className="rating">⭐{pelicula.vote_average}</span>
+                            <span className="rating">⭐{pelicula.vote_average.toFixed(1)} </span>
                             <span className="categoria">{generosPeliculas(pelicula.genre_ids)}</span>
                         </div>
-                        <Button>
+                        <Button className='btn btn-verTrailer'>
                                 <FontAwesomeIcon icon={faPlay}/> Ver Trailer
                         </Button>
                         </CarouselCaption>
                     </Carousel.Item>
                 ))}
             </Carousel>
-        </div>
     )
 }
 export default Destacadas
