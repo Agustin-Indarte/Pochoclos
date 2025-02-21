@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Carousel, Button, CarouselItem } from 'react-bootstrap'
+import { Carousel, Button, CarouselItem, CarouselCaption } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
 import "./Destacadas.css"
@@ -64,15 +64,45 @@ const Destacadas = () => {
         pedirDatos() //Llamamos a la funcion
     }, [])
 
+    //Establecemos una funcion que busque por cada id de generos el nombre que le corresponde
+    const generosPeliculas = (genreIds)=>{
+        return genreIds.map((id)=>{
+            const genero =generos.find((g)=>g.id===id)
+            return genero ? genero.name:null
+        })
+        .filter(Boolean).join(" ")
+    }
+
+    //En caso de que la informacion este cargando muestra un spinner
     if (cargando) {
         return <div>Cargando...</div>;
-
-        
-        return (
-            <div className='container mt-4'>
-                <h2>Peliculas Destacadas</h2>
-            </div>
-        )
     }
+
+    //Creamos y renderizamos el contenedor de las peliculas destacadas con un carousel que recorrera las peliculas populares seleccionadas y muestre la informacion obtenida (fondo,titulo,descripcion,raiting y categoria) ademas de un boton para ver el trailer
+    return (
+        <div className='container mt-4'>
+            <Carousel>
+                {peliculas.map((pelicula)=>(
+                    <Carousel.Item key={pelicula.id}>
+                        <img className='w-100' 
+                            src={pelicula.backdrop} 
+                            alt={pelicula.title} 
+                        />
+                        <CarouselCaption>
+                            <h2>{pelicula.title}</h2>
+                            <p>{pelicula.overview}</p>
+                            <div>
+                            <span className="rating">⭐{pelicula.vote_average}</span>
+                            <span className="categoria">{generosPeliculas(pelicula.genre_ids)}</span>
+                        </div>
+                        <Button>
+                                <FontAwesomeIcon icon={faPlay}/> Ver Trailer
+                        </Button>
+                        </CarouselCaption>
+                    </Carousel.Item>
+                ))}
+            </Carousel>
+        </div>
+    )
 }
 export default Destacadas
