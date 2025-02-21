@@ -9,6 +9,7 @@ import { Pagination, Navigation } from "swiper/modules";
 
 const CarruselPeliculas = () => {
     const [peliculas, setPeliculas] = useState([]);
+    // Constantes de la API de peliculas
     const apiKey = 'e845bcd33e2571e0313cbf204469c4fc'; 
     const url_api = 'https://api.themoviedb.org/3'
     const img_path = 'https://image.tmdb.org/t/p/original'
@@ -32,10 +33,11 @@ const CarruselPeliculas = () => {
         };
 
         obtenerPeliculas();
-    }, [apiKey]); // Incluye apiKey en las dependencias
+    }, [apiKey]);
 
     return (
-      
+
+      // Swipper de peliculas
 <Swiper
       slidesPerView={3}
       spaceBetween={20}

@@ -18,13 +18,14 @@
     text-align: center;
 }
 
+/* Botones de anterior y siguien del swiper */
+
 .swiper-button-prev, .swiper-button-next {
-    position: static;
     color: var(--colorRojoOscuro) !important;
 }
 
 .swiper-pagination-bullets{
-    display: none;
+    display: none;           /*esconder los bullets que muestran la paginacion de las peliculas*/
 }
 
 /* .swiper-wrapper{
