@@ -1,16 +1,14 @@
-import { useState } from 'react'
+// App.jsx  
+import React from 'react';  
+import ModalPage from './pages/Modalagregarpelicula/modal';  
 
-import viteLogo from '/vite.svg'
-import './App.css'
+const App = () => {  
+  return (  
+    <div>  
+      <h1>Administracion</h1>  
+      <ModalPage />  
+    </div>  
+  );  
+};  
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-      <div>
-        Pochoclos
-      </div>
-  )
-}
-
-export default App
+export default App;
