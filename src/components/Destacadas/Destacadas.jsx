@@ -40,7 +40,7 @@ const Destacadas = () => {
                 //Definimos las peliculas procesadas, pidiendo la informacion a la api a traves de map y agregando el fondo personalizado, en caso de no tener uno asignado, guarda el predeterminado de TMDB
                 const peliculasProcesadas = peliculasSeleccionadas.map((pelicula) => ({
                     ...pelicula,
-                    backdrop: ajustesFondos[pelicula.id] || `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`,
+                    backdrop: ajustesFondos[pelicula.id] || `https://image.tmdb.org/t/p/original/${pelicula.backdrop_path}`,
                     poster: `https://image.tmdb.org/t/p/original/${pelicula.poster_path}`
                 }))
                 console.log("Películas procesadas:", peliculasProcesadas); //Consultamos con la consola las peliculas procesadas
