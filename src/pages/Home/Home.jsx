@@ -1,4 +1,4 @@
-import {Footer,NavBar,Destacadas,Categorias} from "../../components";
+import {Footer,NavBar,Destacadas,CategoriasPeliculas} from "../../components";
 
 function Home() {
   return (
@@ -7,12 +7,8 @@ function Home() {
 
     <Destacadas/>
 
-    <Categorias/>
-    <Categorias/>
-    <Categorias/>
-    <Categorias/>
+    <CategoriasPeliculas></CategoriasPeliculas>
 
-    
     <Footer/>
     </>
   )

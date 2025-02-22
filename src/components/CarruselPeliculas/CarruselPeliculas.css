@@ -1,0 +1,53 @@
+/* Fondo azul para toda la sección */
+/* Fondo azul para toda la sección de categorías */
+.contenedor-categorias {
+    background-color: var(--colorAzul);
+    padding: 10px 0; /* Reducimos el padding vertical */
+    margin-bottom: 0; /* Eliminamos el margen inferior */
+}
+
+/* Título alineado a la izquierda, en rojo */
+.titulo-categoria {
+    text-align: left;
+    color: var(--colorBeige);
+    font-size: 24px;
+    margin-left: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: var(--colorAzul); /* Asegurar que el título tenga el mismo fondo */
+}
+
+/* Ajustes del carrusel */
+.mySwiper {
+    padding: 10px 0; /* Reducimos el padding para evitar espacios */
+    margin:0 50px;
+}
+
+/* Evitar espacios extra entre slides */
+.swiper-wrapper {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Ajustar imágenes */
+.img-peliculas {
+    margin: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    border: 0.2rem white solid;
+}
+
+/* Botones de anterior y siguiente del Swiper */
+.swiper-button-prev, .swiper-button-next {
+    width: 5px;
+    color: var(--colorRojoOscuro) !important;
+}
+
+/* Esconder los bullets de paginación */
+.swiper-pagination-bullets {
+    display: none;
+}

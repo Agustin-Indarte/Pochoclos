@@ -6,7 +6,7 @@ import { FaSearch } from "react-icons/fa"; // Ícono de lupa de FontAwesome
 function NavBar() {
   return (
     <Navbar expand="md" className='custom-Navbar fixed-top shadow-lg justify-content-between '>
-      <Container fluid>
+      <Container>
         {/* Logo y marca */}
         <Navbar.Brand>
           <Link to="/" className='navbar-brand'>
