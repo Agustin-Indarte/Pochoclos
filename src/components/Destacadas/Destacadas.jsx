@@ -2,7 +2,7 @@ import React from 'react'
 
 function Destacadas() {
   return (
-    <img src="public\Logo-Pochoclos.png" alt="" />
+    <img src="public\Destacada1.jpg" alt="" style={{marginTop:"100px", objectFit:"cover"}}/>
   )
 }
 

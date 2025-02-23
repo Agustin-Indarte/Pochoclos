@@ -1,25 +1,30 @@
-import './Navbar.css'
-import { Container, Dropdown, DropdownToggle, Nav, Navbar, NavbarBrand } from "react-bootstrap"
-import { Link } from "react-router-dom"
-import { FaSearch } from "react-icons/fa"; // Ícono de lupa de FontAwesome
+import './Navbar.css';
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
+import { useState } from "react";
 
 function NavBar() {
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
-    <Navbar expand="md" className='custom-Navbar fixed-top shadow-lg justify-content-between '>
+    <Navbar expand="md" className="custom-Navbar fixed-top shadow-lg justify-content-between">
       <Container fluid>
-        {/* Logo y marca */}
+        {/* Logo */}
         <Navbar.Brand>
-          <Link to="/" className='navbar-brand'>
-          <img src="public\Logo-Pochoclos.png" alt="Logo Pochoclos" className='img img-fluid ms-2'/>
+          <Link to="/" className="navbar-brand">
+            <img src="/Logo-Pochoclos.png" alt="Logo Pochoclos" className="img  ms-2" />
           </Link>
         </Navbar.Brand>
-        
-        <Nav className="d-block d-md-none">
+
+        {/* Ícono de búsqueda en dispositivos pequeños */}
+        <Nav className="d-block d-md-none justify-content-center me-4">
           <Nav.Link href="/" className="text-uppercase">
-            <FaSearch size={20} /> {/* Ícono de lupa */}
+            <FaSearch size={20} />
           </Nav.Link>
         </Nav>
-        
+
+        {/* Menú de navegación */}
         <Nav className="d-none d-md-flex me-auto justify-content-start w-100 fw-bold align-items-end mt-3 fs-5">
           <Nav.Link href="/" className="active text-uppercase">Inicio</Nav.Link>
           <Nav.Link href="/menu" className="text-uppercase">Buscar</Nav.Link>
@@ -27,45 +32,37 @@ function NavBar() {
           <Nav.Link href="/contact" className="text-uppercase">Series</Nav.Link>
           <Nav.Link href="/contact" className="text-uppercase">Favoritos</Nav.Link>
         </Nav>
-        
-        {/* Perfil y menú desplegable */}
-        <div className='Navbar-Perfil d-flex align-items-center justify-content-end my-1'>
-            <p className='text-light me-3 mt-4 fs-5 fw-bold d-none d-md-block'>Team2</p>
 
-            {/* Dropdown */}
-            <Dropdown>
-                {/* Ocultar el dropdown */}
-                <Dropdown.Toggle variant="transparent"
-                id="dropdown-perfil"
-                className="p-0 border-0 bg-transparent"
-                style={{ visibility: 'hidden', position: 'absolute' }} />
-
-                {/* Usar la figura para abrir el menu */}
-                <figure className='bg-body-secondary rounded-5 p-2 mb-0 me-2' 
-                onClick={(e) =>{
-                    e.preventDefault();
-                    document.getElementById('dropdown-perfil').click();
-                }} style={{ cursor: 'pointer' }} >
-                <img src="public\Perfil.png" alt="Imagen de perfil" fluid />
-            </figure>
-
-            {/* Menu desplegable */}
-            <Dropdown.Menu className='dropdown-menu-end'>
-                <Dropdown.Item href='#/action1'>Perfil</Dropdown.Item>
-                <Dropdown.Item href='#/action1'>Ajustes</Dropdown.Item>
-                <Dropdown.Item href='#/action1'>Suscripción</Dropdown.Item>
-                <Dropdown.Item href='#/action1'>Contactanos</Dropdown.Item>
-                <Dropdown.Item href='#/action1'>Cerrar Sesión</Dropdown.Item>
-                <Dropdown.Item href='#/action1'>Administración</Dropdown.Item>
-            </Dropdown.Menu>
-            </Dropdown>
-
-            
+        {/* Menú de perfil */}
+        <div
+          className="Navbar-Perfil d-flex align-items-center justify-content-end mt-2"
+          onMouseEnter={() => setShowMenu(true)}
+          onMouseLeave={() => setShowMenu(false)}
+        >
+          <p className="text-light me-3 mt-4 fs-4 fw-bold d-none d-md-block">Team2</p>
+          <figure className="bg-body-secondary rounded-5 p-2 mb-0 me-2" style={{ cursor: 'pointer' }}>
+            <img src="/Perfil.png" alt="Imagen de perfil" />
+          </figure>
+          {showMenu && (
+            <div className="dropdown-menu-custom">
+              <div className='perfil-desplegable d-flex align-items-center justify-content-end my-1'>
+                <p className="text-light me-3 mt-4 fs-4 fw-bold d-none d-md-block">Team2</p>
+                <figure className="bg-body-secondary rounded-5 p-2 mb-0 me-2" style={{ cursor: 'pointer' }}>
+                  <img src="/Perfil.png" alt="Imagen de perfil" />
+                </figure>
+              </div>
+              <Link className="dropdown-item" to="/perfil">Perfil</Link>
+              <Link className="dropdown-item" to="/ajustes">Ajustes</Link>
+              <Link className="dropdown-item" to="/suscripcion">Suscripción</Link>
+              <Link className="dropdown-item" to="/contacto">Contáctanos</Link>
+              <Link className="dropdown-item" to="/logout">Cerrar Sesión</Link>
+              <Link className="dropdown-item" to="/admin">Administración</Link>
+            </div>
+          )}
         </div>
-        
       </Container>
     </Navbar>
-  )
+  );
 }
 
-export default NavBar
+export default NavBar;
