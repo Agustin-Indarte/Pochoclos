@@ -3,8 +3,8 @@ import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Login from "./pages/Login/Login"
 import Home from "./pages/Home/Home";
-import Register from "./pages/Register/Register";
-import ProtectedRoutes from "./components/Protectedroutes/ProtectedRoutes";
+import Registro from "./pages/Registro/Registro"
+import  RutaProtegida  from "./components/RutaProtegida/RutaProtegida";
 import Profile from "./pages/Profile/Profile";
 
 
@@ -19,16 +19,16 @@ function App() {
          <Routes>
         { /*RUTAS PUBLICAS */}
         <Route path="/" element = {<Home/>} />
-        <Route  path="/register" element = {<Register/>}/>
+        <Route  path="/register" element = {<Registro/>}/>
         <Route path="login" element = {<Login/>} />
 
 
          <Route
          path="/profile"
          element= {
-          <ProtectedRoutes>
+          <RutaProtegida>
             <Profile/>
-          </ProtectedRoutes>
+          </RutaProtegida>
 
          }
          />
@@ -40,4 +40,5 @@ function App() {
   )
 }
 
-export default App
+export default App;
+

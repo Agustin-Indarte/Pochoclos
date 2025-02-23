@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom';
 import { auth} from '../../Firebase';
 import { Spinner, Container } from 'react-bootstrap';
 
-function ProtectedRoutes({children}) {
+function RutaProtegida({children}) {
   const [user, loading] = useAuthState(auth);
 if(loading){
   return(
@@ -14,12 +14,12 @@ if(loading){
   );
 }
 
-if(!user) return <Navigate to="/login" />
+if(!user) return <Navigate to="/Registro"/>
 
 
   return children
-   
+
 
 }
 
-export default ProtectedRoutes
+export default RutaProtegida
