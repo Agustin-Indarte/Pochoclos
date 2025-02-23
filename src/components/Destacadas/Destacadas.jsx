@@ -25,7 +25,7 @@ const Destacadas = () => {
                 )
 
                 //Seleccionamos el rango de peliculas que queremos mostrar
-                const peliculasSeleccionadas = peliculasRespuesta.data.results.slice(4, 10)
+                const peliculasSeleccionadas = peliculasRespuesta.data.results.slice(0, 11)
 
                 // Personalizacion de imagen de fondo para cada pelicula a traves de su ID 
                 const ajustesFondos = {
