@@ -1,6 +1,6 @@
 import { useAuthState} from 'react-firebase-hooks/auth';
 import { Navigate } from 'react-router-dom';
-import { auth} from '../../Firebase';
+import { auth} from '../../firebase';
 import { Spinner, Container } from 'react-bootstrap';
 
 function ProtectedRoutes({children}) {

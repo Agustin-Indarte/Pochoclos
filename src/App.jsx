@@ -11,8 +11,12 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
+    <>
+    
     <Router>
+    <Registro></Registro>
       <Routes>
+        
         {/* RUTAS PUBLICAS */}
         <Route path="/registro" element={<Registro />} />
         <Route path="/" element={<Home />} />
@@ -28,6 +32,8 @@ function App() {
         />
       </Routes>
     </Router>
+    </>
+    
   );
 }
 

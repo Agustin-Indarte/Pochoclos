@@ -5,7 +5,7 @@ import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
 import { createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { useNavigate } from 'react-router-dom'; // Importar useNavigate
+import { useNavigate } from 'react-router-dom';
 import { auth } from '../../firebase';
 
 const SignUpSchema = Yup.object().shape({
