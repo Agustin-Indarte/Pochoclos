@@ -2,8 +2,6 @@
 /* Fondo azul para toda la sección de categorías */
 .contenedor-categorias {
     background-color: var(--colorAzul);
-    padding: 10px 0; /* Reducimos el padding vertical */
-    margin-bottom: 0; /* Eliminamos el margen inferior */
 }
 
 /* Título alineado a la izquierda, en rojo */
@@ -11,7 +9,7 @@
     text-align: left;
     color: var(--colorBeige);
     font-size: 24px;
-    margin-left: 20px;
+    margin-left: 30px;
     font-weight: bold;
     padding: 10px 20px;
     display: inline-block;
@@ -21,33 +19,56 @@
 
 /* Ajustes del carrusel */
 .mySwiper {
-    padding: 10px 0; /* Reducimos el padding para evitar espacios */
-    margin:0 50px;
+    padding: 10px 30px; /* Reducimos el padding para evitar espacios */
 }
 
-/* Evitar espacios extra entre slides */
-.swiper-wrapper {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
 
 /* Ajustar imágenes */
 .img-peliculas {
     margin: 0;
     object-fit: cover;
     width: 100%;
-    height: 200px;
+    height: 180px;
     border-radius: 10px;
     border: 0.2rem white solid;
+    transition: filter 1s;
+}
+
+/* Agrandar la imagen y le da un sombra al posicionar el cursor encima */
+.img-peliculas:hover{
+    transform: scale(1.1);
+    transition: all 1s;
+    box-shadow: 3px 2px 15px -1px var(--colorRojo);
+    cursor: pointer;
 }
 
 /* Botones de anterior y siguiente del Swiper */
 .swiper-button-prev, .swiper-button-next {
-    width: 5px;
+    width: 80px;
+    height: 250px;
     color: var(--colorRojoOscuro) !important;
+    font-weight: bolder;
+    position: absolute;
+    top: 0.5rem;
+    background-color: var(--colorAzul);
+    z-index: 1;
 }
+
+.swiper-button-prev{
+    right: 100%;
+    margin-right: 50px;
+}
+
+.swiper-button-next{
+    left: 95%;
+}
+
 
 /* Esconder los bullets de paginación */
 .swiper-pagination-bullets {
     display: none;
+}
+
+.titulo-peli{
+    text-align: center;
 }
