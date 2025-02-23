@@ -4,7 +4,6 @@ function Home() {
   return (
     <>
     <NavBar/>
-
     <Destacadas/>
 
     <CategoriasPeliculas></CategoriasPeliculas>

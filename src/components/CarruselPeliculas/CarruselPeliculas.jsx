@@ -45,7 +45,9 @@ const CarruselPeliculas = ({ categoriaId, titulo }) => {
             >
                 {peliculas.map((pelicula) => (
                     <SwiperSlide key={pelicula.id}>
+                        <div classname="contenedor-Cards">
                         <img src={`${url_img + pelicula.backdrop_path}`} alt={pelicula.title} className='img-peliculas' />
+                        </div>
                         <h3 className='titulo-peli text-light'>{pelicula.title}</h3>
                     </SwiperSlide>
                 ))}

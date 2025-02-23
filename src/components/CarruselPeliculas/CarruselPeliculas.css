@@ -1,6 +1,6 @@
-/* Fondo azul para toda la sección */
 /* Fondo azul para toda la sección de categorías */
 .contenedor-categorias {
+    padding-top: 2%;
     background-color: var(--colorAzul);
 }
 
@@ -9,25 +9,26 @@
     text-align: left;
     color: var(--colorBeige);
     font-size: 24px;
-    margin-left: 30px;
+    margin-left: 50px;
     font-weight: bold;
-    padding: 10px 20px;
+
     display: inline-block;
     border-radius: 5px;
     background-color: var(--colorAzul); /* Asegurar que el título tenga el mismo fondo */
 }
 
 /* Ajustes del carrusel */
-.mySwiper {
-    padding: 10px 30px; /* Reducimos el padding para evitar espacios */
+.mySwiper { 
+    padding: 10px 30px;
 }
+
 
 
 /* Ajustar imágenes */
 .img-peliculas {
-    margin: 0;
+
     object-fit: cover;
-    width: 100%;
+    width: 95%;
     height: 180px;
     border-radius: 10px;
     border: 0.2rem white solid;
@@ -44,23 +45,13 @@
 
 /* Botones de anterior y siguiente del Swiper */
 .swiper-button-prev, .swiper-button-next {
-    width: 80px;
+    width: 5%;
     height: 250px;
-    color: var(--colorRojoOscuro) !important;
+    color: var(--colorRojoOscuro) ;
     font-weight: bolder;
     position: absolute;
     top: 0.5rem;
-    background-color: var(--colorAzul);
     z-index: 1;
-}
-
-.swiper-button-prev{
-    right: 100%;
-    margin-right: 50px;
-}
-
-.swiper-button-next{
-    left: 95%;
 }
 
 
@@ -70,5 +61,6 @@
 }
 
 .titulo-peli{
+    margin-top: 15px;
     text-align: center;
 }
