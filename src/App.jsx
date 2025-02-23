@@ -12,6 +12,7 @@ function App() {
 
   return (
     <Router>
+      <Registro></Registro>
       <Routes>
         {/* RUTAS PUBLICAS */}
         <Route path="/registro" element={<Registro />} />
