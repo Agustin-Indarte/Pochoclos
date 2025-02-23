@@ -8,9 +8,9 @@ function NavBar() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <Navbar expand="md" className="custom-Navbar fixed-top shadow-lg justify-content-between">
-      <Container fluid>
-        {/* Logo */}
+    <Navbar expand="md" className='custom-Navbar fixed-top shadow-lg justify-content-between '>
+      <Container>
+        {/* Logo y marca */}
         <Navbar.Brand>
           <Link to="/" className="navbar-brand">
             <img src="/Logo-Pochoclos.png" alt="Logo Pochoclos" className="img  ms-2" />

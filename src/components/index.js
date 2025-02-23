@@ -1,4 +1,5 @@
 export {default as NavBar} from './NavBar/NavBar'
 export {default as Footer} from './Footer/Footer'
-export {default as Categorias} from './Categorias/Categorias'
+export {default as CarruselPeliculas} from './CarruselPeliculas/CarruselPeliculas'
 export {default as Destacadas} from './Destacadas/Destacadas'
+export {default as CategoriasPeliculas} from './CategoriasPeliculas/CategoriasPeliculas'
