@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Carousel, Button, CarouselItem, CarouselCaption } from 'react-bootstrap'
+import { Carousel, Button, CarouselCaption } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
 import "./Destacadas.css"
