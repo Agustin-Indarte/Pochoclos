@@ -1,0 +1,29 @@
+.app-container {
+    background-image: url('tu-imagen-de-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .text-container {
+    padding: 50px 20px;
+  }
+  
+  .content-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .content-item {
+    margin: 10px;
+    width: 200px;
+  }
+  
+  .content-item img {
+    width: 100%;
+    height: auto;
+  }
