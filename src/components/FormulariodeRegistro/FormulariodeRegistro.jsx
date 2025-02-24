@@ -46,7 +46,7 @@ const SignUpForm  = () => {
       });
 
       resetForm(); // Limpiar el formulario después del envío exitoso
-      navigate('/profile'); // Redirigir a la página de perfil
+      navigate('/login'); // Redirigir a la página de perfil
 
     } catch (error) {
       console.error("Error al suscribirse:", error);
@@ -64,7 +64,7 @@ const SignUpForm  = () => {
     const provider = new GoogleAuthProvider();
     try {
       await signInWithPopup(auth, provider);
-      navigate('/profile');
+      navigate('/login');
     } catch (error) {
       console.error("Error al iniciar sesión con Google:", error);
       Swal.fire({
@@ -136,7 +136,7 @@ const SignUpForm  = () => {
             </Row>
             <Row className="justify-content-center mb-3">
               <Col md={12} className="text-center">
-                <Button type="submit" variant="danger" className="w-100">Suscribirse</Button>
+                <Button type="submit" variant="danger" className="w-100" onClick={handleSubmit}>Suscribirse</Button>
                 <Button variant="danger" className="w-100 mt-2" onClick={handleGoogleLogin}>Iniciar sesión con Google</Button>
               </Col>
             </Row>
