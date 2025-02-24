@@ -90,7 +90,9 @@
     filter: invert(75%) sepia(100%) saturate(5000%) hue-rotate(350deg) brightness(95%) contrast(130%);
 }
 
+
 .carousel-indicators [data-bs-target] {
+    width: 5%;
     margin-bottom: 1%;
     margin-inline: 5px;
     height: 5px;
@@ -165,12 +167,6 @@
     gap: 10px;
 }
 
-
-
-.carousel-indicators .active {
-    width: 7%;
-    background-color: var(--colorRojoOscuro);
-}
 
 
 

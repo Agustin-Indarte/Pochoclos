@@ -1,33 +1,28 @@
 
 .footer{
-    padding-top: 10px;
-    padding-left: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--colorAzulOscuro);
-    border-top: 2px solid var(--colorRojo);
+    border-top: 1px solid var(--colorRojo);
 }
 
-.derechos{
-    font-size: large;
-    font-weight: 500;
-    color: white;
+.footer p{
+   color: white;
+   margin-bottom: 0;
 }
 
 .img-footer{
-    height: 60px;
+    margin-left: 1.5%;
+    margin-block: 5px;
+    height: 35px;
     width: auto;
-    padding-bottom: 20px;
 }
 
 
-.redes {
-    display: flex;
-    justify-content: center;
-}
+.redes a{
+   color: white;
+   margin-inline: 10px;
+   font-size: 1.2rem;
 
-.fab{
-    color: var(--colorGris);
 }
-

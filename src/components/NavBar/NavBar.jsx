@@ -9,7 +9,7 @@ function NavBar() {
 
   return (
     <Navbar expand="md" className='custom-Navbar fixed-top shadow-lg justify-content-between '>
-      <Container>
+      <Container fluid>
         {/* Logo y marca */}
         <Navbar.Brand>
           <Link to="/" className="navbar-brand">

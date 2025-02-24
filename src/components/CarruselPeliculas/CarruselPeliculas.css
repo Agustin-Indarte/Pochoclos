@@ -9,26 +9,23 @@
     text-align: left;
     color: var(--colorBeige);
     font-size: 24px;
-    margin-left: 50px;
+    margin-left: 5%;
     font-weight: bold;
-
-    display: inline-block;
     border-radius: 5px;
-    background-color: var(--colorAzul); /* Asegurar que el título tenga el mismo fondo */
 }
 
 /* Ajustes del carrusel */
 .mySwiper { 
-    padding: 10px 30px;
+    margin-left: 3%;
+    padding: 15px 30px;
 }
-
 
 
 /* Ajustar imágenes */
 .img-peliculas {
-
+    margin-inline: 2%;
     object-fit: cover;
-    width: 95%;
+    width: 90%;
     height: 180px;
     border-radius: 10px;
     border: 0.2rem white solid;
@@ -37,22 +34,31 @@
 
 /* Agrandar la imagen y le da un sombra al posicionar el cursor encima */
 .img-peliculas:hover{
-    transform: scale(1.1);
+    transform: scale(1.06);
     transition: all 1s;
     box-shadow: 3px 2px 15px -1px var(--colorRojo);
     cursor: pointer;
 }
 
 /* Botones de anterior y siguiente del Swiper */
-.swiper-button-prev, .swiper-button-next {
-    width: 5%;
+.swiper-button-prev{
+    margin-left: -0.70%;
     height: 250px;
     color: var(--colorRojoOscuro) ;
     font-weight: bolder;
-    position: absolute;
     top: 0.5rem;
     z-index: 1;
 }
+
+.swiper-button-next {
+    margin-right: 1%;
+    height: 250px;
+    color: var(--colorRojoOscuro) ;
+    font-weight: bolder;
+    top: 0.5rem;
+    z-index: 1;
+}
+
 
 
 /* Esconder los bullets de paginación */
@@ -61,6 +67,8 @@
 }
 
 .titulo-peli{
-    margin-top: 15px;
+    width: 90%;
+    margin-top: 10px;
+    font-size: 1.2rem;
     text-align: center;
 }
