@@ -1,3 +1,29 @@
 #container-profile{
     background-color:#151931;
 }
+
+  
+  .profile-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-img {
+    object-fit: cover;
+    width: 120px;
+    height: 120px;
+  }
+  .icon-circle {
+    color: white; /* Cambia el color del icono */
+    background-color: #555;
+  }
+  
+  
+  @media (min-width: 768px) {
+    .profile-circle {
+      margin: 0 20px; /* Más espacio entre los perfiles */
+    }
+  }
+  
