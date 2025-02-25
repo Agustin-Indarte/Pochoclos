@@ -96,6 +96,58 @@
     color: var(--colorRojo);
 }
 
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .video-fondo {
+        object-position: center;
+    }
+
+    .Detalles-BannerInicio h1{
+        font-size: 2rem;
+    }
+    
+    .Detalles-BannerInicio p{
+        font-size: 1.4rem;
+        width: 70%;
+    }
+}
+
+@media (max-width: 576px) {
+    .video-fondo {
+        object-position: top;
+    }
+
+    .logo-BannerInicio{
+        margin-top: 5%;
+        height: 90px;
+    }
+
+    .Detalles-BannerInicio h1{
+        font-size: 1.7rem;
+    }
+    
+    .Detalles-BannerInicio p{
+        font-size: .9rem;
+        width: 90%;
+    }
+
+    .btn-suscribirse-inicio{
+        width: 150px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .btn-sesion-inicio{
+        width: 150px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .Ver-detalles{
+        margin-left: 30px;
+    }
+}
+
 
 
 
