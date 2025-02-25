@@ -4,9 +4,6 @@ import { Footer, NavBar,BannerInicio,Dispositivos,Servicios,Faqs,Planes } from '
 function Inicio() {
   return (
     <>
-    <NavBar></NavBar>
-      <BannerInicio/>
-      <Dispositivos/>
       <Servicios/>
       <Faqs/>
       <Planes/>
