@@ -1,42 +1,19 @@
+import { Container } from 'react-bootstrap';
 import './Dispositivos.css'
-import { Container } from 'react-bootstrap'
 
 function Dispositivos() {
   return (
-    <div className="app-container">
+    <>
       <div className="text-container">
         <h1>Disfrutalo cuando y donde quieras</h1>
-        <p>Ya sea en tu celular, tablet, computadora o TV.</p>
+        <h4>Ya sea en tu celular, tablet, computadora o TV.</h4>
+        <img src="public\dispositivos.png" alt="imagen de dispositivos" />
+        <img className='pochoclosizq' src="public\pochoclos1.png" alt="pochoclos dispersos del lado izquierdo" />
+        <img className='pochoclosder' src="public\pochoclos2.png" alt="pochoclos dispersos del lado derecho" />
       </div>
-      <ContentList />
-    </div>
+    </>
   );
 }
 
-function ContentList() {
-  const content = [
-    { title: 'THE MARVELS', image: 'marvels.jpg' },
-    { title: 'SHOGUN', image: 'shogun.jpg' },
-    { title: 'LIBERTADORES', image: 'libertadores.jpg' },
-    // Agrega más contenido aquí
-  ];
-
-  return (
-    <div className="content-list">
-      {content.map((item, index) => (
-        <ContentItem key={index} title={item.title} image={item.image} />
-      ))}
-    </div>
-  );
-}
-
-function ContentItem({ title, image }) {
-  return (
-    <div className="content-item">
-      <img src={image} alt={title} />
-      <h3>{title}</h3>
-    </div>
-  );
-}
 
 export default Dispositivos;
