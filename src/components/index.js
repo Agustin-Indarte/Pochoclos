@@ -4,7 +4,7 @@ export {default as CarruselPeliculas} from './CarruselPeliculas/CarruselPelicula
 export {default as Destacadas} from './Destacadas/Destacadas'
 export {default as CategoriasPeliculas} from './CategoriasPeliculas/CategoriasPeliculas'
 export {default as BannerInicio} from './BannerInicio/BannerInicio'
-export {default as Dispositivos} from './Dispositivos/Dispositvos'
+export {default as Dispositivos} from './Dispositivos/Dispositivos'
 export {default as Faqs} from './Faqs/Faqs'
 export {default as Planes} from './Planes/Planes'
 export {default as Servicios} from './Servicios/Servicios'

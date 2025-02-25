@@ -1,0 +1,36 @@
+.text-container{
+  padding: 40px 0px 50px 0px;
+  text-align: center;
+  background-color: var(--colorAzulOscuro);
+}
+
+h1{
+  color: var(--colorRojoOscuro);
+  font-weight: bold;
+}
+
+h4{
+  padding: 20px 0px 20px 0px;
+  color: white;
+}
+
+img{
+  padding: 20px 0px 20px 0px;
+}
+
+.pochoclosizq{
+  width: 20vw;
+  height: 80vh;
+  position: absolute;
+  top: 2%;
+  right: 75%;
+
+}
+
+.pochoclosder{
+  width: 20vw;
+  height: 75vh;
+  position: absolute;
+  top: 2%;
+  left: 75%;
+}
