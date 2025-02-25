@@ -39,7 +39,7 @@ function Profile() {
   }, []);
 
   return (
-    <Container className="vh-100 d-flex flex-column justify-content-center align-items-center text-black container-fluid">
+    <Container className="vh-100 d-flex flex-column justify-content-center align-items-center text-black ">
   <img src="/src/images/logo-pochoclos.png" className="img-fluid mb-0" />
   <h1 className="mb-4 fw-bold text-white">¿Quién está viendo?</h1>
 
@@ -61,14 +61,15 @@ function Profile() {
     {/* Perfiles guardados en Firestore */}
     {profiles.map((profile) => (
       <Col key={profile.id} xs={6} sm={4} md={3} lg="auto" className="text-center">
-        <div className="profile-circle">
-          <Image
-            src={profile.photoURL || "https://via.placeholder.com/120"}
-            roundedCircle
-            width={120}
-            height={120}
-            className="profile-img"
-          />
+        <div className="profile-circle" onClick={() => navigate ("/login")}>
+        <Image
+  src={profile.photoURL || "/src/images/default-profile.png"}
+  roundedCircle
+  width={120}
+  height={120}
+  className="profile-img"
+/>
+
           <p className="mt-2 fw-bold">{profile.name}</p>
         </div>
       </Col>
@@ -78,7 +79,7 @@ function Profile() {
     <Col xs={6} sm={4} md={3} lg="auto" className="text-center">
       <div className="profile-circle add-profile" onClick={() => navigate("/add-profile")}>
         <div className="icon-circle">
-        <FontAwesomeIcon icon={faChild} size="7x" />
+        <img src="/src/images/15371680.png" alt="Añadir perfil" className="profile-img" />
         </div>
         
         <p className="mt-2">Niños</p>
@@ -89,7 +90,7 @@ function Profile() {
     <Col xs={6} sm={4} md={3} lg="auto" className="text-center ">
       <div className="profile-circle add-profile" onClick={() => navigate("/add-profile")}>
         <div className="icon-circle ">
-        <FontAwesomeIcon icon={faPlusCircle} size="7x"  />
+        <img src="/src/images/1177577.png" alt="Añadir perfil" className="profile-img" />
         </div>
         
         <p className="mt-2">Añadir perfil</p>
