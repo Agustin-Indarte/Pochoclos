@@ -8,6 +8,7 @@ import { Container, Form, Button, Alert } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { auth} from '../../Firebase';
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 // Esquema de validación con Yup
 const schema = yup.object().shape({
@@ -32,12 +33,14 @@ function LoginForm() {
   const handleLogin = async (data) => {
     setError("");
     try {
-      await createUserWithEmailAndPassword(auth, data.email, data.password);
+      // 🔹 Usamos signInWithEmailAndPassword en lugar de createUserWithEmailAndPassword
+      await signInWithEmailAndPassword(auth, data.email, data.password);
       navigate("/profile");
     } catch (error) {
-      setError("Error al iniciar sesion : " + error.message);
+      setError("Error al iniciar sesión: " + error.message);
     }
   };
+  
 
   const handleGoogleLogin = async () => {
     const provider = new GoogleAuthProvider();
@@ -80,7 +83,7 @@ function LoginForm() {
           </Form.Group>
 
           <div className="d-flex flex-column align-items-center">
-            <Button type="submit" variant="primary" className="col-md-6 mb-3 btn btn-primary">
+            <Button type="submit" variant="primary" className="col-md-6 mb-3 btn btn-primary" onClick={handleSubmit}>
               Iniciar Sesión
             </Button>
             <Button variant="danger" className="col-md-6" onClick={handleGoogleLogin}>

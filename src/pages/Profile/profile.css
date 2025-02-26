@@ -1,3 +1,59 @@
 #container-profile{
     background-color:#151931;
 }
+
+  
+  
+  
+  
+  
+  
+  .icon-circle {
+    color: white; /* Cambia el color del icono */
+    background-color: #555;
+  }
+  .profile-circle {
+    width: 130px; /* Tamaño fijo para que sea un círculo perfecto */
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden; /* Asegura que la imagen no sobresalga */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd; /* Opcional, para visualizar el contenedor */
+  }
+  
+  
+  .profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la imagen se recorte y llene el círculo */
+    border-radius: 50%; /* Se asegura de que la imagen también sea redonda */
+  }
+  
+  
+  
+  .icon-circle {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    overflow: hidden;
+  }
+  
+  .icon-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  
+  @media (min-width: 768px) {
+    .profile-circle {
+      margin: 0 20px; /* Más espacio entre los perfiles */
+    }
+  }
+  

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {Formik, Field, Form} from 'formik'
 import { Button, Container, Row, Col } from 'react-bootstrap';
@@ -45,7 +46,7 @@ const SignUpForm  = () => {
       });
 
       resetForm(); 
-      navigate('/profile');  add
+      navigate('/profile'); 
 
     } catch (error) {
       console.error("Error al suscribirse:", error);
@@ -63,7 +64,7 @@ const SignUpForm  = () => {
     const provider = new GoogleAuthProvider();
     try {
       await signInWithPopup(auth, provider);
-      navigate('/profile');
+      navigate('/login');
     } catch (error) {
       console.error("Error al iniciar sesión con Google:", error);
       Swal.fire({
@@ -135,7 +136,7 @@ const SignUpForm  = () => {
             </Row>
             <Row className="justify-content-center mb-3">
               <Col md={12} className="text-center">
-                <Button type="submit" variant="danger" className="w-100">Suscribirse</Button>
+                <Button type="submit" variant="danger" className="w-100" onClick={handleSubmit}>Suscribirse</Button>
                 <Button variant="danger" className="w-100 mt-2" onClick={handleGoogleLogin}>Iniciar sesión con Google</Button>
               </Col>
             </Row>
@@ -143,8 +144,7 @@ const SignUpForm  = () => {
         )}
       </Formik>
     </Container>
-  );
-};
+  );};
 
 export default SignUpForm;
 
