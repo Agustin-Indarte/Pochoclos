@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #131523; /* Fondo uniforme */
+  background-color: #131523; 
 }
 
 .Registro-page {
@@ -13,7 +13,7 @@ html, body {
   flex-direction: column;
   padding: 0;
   margin: 0;
-  background-color: #151931; /* Fondo del mismo color */
+  background-color: #151931; 
 }
 
 .bg-dark {
@@ -25,15 +25,15 @@ html, body {
   justify-content: flex-start;
   padding: 0;
   margin: 0;
-  background-color: #151931; /* Fondo del mismo color */
+  background-color: #151931; 
 }
 
 .small-logo {
-  width: 300px; /* Ajusta el tamaño según sea necesario */
-  height: auto; /* Mantener la proporción de aspecto */
-  margin: 0; /* Eliminar márgenes */
-  padding: 0; /* Eliminar rellenos */
-  display: block; /* Asegúrate de que la imagen se comporte como un bloque */
+  width: 300px; 
+  height: auto; 
+  margin: 0; 
+  padding: 0; 
+  display: block; 
 }
 
 

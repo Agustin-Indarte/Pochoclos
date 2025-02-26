@@ -17,26 +17,25 @@ const SignUpSchema = Yup.object().shape({
 });
 
 const SignUpForm  = () => {
-  const navigate = useNavigate(); // Inicializar useNavigate
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
-      // 1. Enviar correo usando EmailJS
+      
       const templateParams = {
         plan: values.plan,
         email: values.email,
         username: values.username,
-        // ... otros valores que quieras incluir en el correo
+        
       };
 
-      // Reemplazar con tus valores reales de EmailJS
       const serviceId = 'service_sm1p9wy';
       const templateId = 'template_l6dc3kd';
       const userId = 'uCEXyRA4tN57jmK5r';
 
       await emailjs.send(serviceId, templateId, templateParams, userId);
 
-      // 2. (Opcional) Crear usuario en Firebase (si es necesario)
+    
       await createUserWithEmailAndPassword(auth, values.email, values.password);
 
       Swal.fire({
@@ -45,8 +44,8 @@ const SignUpForm  = () => {
         text: 'Te has suscrito correctamente. Revisa tu correo electrónico.',
       });
 
-      resetForm(); // Limpiar el formulario después del envío exitoso
-      navigate('/profile'); // Redirigir a la página de perfil
+      resetForm(); 
+      navigate('/profile');  add
 
     } catch (error) {
       console.error("Error al suscribirse:", error);
