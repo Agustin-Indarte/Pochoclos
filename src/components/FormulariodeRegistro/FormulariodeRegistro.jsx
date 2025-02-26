@@ -78,7 +78,7 @@ const SignUpForm  = () => {
   
     
   return (
-    <Container style={{ backgroundColor: '#CFCFCF', padding: '1rem', borderRadius: '10px', maxWidth: '350px', margin: '0 auto', marginTop: '-20px' }}>
+    <Container style={{ backgroundColor: '#CFCFCF', padding: '1rem', borderRadius: '10px', maxWidth: '350px', margin: '0 auto', marginTop: '0' }}>
       <h1 style={{ textAlign: 'center', fontSize: '20px', color: '#D90429', fontWeight: 'bold' }}>¡Elige tu plan pochoclero!</h1>
       <Formik
         initialValues={{
@@ -97,11 +97,11 @@ const SignUpForm  = () => {
             <Row className="justify-content-center mb-3">
               <Col md={12} className="text-center">
                 <label style={{ fontWeight: 'bold', color: 'black' }}>
-                  <Field type="radio" name="plan" value="mensual" />
+                  <Field type="radio" name="plan" value="mensual" style={{ accentColor: 'red' }} />
                   Mensual
                 </label>
                 <label style={{ marginLeft: '1rem', fontWeight: 'bold', color: 'black' }}>
-                  <Field type="radio" name="plan" value="anual" />
+                  <Field type="radio" name="plan" value="anual" style={{ accentColor: 'red' }} />
                   Anual
                 </label>
               </Col>
