@@ -97,11 +97,11 @@ const SignUpForm  = () => {
             <Row className="justify-content-center mb-3">
               <Col md={12} className="text-center">
                 <label style={{ fontWeight: 'bold', color: 'black' }}>
-                  <Field type="radio" name="plan" value="mensual" style={{ accentColor: 'red' }} />
+                  <Field type="radio" name="plan" value="mensual" style={{ accentColor: '#AC011F' }} />
                   Mensual
                 </label>
                 <label style={{ marginLeft: '1rem', fontWeight: 'bold', color: 'black' }}>
-                  <Field type="radio" name="plan" value="anual" style={{ accentColor: 'red' }} />
+                  <Field type="radio" name="plan" value="anual" style={{ accentColor: '#AC011F' }} />
                   Anual
                 </label>
               </Col>
