@@ -46,9 +46,9 @@ function Profile() {
   <Row className="d-flex flex-wrap justify-content-center gap-4 bg-light rounded-2 ">
     {/* Perfil del usuario autenticado */}
     <Col xs={6} sm={4} md={3} lg="auto" className="text-center">
-      <div className="profile-circle">
+      <div className="profile-circle" onClick={() => navigate ("/")} >
         <Image
-          src={userPhoto} 
+          src= "src/images/6073874.png" 
           roundedCircle
           width={120}
           height={120}
@@ -61,13 +61,13 @@ function Profile() {
     {/* Perfiles guardados en Firestore */}
     {profiles.map((profile) => (
       <Col key={profile.id} xs={6} sm={4} md={3} lg="auto" className="text-center">
-        <div className="profile-circle" onClick={() => navigate ("/login")}>
+        <div className="profile-circle" onClick={() => navigate ("/")}>
         <Image
-  src={profile.photoURL || "/src/images/default-profile.png"}
-  roundedCircle
-  width={120}
-  height={120}
-  className="profile-img"
+            src={profile.photoURL || "/src/images/default-profile.png"}
+            roundedCircle
+            width={120}
+            height={120}
+            className="profile-img"
 />
 
           <p className="mt-2 fw-bold">{profile.name}</p>
@@ -81,26 +81,39 @@ function Profile() {
         <div className="icon-circle">
         <img src="/src/images/15371680.png" alt="Añadir perfil" className="profile-img" />
         </div>
-        
+        <div>
         <p className="mt-2">Niños</p>
+        </div>
+        
+        
       </div>
     </Col>
 
     {/* Botón para agregar un nuevo perfil */}
     <Col xs={6} sm={4} md={3} lg="auto" className="text-center ">
-      <div className="profile-circle add-profile" onClick={() => navigate("/add-profile")}>
+      <div className="profile-circle add-profile " onClick={() => navigate("/add-profile")}>
         <div className="icon-circle ">
-        <img src="/src/images/1177577.png" alt="Añadir perfil" className="profile-img" />
+        <img src="/src/images/1177577.png" alt="Añadir perfil" className="profile-img " />
+        </div>
+        <div>
+        <p className="mt-2">Añadir perfil</p>
         </div>
         
-        <p className="mt-2">Añadir perfil</p>
+        
       </div>
     </Col>
   </Row>
 
-  <Button variant="danger" className="mt-4" onClick={() => signOut(auth).then(() => navigate("/login"))}>
-    Cerrar sesión
-  </Button>
+  <Button 
+  variant="danger" 
+  className="mt-4" 
+  onClick={async () => {
+    await signOut(auth);
+    navigate("/Login");
+  }}
+>
+  Cerrar Sesion
+</Button>
 </Container>
 
 

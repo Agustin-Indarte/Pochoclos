@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {Formik, Field, Form} from 'formik'
 import { Button, Container, Row, Col } from 'react-bootstrap';
@@ -144,8 +145,7 @@ const SignUpForm  = () => {
         )}
       </Formik>
     </Container>
-  );
-};
+  );};
 
 export default SignUpForm;
 
