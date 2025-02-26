@@ -1,5 +1,6 @@
 import React from 'react'
 import { CardPelicula } from '../../components';
+import "./GridPelicula.css"
 
 const GridPelicula = ({ peliculasAPI, peliculasCRUD }) => {
     // 🔹 Combinamos películas del CRUD con las de la API

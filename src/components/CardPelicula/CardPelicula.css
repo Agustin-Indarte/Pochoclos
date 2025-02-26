@@ -1,0 +1,84 @@
+.card-container {
+    width: 300px;
+    height: 450px;
+    perspective: 1000px; /* Profundidad para efecto 3D */
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Aplica el giro al hacer hover en el contenedor */
+.card-container:hover .card-inner {
+    transform: rotateY(180deg);
+    transition: all 1s;
+    box-shadow: 0px 5px 20px -1px var(--colorRojo);
+    cursor: pointer;
+}
+
+/* Estilos generales de la card */
+.Card-frente,
+.Card-reverso {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 3%;
+    overflow: hidden;
+}
+
+/* Frente de la card */
+.Card-frente img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 0;
+    border: 3px solid white;
+    border-radius: 3%;
+}
+
+/* Efecto al hacer hover */
+
+
+/* Reverso de la card */
+.Card-reverso {
+    background: #1a1a1a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: rotateY(180deg);
+    border: 3px solid white;
+    
+}
+
+
+.Card-reverso p{
+    color: white;
+    text-align: left;
+    width: 90%;
+}
+
+.Card-reverso h4{
+   color: var(--colorRojo);
+   font-weight: bolder;
+}
+
+.Card-reverso Button{
+    background-color: #1a1a1a;
+    color: var(--colorRojo);
+    border: 2px solid var(--colorRojo);
+    font-weight: bolder;
+}
+
+.Card-reverso Button:hover{
+    background-color: var(--colorRojoOscuro);
+    color: white;
+    border: 2px solid white;
+}

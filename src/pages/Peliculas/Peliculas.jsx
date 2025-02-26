@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { NavBar,Footer,GridPelicula } from '../../components';
+import { NavBar, Footer, GridPelicula } from '../../components';
+import "./Peliculas.css"
 
 const Peliculas = () => {
     const [peliculasAPI, setPeliculasAPI] = useState([]);
@@ -28,10 +29,15 @@ const Peliculas = () => {
     }, []);
 
     return (
-        <div className="pagina-peliculas">
-            <h2>Todas las películas</h2>
-            <GridPelicula peliculasAPI={peliculasAPI} peliculasCRUD={peliculasCRUD} />
-        </div>
+        <>
+            <NavBar></NavBar>
+            <div className="pagina-peliculas">
+                <h2>TODAS NUESTRAS PELÍCULAS EN UN SOLO LUGAR</h2>
+                <GridPelicula peliculasAPI={peliculasAPI} peliculasCRUD={peliculasCRUD} />
+            </div>
+            <Footer></Footer>
+        </>
+
     );
 };
 
