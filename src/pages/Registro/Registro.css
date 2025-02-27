@@ -29,9 +29,9 @@ html, body {
 }
 
 .small-logo {
-  width: 300px; 
+  width: 400px; 
   height: auto; 
-  margin: 0; 
+  margin: 50px 0; 
   padding: 0; 
   display: block; 
 }
