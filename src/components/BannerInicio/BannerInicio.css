@@ -1,0 +1,158 @@
+.BannerInicio{
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.video-fondo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Asegura que el video cubra todo el fondo sin espacios blancos */
+  object-position: top;
+  z-index: -1;
+}
+
+.Detalles-BannerInicio{
+    margin-left: 1%;
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté sobre el video */
+}
+
+.logo-BannerInicio{
+    margin-left: 1%;
+    margin-top: 2%;
+    height: 100px;
+}
+
+.textos-BannerInicio{
+    margin-left: 1%;
+}
+
+.Detalles-BannerInicio h1{
+    color: var(--colorBeige);
+    font-size: 2.3rem;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+.Detalles-BannerInicio p{
+    font-size: 1.5rem;
+    width: 50%;
+    color: white;
+    margin: 20px 0;
+}
+
+.Botones-BannerInicio{
+    margin-left: 2%;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-suscribirse-inicio{
+    margin-right: 10px;
+    background-color: rgba(0, 0, 0, 0.415);
+    border: 2px solid var(--colorBeige);
+    width: 180px;
+    height: 50px;
+    color: var(--colorBeige);
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.btn-suscribirse-inicio:hover{
+    background-color: var(--colorBeige);
+    border: 2px solid var(--colorAzul);
+    color: var(--colorAzul);
+}
+
+.btn-sesion-inicio{
+    background-color: var(--colorRojoOscuro);
+    border: 2px solid whitesmoke;
+    width: 180px;
+    height: 50px;
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.btn-sesion-inicio:hover{
+    background-color: var(--colorRojo);
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+}
+
+.Ver-detalles{
+    margin-left: 50px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.Ver-detalles:hover{
+    color: var(--colorRojo);
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .video-fondo {
+        object-position: center;
+    }
+
+    .Detalles-BannerInicio h1{
+        font-size: 2rem;
+    }
+    
+    .Detalles-BannerInicio p{
+        font-size: 1.4rem;
+        width: 70%;
+    }
+}
+
+@media (max-width: 576px) {
+    .video-fondo {
+        object-position: top;
+    }
+
+    .logo-BannerInicio{
+        margin-top: 5%;
+        height: 90px;
+    }
+
+    .Detalles-BannerInicio h1{
+        font-size: 1.7rem;
+    }
+    
+    .Detalles-BannerInicio p{
+        font-size: .9rem;
+        width: 90%;
+    }
+
+    .btn-suscribirse-inicio{
+        width: 150px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .btn-sesion-inicio{
+        width: 150px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .Ver-detalles{
+        margin-left: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+

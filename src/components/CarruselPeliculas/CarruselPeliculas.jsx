@@ -17,7 +17,7 @@ const CarruselPeliculas = ({ categoriaId, titulo }) => {
             try {
                 const respuesta = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=es&with_genres=${categoriaId}&page=1`);
                 const datos = await respuesta.json();
-                setPeliculas(datos.results);
+                setPeliculas(datos.results);git
             } catch (error) {
                 console.error('Error al obtener películas:', error);
             }
