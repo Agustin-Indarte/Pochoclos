@@ -26,3 +26,10 @@
     border-radius: 10px;
     text-align: center;      /* Centra el texto dentro del input */
 }
+
+.mensaje-no-encontrado{
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
+}
