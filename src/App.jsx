@@ -1,12 +1,12 @@
 // App.jsx  
 import React from 'react';  
 import ModalPage from './pages/Modalagregarpelicula/modal';  
+import Administracion from './pages/Administracion/Administracion';
 
 const App = () => {  
   return (  
     <div>  
-      <h1>Administracion</h1>  
-      <ModalPage />  
+      <Administracion/>
     </div>  
   );  
 };  
