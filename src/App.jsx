@@ -19,7 +19,7 @@ function App() {
          <Routes>
         { /*RUTAS PUBLICAS */}
         <Route path="/" element = {<Home/>} />
-        <Route  path="/register" element = {<Registro/>}/>
+        <Route  path="/registro" element = {<Registro/>}/>
         <Route path="login" element = {<Login/>} />
 
 
