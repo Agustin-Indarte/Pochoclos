@@ -18,26 +18,25 @@ const SignUpSchema = Yup.object().shape({
 });
 
 const SignUpForm  = () => {
-  const navigate = useNavigate(); // Inicializar useNavigate
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
-      // 1. Enviar correo usando EmailJS
+      
       const templateParams = {
         plan: values.plan,
         email: values.email,
         username: values.username,
-        // ... otros valores que quieras incluir en el correo
+        
       };
 
-      // Reemplazar con tus valores reales de EmailJS
       const serviceId = 'service_sm1p9wy';
       const templateId = 'template_l6dc3kd';
       const userId = 'uCEXyRA4tN57jmK5r';
 
       await emailjs.send(serviceId, templateId, templateParams, userId);
 
-      // 2. (Opcional) Crear usuario en Firebase (si es necesario)
+    
       await createUserWithEmailAndPassword(auth, values.email, values.password);
 
       Swal.fire({
@@ -46,8 +45,8 @@ const SignUpForm  = () => {
         text: 'Te has suscrito correctamente. Revisa tu correo electrónico.',
       });
 
-      resetForm(); // Limpiar el formulario después del envío exitoso
-      navigate('/login'); // Redirigir a la página de perfil
+      resetForm(); 
+      navigate('/profile'); 
 
     } catch (error) {
       console.error("Error al suscribirse:", error);
@@ -79,7 +78,7 @@ const SignUpForm  = () => {
   
     
   return (
-    <Container style={{ backgroundColor: '#CFCFCF', padding: '1rem', borderRadius: '10px', maxWidth: '350px', margin: '0 auto', marginTop: '-20px' }}>
+    <Container style={{ backgroundColor: '#CFCFCF', padding: '1rem', borderRadius: '10px', maxWidth: '350px', margin: '0 auto', marginTop: '0' }}>
       <h1 style={{ textAlign: 'center', fontSize: '20px', color: '#D90429', fontWeight: 'bold' }}>¡Elige tu plan pochoclero!</h1>
       <Formik
         initialValues={{
@@ -98,11 +97,11 @@ const SignUpForm  = () => {
             <Row className="justify-content-center mb-3">
               <Col md={12} className="text-center">
                 <label style={{ fontWeight: 'bold', color: 'black' }}>
-                  <Field type="radio" name="plan" value="mensual" />
+                  <Field type="radio" name="plan" value="mensual" style={{ accentColor: '#AC011F' }} />
                   Mensual
                 </label>
                 <label style={{ marginLeft: '1rem', fontWeight: 'bold', color: 'black' }}>
-                  <Field type="radio" name="plan" value="anual" />
+                  <Field type="radio" name="plan" value="anual" style={{ accentColor: '#AC011F' }} />
                   Anual
                 </label>
               </Col>

@@ -4,10 +4,10 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { Container, Form, Button, Alert } from "react-bootstrap";
+import { Container, Form, Button, Alert, Card } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
-import { auth} from '../../Firebase';
+import { auth } from '../../Firebase'; // Asegúrate de que la ruta de Firebase sea correcta
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 // Esquema de validación con Yup
@@ -33,14 +33,12 @@ function LoginForm() {
   const handleLogin = async (data) => {
     setError("");
     try {
-      // 🔹 Usamos signInWithEmailAndPassword en lugar de createUserWithEmailAndPassword
       await signInWithEmailAndPassword(auth, data.email, data.password);
       navigate("/profile");
     } catch (error) {
       setError("Error al iniciar sesión: " + error.message);
     }
   };
-  
 
   const handleGoogleLogin = async () => {
     const provider = new GoogleAuthProvider();
@@ -53,11 +51,19 @@ function LoginForm() {
   };
 
   return (
-    <Container className="vh-100 d-flex justify-content-center align-items-center mt-0">
-      <div id="container-login" className="form-container col-md-6 p-4 rounded">
+    <Container
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'flex-start', // Alinea al inicio superior
+        minHeight: '100vh', // Ocupa toda la altura de la ventana
+        paddingTop: '20px' // Ajusta el margen superior
+      }}
+    >
+      <Card style={{ backgroundColor: "#CFCFCF", width: '300px', height: '450px' }} className="p-4 rounded">
         <div className="text-center text-danger mb-4">
-          <img src="/src/images/logo-pochoclos.png" alt="20x" srcset="" className="mt-0" />
-          <h1 className="fw-bold mt-0 ">Inicia sesión en Películas Pochoclos</h1>
+          <h1 className="fw-bold mt-0" style={{ fontSize: '18px' }}>¡Bienvenido a tu cine en casa!</h1>
+          <h2 style={{ fontSize: '16px', color: '#151931', marginTop: '14px' }}>Por favor, iniciá sesión para disfruta de tus series y películas favoritas.</h2>
           {error && <Alert variant="danger">{error}</Alert>}
         </div>
 
@@ -83,17 +89,18 @@ function LoginForm() {
           </Form.Group>
 
           <div className="d-flex flex-column align-items-center">
-            <Button type="submit" variant="primary" className="col-md-6 mb-3 btn btn-primary" onClick={handleSubmit}>
+            <Button type="submit" style={{ backgroundColor: '#D90429', borderColor: '#D90429' }} className="col-md-6 mb-3">
               Iniciar Sesión
             </Button>
-            <Button variant="danger" className="col-md-6" onClick={handleGoogleLogin}>
+            <Button style={{ backgroundColor: '#D90429', borderColor: '#D90429', width: '100%' }} onClick={handleGoogleLogin}>
               <FontAwesomeIcon icon={faGoogle} size="lg" /> Inicia sesión con Google
             </Button>
           </div>
         </Form>
-      </div>
+      </Card>
     </Container>
   );
 }
 
 export default LoginForm;
+
