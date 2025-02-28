@@ -12,8 +12,8 @@ function NavBar() {
       <Container fluid>
         {/* Logo y marca */}
         <Navbar.Brand>
-          <Link to="/" className="navbar-brand">
-            <img src="/Logo-Pochoclos.png" alt="Logo Pochoclos" className="img  ms-2" />
+          <Link className="navbar-brand">
+            <img src="public\logo-pochoclos.png" alt="Logo Pochoclos" className="img  ms-2" />
           </Link>
         </Navbar.Brand>
 
@@ -26,7 +26,7 @@ function NavBar() {
 
         {/* Menú de navegación */}
         <Nav className="d-none d-md-flex me-auto justify-content-start w-100 fw-bold align-items-end mt-3 fs-5">
-          <Nav.Link href="/" className="active text-uppercase">Inicio</Nav.Link>
+          <Nav.Link href="/home" className="active text-uppercase">Inicio</Nav.Link>
           <Nav.Link href="/peliculas" className="text-uppercase">Buscar</Nav.Link>
           <Nav.Link href="/favoritos" className="text-uppercase">Favoritos</Nav.Link>
         </Nav>
@@ -49,11 +49,11 @@ function NavBar() {
                   <img src="/Perfil.png" alt="Imagen de perfil" />
                 </figure>
               </div>
-              <Link className="dropdown-item" to="/perfil">Perfil</Link>
+              <Link className="dropdown-item" to="/profile">Perfil</Link>
               <Link className="dropdown-item" to="/ajustes">Ajustes</Link>
-              <Link className="dropdown-item" to="/suscripcion">Suscripción</Link>
+              <Link className="dropdown-item" to="/registro">Suscripción</Link>
               <Link className="dropdown-item" to="/contacto">Contáctanos</Link>
-              <Link className="dropdown-item" to="/logout">Cerrar Sesión</Link>
+              <Link className="dropdown-item" to="/">Cerrar Sesión</Link>
               <Link className="dropdown-item" to="/admin">Administración</Link>
             </div>
           )}

@@ -1,0 +1,10 @@
+.grilla-peliculas{
+    padding-bottom: 25px;
+    padding-top: 25px;
+    background-color: var(--colorAzul);
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
