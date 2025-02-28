@@ -1,0 +1,54 @@
+.btnDelete{
+    background-color: #c00404; /* Azul Bootstrap */
+    color: white;
+    padding: 3px 3px;
+    border-radius: 100%; /* Bordes redondeados */
+    cursor: pointer;
+    margin: 5px;
+    position: relative;
+}
+
+.btnDelete:hover{
+    background-color: #ff0000; /* Azul Bootstrap */
+}
+
+.btnDelete::after , .btnEdit::after , .btnDone::after {
+    content: "Eliminar";
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    color: rgb(85, 85, 85);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    top: -30px; /* Lo posiciona arriba del botón */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* Oculto por defecto */
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .btnDelete:hover::after , .btnEdit:hover::after, .btnDone:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+.btnEdit , .btnDone{
+    background-color: white; /* Azul Bootstrap */
+    color: white;
+    padding: 3px 3px;
+    border-radius: 100%; /* Bordes redondeados */
+    cursor: pointer;
+    margin: 5px;
+    position: relative;
+}
+
+.btnEdit::after {
+    content: "Editar";
+  }
+.btnDone::after {
+    content: "Favorito";
+  }
+
+  

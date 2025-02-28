@@ -11,7 +11,7 @@ function HeaderAdmin() {
                 <h2 className='col-8 '>LISTA DE PELICULAS</h2>
                 <button className='col-4 btnNewMovie'>NUEVA PELICULA</button>
             </div>
-        </div>
+    </div>
   )
 }
 
