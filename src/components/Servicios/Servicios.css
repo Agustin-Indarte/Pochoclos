@@ -1,111 +1,130 @@
-.seccion-peliculas {
+.seccion-Estrenos {
     background-color: var(--colorAzulOscuro);
     color: white;
     padding: 40px 0;
   }
   
-  .seccion-peliculas h2 {
+  .seccion-Estrenos h2 {
+    text-align: left;
     font-size: 2rem;
     font-weight: bold;
     color: var(--colorRojo);
     margin-bottom: 20px;
   }
   
-  .seccion-peliculas p {
+  .seccion-Estrenos p {
     font-size: 1.2rem;
+
   }
 
   .img-familia{
-    width: 750px;
-
+    width: 710px;
+    margin-left: 40px;
   }
   
-  .swiper-slide img {
+  .mySwiper-estrenos .swiper-slide img {
     max-height: 350px;
     object-fit: contain;
   }
   
-  .seccion-peliculas .align-items-center {
+  .seccion-Estrenos .align-items-center {
     align-items: center;
   }
   
-  .seccion-peliculas .col-md-6:first-child {
+  .seccion-Estrenos .col-md-6:first-child {
     padding-right: 20px;
   }
   
-  .swiper-container {
+  .mySwiper-estrenos .swiper-container {
     width: 100%;
   }
   
-  .swiper-slide {
+  .mySwiper-estrenos .swiper-slide {
     text-align: center;
   }
   
-  .swiper-slide img {
+  .mySwiper-estrenos .swiper-slide img {
     width: auto;
     height: auto;
     object-fit: fill;
   }
 
+  .mySwiper-estrenos .swiper-button-next {
+    margin-right: -1%;
+    height: 250px;
+    color: var(--colorRojoOscuro) ;
+    font-weight: bolder;
+    top: 5rem;
+    z-index: 1;
+  }
   
+  .mySwiper-estrenos .swiper-button-prev {
+    margin-left: -1%;
+    height: 250px;
+    color: var(--colorRojoOscuro) ;
+    font-weight: bolder;
+    top: 5rem;
+    z-index: 1;
+  }
+
 
   @media (max-width: 768px) {
-    .seccion-peliculas {
+    .seccion-Estrenos {
       padding: 30px 0;
     }
   
-    .seccion-peliculas h2 {
+    .seccion-Estrenos h2 {
       font-size: 1.8rem;
       margin-bottom: 15px;
     }
   
-    .seccion-peliculas p {
+    .seccion-Estrenos p {
       font-size: 0.9rem;
     }
   
-    .seccion-peliculas .col-md-6 {
+    .seccion-Estrenos .col-md-6 {
       text-align: center;
       padding: 0 15px;
     }
   
-    .seccion-peliculas .col-md-6:first-child {
+    .seccion-Estrenos .col-md-6:first-child {
       padding-right: 15px;
     }
   
-    .swiper-slide img {
+    .mySwiper-estrenos .swiper-slide img {
       max-height: 200px;
     }
   }
   
   @media (max-width: 576px) {
-    .seccion-peliculas {
+    .seccion-Estrenos {
       padding: 20px 0;
     }
   
-    .seccion-peliculas h2 {
+    .seccion-Estrenos h2 {
       font-size: 1.5rem;
       margin-bottom: 10px;
     }
   
-    .seccion-peliculas p {
+    .seccion-Estrenos p {
       font-size: 0.85rem;
     }
   
-    .swiper-slide img {
+    .mySwiper-estrenos .swiper-slide img {
       max-height: 150px;
     }
   }
   
   @media (max-width: 480px) {
-    .seccion-peliculas {
+    .seccion-Estrenos {
       padding: 15px 0;
     }
   
-    .seccion-peliculas h2 {
+    .seccion-Estrenos h2 {
       font-size: 1.3rem;
     }
   
-    .swiper-slide img {
+    .mySwiper-estrenos .swiper-slide img {
       max-height: 100px;
     }
   }

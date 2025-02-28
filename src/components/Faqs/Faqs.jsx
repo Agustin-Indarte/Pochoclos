@@ -37,6 +37,18 @@ function PreguntasFrecuentes() {
             <p>Podrás utilizar Pochoclos en tu dispositivo móvil, navegador web, consola de videojuegos, decodificador y Smart TV.</p>
           </Accordion.Body>
         </Accordion.Item>
+        <Accordion.Item eventKey="3">
+          <Accordion.Header>¿Dónde puedo ver?</Accordion.Header>
+          <Accordion.Body>
+            <p>Podrás utilizar Pochoclos en tu dispositivo móvil, navegador web, consola de videojuegos, decodificador y Smart TV.</p>
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="4">
+          <Accordion.Header>¿Dónde puedo ver?</Accordion.Header>
+          <Accordion.Body>
+            <p>Podrás utilizar Pochoclos en tu dispositivo móvil, navegador web, consola de videojuegos, decodificador y Smart TV.</p>
+          </Accordion.Body>
+        </Accordion.Item>
       </Accordion>
     </div>
   );

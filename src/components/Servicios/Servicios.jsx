@@ -29,7 +29,7 @@ function SeccionPeliculas() {
   }, [API_KEY]);
 
   return (
-    <div className="seccion-peliculas">
+    <div className="seccion-Estrenos">
       <Container>
         <Row className="align-items-center">
           <Col md={6}>
@@ -63,7 +63,7 @@ function SeccionPeliculas() {
                     1280: { slidesPerView: 4 }, 
                 }}
                 modules={[Pagination, Navigation]}
-                className="mySwiper"
+                className="mySwiper-estrenos"
             >
                 {peliculas.map((pelicula) => (
                     <SwiperSlide key={pelicula.id}>

@@ -1,44 +1,56 @@
   .acordion{
     background-color: var(--colorAzul);
+    min-height: 70vh;
+    max-height: 100vh;
+    padding-top: 50px;
   }
   
   .preguntas-frecuentes {
     margin: 0 auto;
     width: 60%;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding-bottom: 30px;
   }
   
-  h2 {
-    padding-top: 20px;
+  .acordion h2 {
     text-align: center;
-    color: var(--colorRojoOscuro); 
+    padding-top: 0;
+    color: var(--colorRojo);
+    font-weight: bolder;
   }
   
   .accordion-button {
     font-size: x-large;
-    background-color: rgb(133, 133, 133); 
-    color: var(--colorBeige);
     border: none;
-    padding: 15px;
     font-weight: bold;
+    background-color: var(--colorGris);
   }
   
   .accordion-button:not(.collapsed) {
-    background-color: rgb(133, 133, 133);
-    color: var(--colorBeige);
     box-shadow: none ;
   }
   
   .accordion-body {
     font-size: large;
     font-weight: 500;
-    background-color: rgb(133, 133, 133);
   }
+
+
   
   .accordion-body li {
     margin-bottom: 8px;
   }
+
+  .accordion-header {
+    background-color: var(--colorAzul);
+    border: 1px solid var(--colorAzul);
+  
+  }
+
+  /* Elimina el borde blanco alrededor del acordeón */
+.acordion .accordion-item {
+  border: none;
+ 
+}
 
 
   /* Media queries para pantallas más pequeñas */

@@ -1,9 +1,12 @@
 import React, {useState,useEffect} from 'react'
 import "./BannerInicio.css"
 import { Container, Button } from 'react-bootstrap'
+import { useNavigate } from "react-router-dom"
 
+const BannerInicio=()=> {
+  
+  const navigate=useNavigate()
 
-function BannerInicio() {
   /* Definimos el estado del video */
   const [videoSrc, setVideoSrc] = useState("/VideoPochoclos.mp4");
   /* Funcion que identifica el tamaño de la pantalla y establece un video o el otro */
@@ -33,10 +36,10 @@ function BannerInicio() {
         </div>
         <div className='Botones-BannerInicio'>
           <div>
-          <Button className='btn btn-suscribirse-inicio'>
+          <Button className='btn btn-suscribirse-inicio' onClick={() => navigate("/registro")}>
             Suscribirse
           </Button>
-          <Button className='btn btn-sesion-inicio'>
+          <Button className='btn btn-sesion-inicio'onClick={() => navigate("/login")}>
             Iniciar Sesión
           </Button>
           </div>

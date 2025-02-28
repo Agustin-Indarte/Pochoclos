@@ -1,6 +1,7 @@
 /* Fondo azul para toda la sección de categorías */
 .contenedor-categorias {
     padding-top: 2%;
+    background-color: var(--colorAzul);
 }
 
 /* Título alineado a la izquierda, en rojo */
@@ -14,14 +15,14 @@
 }
 
 /* Ajustes del carrusel */
-.mySwiper { 
+.mySwiper-Categorias { 
     margin-left: 3%;
     padding: 15px 30px;
 }
 
 
 /* Ajustar imágenes */
-/* .img-peliculas {
+.img-peliculas {
     margin-inline: 2%;
     object-fit: cover;
     width: 90%;
@@ -32,29 +33,29 @@
 } */
 
 /* Agrandar la imagen y le da un sombra al posicionar el cursor encima */
-/* .img-peliculas:hover{
+ .img-peliculas:hover{
     transform: scale(1.06);
     transition: all 1s;
     box-shadow: 3px 2px 15px -1px var(--colorRojo);
     cursor: pointer;
-} */
+} 
 
 /* Botones de anterior y siguiente del Swiper */
-.swiper-button-prev{
+.mySwiper-Categorias .swiper-button-prev{
     margin-left: -0.70%;
     height: 250px;
     color: var(--colorRojoOscuro) ;
     font-weight: bolder;
-    top: 5rem;
+    top: 1rem;
     z-index: 1;
 }
 
-.swiper-button-next {
+.mySwiper-Categorias .swiper-button-next {
     margin-right: 1%;
     height: 250px;
     color: var(--colorRojoOscuro) ;
     font-weight: bolder;
-    top: 5rem;
+    top: 1rem;
     z-index: 1;
 }
 

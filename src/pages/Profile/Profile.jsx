@@ -39,14 +39,14 @@ function Profile() {
   }, []);
 
   return (
-    <Container className="vh-100 d-flex flex-column justify-content-center align-items-center text-black ">
+    <Container className="Seccion-Perfiles vh-100 d-flex flex-column justify-content-center align-items-center text-black ">
   <img src="/src/images/logo-pochoclos.png" className="img-fluid mb-0" />
   <h1 className="mb-4 fw-bold text-white">¿Quién está viendo?</h1>
 
   <Row className="d-flex flex-wrap justify-content-center gap-4 bg-light rounded-2 ">
     {/* Perfil del usuario autenticado */}
     <Col xs={6} sm={4} md={3} lg="auto" className="text-center">
-      <div className="profile-circle" onClick={() => navigate ("/")} >
+      <div className="profile-circle" onClick={() => navigate ("/home")} >
         <Image
           src= "src/images/6073874.png" 
           roundedCircle

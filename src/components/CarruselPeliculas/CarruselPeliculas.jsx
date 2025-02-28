@@ -17,7 +17,7 @@ const CarruselPeliculas = ({ categoriaId, titulo }) => {
             try {
                 const respuesta = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=es&with_genres=${categoriaId}&page=1`);
                 const datos = await respuesta.json();
-                setPeliculas(datos.results);git
+                setPeliculas(datos.results);
             } catch (error) {
                 console.error('Error al obtener películas:', error);
             }
@@ -41,7 +41,7 @@ const CarruselPeliculas = ({ categoriaId, titulo }) => {
                     1280: { slidesPerView: 4 }, 
                 }}
                 modules={[Pagination, Navigation]}
-                className="mySwiper"
+                className="mySwiper-Categorias"
             >
                 {peliculas.map((pelicula) => (
                     <SwiperSlide key={pelicula.id}>

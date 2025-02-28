@@ -27,10 +27,8 @@ function NavBar() {
         {/* Menú de navegación */}
         <Nav className="d-none d-md-flex me-auto justify-content-start w-100 fw-bold align-items-end mt-3 fs-5">
           <Nav.Link href="/" className="active text-uppercase">Inicio</Nav.Link>
-          <Nav.Link href="/menu" className="text-uppercase">Buscar</Nav.Link>
-          <Nav.Link href="/about" className="text-uppercase">Pelis</Nav.Link>
-          <Nav.Link href="/contact" className="text-uppercase">Series</Nav.Link>
-          <Nav.Link href="/contact" className="text-uppercase">Favoritos</Nav.Link>
+          <Nav.Link href="/peliculas" className="text-uppercase">Buscar</Nav.Link>
+          <Nav.Link href="/favoritos" className="text-uppercase">Favoritos</Nav.Link>
         </Nav>
 
         {/* Menú de perfil */}
