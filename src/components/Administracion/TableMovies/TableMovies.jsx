@@ -4,7 +4,7 @@ import ButtonsActions from '../ButtonsActions/ButtonsActions';
 
 function TableMovies({movies,onDeleteMovie,onToggleDone, onTogglePublished}) {
   return (
-    <div className='container align-items-center justify-content-center'>
+    <div className='container'>
          <table className='tableMovies'>
             <thead>
             <tr>
@@ -23,9 +23,9 @@ function TableMovies({movies,onDeleteMovie,onToggleDone, onTogglePublished}) {
                     <tr key={index}>
                         <td>{index+1}</td>
                         <td>
-                        <img src={movie.imgMovie} alt={movie.name} width="100" />
+                        <img className='imgMovie' src={movie.imgMovie} alt={movie.name} width="100" />
                         </td>
-                        <td>{movie.name}</td>
+                        <td className='titleMovie'>{movie.name}</td>
                         <td>{movie.category}</td>
                         <td>{movie.description}</td>
                         <td>

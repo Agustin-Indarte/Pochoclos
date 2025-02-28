@@ -3,6 +3,7 @@
     border-collapse: collapse; /* Elimina el espacio entre las celdas */
      margin: 20px 0; /* Espaciado arriba y abajo */
      color: aliceblue;
+     text-align: center;
 }
 /* Estilos para las cabeceras */
 .tableMovies th {
@@ -10,13 +11,16 @@
     color: white; /* Color de texto blanco */
     padding: 12px 15px; /* Espaciado en las celdas */
     text-align: left; /* Alineación del texto a la izquierda */
+    text-align: center;
   }
+  
   
   /* Estilos para las celdas */
   .tableMovies td {
     padding: 12px 15px; /* Espaciado dentro de las celdas */
     text-align: left; /* Alineación del texto a la izquierda */
     border-bottom: 2px solid #ddd; /* Línea divisoria entre filas */
+    text-align: center;
   }
   /* Estilos para las filas impares */
   .tableMovies tr:nth-child(odd) {
@@ -24,7 +28,7 @@
   }
   /* Estilos para las filas pares */
   .tableMovies tr:nth-child(even) {
-    background-color: #6b676c; /* Un tono más claro para las filas pares */
+    background-color: #545255; /* Un tono más claro para las filas pares */
   }
   
   /* Cambiar color de las filas al pasar el ratón */
@@ -32,7 +36,6 @@
     background-color:  #131523;; /* Color de fondo cuando el ratón pasa por encima */
   }
   
-
   .checkboxTable {
     position: relative;
     width: 30px;
@@ -56,4 +59,16 @@
     transform: translate(-50%, -60%);
     font-size: 20px;
     font-weight: bold;
+  }
+
+  .imgMovie{
+      width: 100px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  }
+  .titleMovie{
+    font-weight: bold;
+    text-transform: uppercase;
   }
