@@ -1,0 +1,59 @@
+.tabla {
+  background-color: var(--colorAzul);
+  height: 80vh;
+  padding-top: 50px;
+}
+
+.planes-pochocleros {
+  width: 75%;
+  margin: 20px auto;
+  padding: 20px;
+  color: white;
+}
+
+h2 {
+  padding-top: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+
+
+.planes-pochocleros th,
+.planes-pochocleros td {
+  text-align: left;
+  vertical-align: middle;
+}
+
+.planes-pochocleros th {
+  color: var(--colorBeige);
+  font-size: x-large;
+  background-color: var(--colorAzul);
+}
+
+.planes-pochocleros thead tr th:nth-child(2),
+.planes-pochocleros thead tr th:nth-child(3) {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8%;
+}
+
+.planes-pochocleros th:nth-child(2),
+.planes-pochocleros th:nth-child(3),
+.planes-pochocleros td:nth-child(2),
+.planes-pochocleros td:nth-child(3) {
+  text-align: center;
+  color: white;
+}
+
+.planes-pochocleros tbody tr:last-child td {
+  font-weight: bold;
+}
+
+.planes-pochocleros td {
+  color: var(--colorBeige);
+  font-size: large;
+  background-color: var(--colorAzul);
+}

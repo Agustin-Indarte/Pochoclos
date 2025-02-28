@@ -1,42 +1,28 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Login from "./pages/Login/Login"
-import Home from "./pages/Home/Home";
-import Registro from "./pages/Registro/Registro"
-import  RutaProtegida  from "./components/RutaProtegida/RutaProtegida";
-import Profile from "./pages/Profile/Profile";
-
-
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {Home,Inicio,Login,Registro,Profile} from "./pages"
+import RutaProtegida from "./components/RutaProtegida/RutaProtegida";
 
 
 function App() {
-  
-
   return (
-    <Router>
-         <Routes>
-        { /*RUTAS PUBLICAS */}
-        <Route path="/" element = {<Home/>} />
-        <Route  path="/register" element = {<Registro/>}/>
-        <Route path="login" element = {<Login/>} />
+    
+     /*  <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/register" element={<Registro />} />
+        <Route path="login" element={<Login />} />
+        <Route
+          path="/profile"
+          element={
+            <RutaProtegida>
+              <Profile />
+            </RutaProtegida>
 
-
-         <Route
-         path="/profile"
-         element= {
-          <RutaProtegida>
-            <Profile/>
-          </RutaProtegida>
-
-         }
-         />
-
-         </Routes>
-
-
-    </Router>
+          }
+        />
+      </Routes> */
+    <Inicio></Inicio>
   )
 }
 

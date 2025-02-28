@@ -1,1 +1,30 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
 
+
+:root{
+    --colorAzul:#151931 ;
+    --colorAzulOscuro: #131523;
+    --colorRojo: #D90429;
+    --colorRojoOscuro : #AC011F;
+    --colorBeige : #ECD9C1;
+    --colorGris : #CFCFCF;
+}
+
+/* SCROLL */
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: black;
+}
+
+::-webkit-scrollbar-thumb{
+  
+    background-image: linear-gradient(#D90429, #c20225,#79051b);
+    border-radius: 0.2em;
+}

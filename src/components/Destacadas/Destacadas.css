@@ -1,0 +1,254 @@
+/* Ajustes generales del carrusel */
+.CarouselDestacadas{
+    margin-top: 100px;
+} /* Para que el componente quede debajo del navbar */
+
+.CarouselDestacadas-container{
+    width: 100vw;
+}
+
+.itemCarouselDestacadas{
+    height: 87vh;
+}
+
+/* Estilos del la imagen de fondo */
+.peliculaFondo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    filter: brightness(80%);
+}
+
+/* Detalles de la pelicula */
+.DetallesPeliculas {
+    position: absolute;
+    left: 5%; /* Ajusta según necesidad */
+    bottom: 20%;
+    text-align: left; /* Alinea todo a la izquierda */
+    max-width: 40%; /* Controla el ancho */
+}
+
+.DetallesPeliculas h2{
+    font-size: 3rem;
+    color: var(--colorBeige);
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    width: 71%;
+}
+
+
+.rating, .categoria{
+    background-color: rgba(172, 171, 171, 0.591);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid whitesmoke;
+    color: black;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.contenedor-detalles {
+    display: flex;
+    flex-direction: column;
+    align-items: start; /* Alinea todo al inicio (izquierda) */
+    width: fit-content; /* Ajusta el ancho según el contenido */
+}
+
+.info-detalles {
+    display: flex;
+    gap: 10px; /* Espaciado entre el rating y las categorías */
+}
+
+/* Boton ver Trailer */
+.btn-verTrailer{
+    width: 95%;
+    background-color: rgba(172, 1, 32, 0.5);
+    border: solid 1px white;
+    padding: 10px 20 px;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3 ease;
+    margin-top: 20px;
+}
+
+.btn-verTrailer:hover{
+    background-color: var(--colorRojo);
+    border: solid 1px white;
+}
+
+
+
+
+/* Estilos de controles del carrusel */
+/* Botones de anterior y siguiente del Swiper */
+/* Controles del carrusel */
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+    filter: invert(75%) sepia(100%) saturate(5000%) hue-rotate(350deg) brightness(95%) contrast(130%);
+}
+
+
+.carousel-indicators [data-bs-target] {
+    width: 5%;
+    margin-bottom: 1%;
+    margin-inline: 5px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-indicators .active {
+    width: 7%; /* Tamaño más grande */ 
+    background-color: var(--colorRojoOscuro); /* Color personalizado */
+}
+
+
+/* Ajuste general del carrusel */
+.CarouselDestacadas {
+    margin-top: 100px;
+}
+
+.CarouselDestacadas-container {
+    width: 100vw;
+}
+
+.itemCarouselDestacadas {
+    height: 87vh;
+}
+
+/* Imagen de fondo de la película */
+.peliculaFondo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    filter: brightness(80%);
+}
+
+/* Detalles de la película */
+.DetallesPeliculas {
+    position: absolute;
+    left: 5%;
+    bottom: 20%;
+    max-width: 40%;
+}
+
+.DetallesPeliculas h2 {
+    font-size: 3rem;
+    color: var(--colorBeige);
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    width: 71%;
+}
+
+
+/* Estilos de la información adicional */
+.rating, .categoria {
+    background-color: rgba(172, 171, 171, 0.591);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid whitesmoke;
+    color: black;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.contenedor-detalles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+}
+
+.info-detalles {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .CarouselDestacadas{
+        margin-top: 50px;
+    } 
+    .itemCarouselDestacadas{
+        height: 50vh;
+    }
+    .DetallesPeliculas {
+        left: 8%;
+        bottom: 15%;
+        max-width: 40%;
+    }
+    
+    .DetallesPeliculas h2 {
+        font-size: 1.3rem;
+    }
+
+    .DetallesPeliculas p {
+        font-size: .7rem;
+    }
+
+    .rating, .categoria {
+        padding: 2px;
+        border-radius: 5px;
+        margin-right: 5px;
+    }
+
+    .btn-verTrailer{
+        font-size: 1.2rem;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .CarouselDestacadas{
+        margin-top: 50px;
+    } 
+    
+    .itemCarouselDestacadas{
+        height: 95vh;
+    }
+
+    .DetallesPeliculas h2,.DetallesPeliculas p,  /* Oculta el párrafo */
+    .info-detalles {        /* Oculta rating y categoría */
+        display: none;
+    }
+
+    .btn-verTrailer {
+        width: 100%;
+        margin-bottom: 27vh;
+        margin-left: 20vw;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        margin-inline: 3%;
+        width: 10%;
+    }
+    
+    .carousel-indicators [data-bs-target] {
+  
+        width: 15%;
+        background-color: rgba(255, 255, 255, 0.771);
+    }
+    
+    .carousel-indicators .active {
+        width: 20%;
+        background-color: var(--colorRojoOscuro);
+    }
+}
+
+
+
+
+
+
+
+
+
+
