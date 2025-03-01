@@ -20,18 +20,19 @@ const ModalPage = () => {
   // Configuración de Formik con Yup  
   const formik = useFormik({  
     initialValues: {  
-      code: '',  
+      id: '',  
       name: '',  
       description: '',  
       category: 'action',  
       published: false,  
-      imgMovies: '', // Cambiado de 'url' a 'imgMovies'  
+      imgMovie: '', 
+      favorite: 'false',
     },  
     validationSchema: Yup.object({  
-      code: Yup.string().required('El código es obligatorio'),  
+      id: Yup.string().required('El código es obligatorio'),  
       name: Yup.string().required('El nombre es obligatorio'),  
       description: Yup.string().required('La descripción es obligatoria'),  
-      imgMovies: Yup.string().url('Ingrese una URL válida').required('La URL de la imagen es obligatoria'), // Validación para imgMovies  
+      imgMovie: Yup.string().url('Ingrese una URL válida').required('La URL de la imagen es obligatoria'), // Validación para imgMovies  
     }),  
     onSubmit: (values) => {  
       addMoviesToLocalStorage(values); // Agrega la película al localStorage  
@@ -40,6 +41,8 @@ const ModalPage = () => {
       formik.resetForm(); // Resetea el formulario después del envío  
     },  
   });  
+ 
+
 
   return (  
     <>  
@@ -55,18 +58,18 @@ const ModalPage = () => {
           <form onSubmit={formik.handleSubmit}>  
             <Row>   
               <Col md={6}>  
-                <label htmlFor="code">Código:</label>  
+                <label htmlFor="id">Código:</label>  
                 <input  
                   type="text"  
-                  id="code"  
-                  name="code"  
+                  id="id"  
+                  name="id"  
                   className="form-control"  
-                  value={formik.values.code}  
+                  value={formik.values.id}  
                   onChange={formik.handleChange}  
                   onBlur={formik.handleBlur}  
                 />  
-                {formik.touched.code && formik.errors.code ? (  
-                  <div className="text-danger">{formik.errors.code}</div>  
+                {formik.touched.id && formik.errors.id ? (  
+                  <div className="text-danger">{formik.errors.id}</div>  
                 ) : null}  
               </Col>  
               <Col md={6} className="d-flex align-items-center justify-content-start">   
@@ -119,18 +122,18 @@ const ModalPage = () => {
             {/* Nuevo campo para imgMovies */}  
             <Row className="mt-3">  
               <Col>  
-                <label htmlFor="imgMovies">URL de Imagen:</label>  
+                <label htmlFor="imgMovie">URL de Imagen:</label>  
                 <input  
                   type="text"  
-                  id="imgMovies"  
-                  name="imgMovies"  
+                  id="imgMovie"  
+                  name="imgMovie"  
                   className="form-control"  
-                  value={formik.values.imgMovies}  
+                  value={formik.values.imgMovie}  
                   onChange={formik.handleChange}  
                   onBlur={formik.handleBlur}  
                 />  
-                {formik.touched.imgMovies && formik.errors.imgMovies ? (  
-                  <div className="text-danger">{formik.errors.imgMovies}</div>  
+                {formik.touched.imgMovie && formik.errors.imgMovie ? (  
+                  <div className="text-danger">{formik.errors.imgMovie}</div>  
                 ) : null}  
               </Col>  
             </Row>  

@@ -1,0 +1,24 @@
+.contenedorHeader h1{
+    color: #D90429;
+}
+.contenedorHeader h2{
+    color: #ECD9C1;
+}
+.btnNewMovie {
+    width: 190px; /* Ancho del botón */
+    height: 50px; /* Alto del botón */
+    background-color:  #AC011F; 
+    color: white; 
+    text-align: center; 
+    font-size: 18px; 
+    font-weight: bold;
+    border-radius: 8px; 
+    border: none; 
+    cursor: pointer; /
+  }
+  
+  .btnNewMovie:hover {
+    background-color: #D90429; 
+    color:  #131523; 
+    border: 2px solid white;
+  }
