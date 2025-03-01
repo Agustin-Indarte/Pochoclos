@@ -94,9 +94,14 @@ function LoginForm() {
               <FontAwesomeIcon icon={faGoogle} size="lg" /> Inicia sesión con Google
             </Button>
           </div>
+          <div className="mt-2">
+                <a href="/registro" className="fw-bold mt-5 text-center">¡¡si no tenes cuenta registrate aca!! </a>
+          </div>
         </Form>
       </Card>
+      
     </Container>
+    
   );
 }
 
