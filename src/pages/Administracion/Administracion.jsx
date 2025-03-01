@@ -53,7 +53,7 @@ function Administracion() {
             onDeleteMovie={onDeleteMovie}
             onToggleDone={onToggleDone}
             onTogglePublished={onTogglePublished} 
-          />
+          />       
         </>
         
   )
