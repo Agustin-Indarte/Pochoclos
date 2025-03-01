@@ -46,7 +46,7 @@ const SignUpForm  = () => {
       });
 
       resetForm(); 
-      navigate('/profile'); 
+      navigate('/login'); 
 
     } catch (error) {
       console.error("Error al suscribirse:", error);
