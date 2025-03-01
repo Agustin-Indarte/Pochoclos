@@ -1,0 +1,28 @@
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--colorAzulOscuro);
+    border-top: 1px solid var(--colorRojo);
+}
+
+.footer p{
+   color: white;
+   margin-bottom: 0;
+}
+
+.img-footer{
+    margin-left: 1.5%;
+    margin-block: 5px;
+    height: 35px;
+    width: auto;
+}
+
+
+.redes a{
+   color: white;
+   margin-inline: 10px;
+   font-size: 1.2rem;
+   margin-right: 25px;
+}

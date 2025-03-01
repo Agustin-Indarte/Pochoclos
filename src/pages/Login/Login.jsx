@@ -6,7 +6,7 @@ const Login = () => {
     return (
         <div className="login-page">
             <div className="login-content">
-                <img src="/logo-pochoclos.png" alt="Logo" className="logo" />
+                <img src="public\Logo-Pochoclos.png" alt="Logo" className="logo" />
                 <LoginForm/>
             </div>
         </div>

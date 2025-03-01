@@ -60,16 +60,15 @@ function LoginForm() {
         paddingTop: '20px' // Ajusta el margen superior
       }}
     >
-      <Card style={{ backgroundColor: "#CFCFCF", width: '300px', height: '450px' }} className="p-4 rounded">
-        <div className="text-center text-danger mb-4">
+      <Card style={{ backgroundColor: "#CFCFCF", width: '400px', height: '400px' }} className="p-4 rounded">
+        <div className="text-center text-danger">
           <h1 className="fw-bold mt-0" style={{ fontSize: '18px' }}>¡Bienvenido a tu cine en casa!</h1>
-          <h2 style={{ fontSize: '16px', color: '#151931', marginTop: '14px' }}>Por favor, iniciá sesión para disfruta de tus series y películas favoritas.</h2>
+          <h2 style={{ fontSize: '16px', color: '#151931' }}>Iniciá sesión y disfrutá de tus series y películas favoritas en cualquier momento. Prepará algo rico, acomodate y sumergite en el mejor entretenimiento desde tu hogar.</h2>
           {error && <Alert variant="danger">{error}</Alert>}
         </div>
 
         <Form id="form-login" onSubmit={handleSubmit(handleLogin)} className="text-center mt-0">
-          <Form.Group className="">
-            <Form.Label className="text-white fw-bold">Correo Electrónico</Form.Label>
+          <Form.Group className="mb-2">
             <Form.Control
               type="email"
               placeholder="Ingrese su correo"
@@ -79,7 +78,6 @@ function LoginForm() {
           </Form.Group>
 
           <Form.Group className="mb-3">
-            <Form.Label className="text-white fw-bold">Contraseña</Form.Label>
             <Form.Control
               type="password"
               placeholder="Ingrese su contraseña"
@@ -89,7 +87,7 @@ function LoginForm() {
           </Form.Group>
 
           <div className="d-flex flex-column align-items-center">
-            <Button type="submit" style={{ backgroundColor: '#D90429', borderColor: '#D90429' }} className="col-md-6 mb-3">
+            <Button type="submit" style={{ backgroundColor: '#D90429', borderColor: '#D90429', width: '100%' }} className="col-md-6 mb-3">
               Iniciar Sesión
             </Button>
             <Button style={{ backgroundColor: '#D90429', borderColor: '#D90429', width: '100%' }} onClick={handleGoogleLogin}>

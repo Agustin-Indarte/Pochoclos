@@ -1,0 +1,74 @@
+/* Fondo azul para toda la sección de categorías */
+.contenedor-categorias {
+    padding-top: 2%;
+    background-color: var(--colorAzul);
+}
+
+/* Título alineado a la izquierda, en rojo */
+.titulo-categoria {
+    text-align: left;
+    color: var(--colorBeige);
+    font-size: 24px;
+    margin-left: 5%;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Ajustes del carrusel */
+.mySwiper-Categorias { 
+    margin-left: 3%;
+    padding: 15px 30px;
+}
+
+
+/* Ajustar imágenes */
+.img-peliculas {
+    margin-inline: 2%;
+    object-fit: cover;
+    width: 90%;
+    height: 180px;
+    border-radius: 10px;
+    border: 0.2rem white solid;
+    transition: filter 1s;
+} */
+
+/* Agrandar la imagen y le da un sombra al posicionar el cursor encima */
+ .img-peliculas:hover{
+    transform: scale(1.06);
+    transition: all 1s;
+    box-shadow: 3px 2px 15px -1px var(--colorRojo);
+    cursor: pointer;
+} 
+
+/* Botones de anterior y siguiente del Swiper */
+.mySwiper-Categorias .swiper-button-prev{
+    margin-left: -0.70%;
+    height: 250px;
+    color: var(--colorRojoOscuro) ;
+    font-weight: bolder;
+    top: 1rem;
+    z-index: 1;
+}
+
+.mySwiper-Categorias .swiper-button-next {
+    margin-right: 1%;
+    height: 250px;
+    color: var(--colorRojoOscuro) ;
+    font-weight: bolder;
+    top: 1rem;
+    z-index: 1;
+}
+
+
+
+/* Esconder los bullets de paginación */
+.swiper-pagination-bullets {
+    display: none;
+}
+
+.titulo-peli{
+    width: 90%;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+}

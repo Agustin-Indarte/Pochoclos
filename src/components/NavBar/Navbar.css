@@ -1,0 +1,67 @@
+.custom-Navbar {
+  background-color: var(--colorAzulOscuro);
+  border-bottom: 1px solid var(--colorRojo);
+}
+
+.navbar-brand img {
+  height: 50px;
+  width: auto;
+}
+
+.custom-Navbar .nav-link,
+.custom-Navbar .nav-link.active {
+  color: var(--colorBeige);
+}
+
+.custom-Navbar .nav-link:hover,
+.custom-Navbar .nav-link.active:hover {
+  color: var(--colorRojo);
+}
+
+.Navbar-Perfil img {
+  height: 35px;
+  width: auto;
+}
+
+.dropdown-menu-custom {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: var(--colorAzulOscuro);
+  border-left: 1px solid var(--colorBeige);
+  border-bottom: 1px solid var(--colorBeige);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+  width: 180px;
+}
+
+.dropdown-menu-custom .dropdown-item {
+  color: var(--colorBeige);
+  padding: 10px 15px;
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dropdown-menu-custom .dropdown-item {
+  border-bottom: 1px solid var(--colorBeige); /* Línea divisoria */
+  width: 80%; /* No ocupa todo el ancho */
+  margin: 0 auto; /* Centrar la línea */
+  text-align: right;
+}
+
+.dropdown-menu-custom .dropdown-item:hover {
+  color:var(--colorRojo);
+}
+
+
+
+
+
+
+
+
+

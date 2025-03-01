@@ -1,18 +1,32 @@
+.seccion-perfil{
+background-color: var(--colorAzul);
+}
+
+.seccion-perfil h2{
+  color: var(--colorBeige);
+}
+
 .profile-circle {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--colorGris);
+}
+
+.añadir-img, .niños-img {
+  height: 150px;
+  width: auto;
+  object-fit: cover;
 }
 
 .profile-img {
-  width: 100%;
-  height: 100%;
+  height: 110px;
+  width: auto;
   object-fit: cover;
-  border-radius: 50%; /* Asegura que la imagen sea redonda */
 }
 
 .icon-circle {

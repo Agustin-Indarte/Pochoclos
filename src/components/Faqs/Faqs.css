@@ -1,0 +1,92 @@
+  .acordion{
+    background-color: var(--colorAzul);
+    min-height: 70vh;
+    max-height: 100vh;
+    padding-top: 50px;
+  }
+  
+  .preguntas-frecuentes {
+    margin: 0 auto;
+    width: 60%;
+    padding-bottom: 30px;
+  }
+  
+  .acordion h2 {
+    text-align: center;
+    padding-top: 0;
+    color: var(--colorRojo);
+    font-weight: bolder;
+  }
+  
+  .accordion-button {
+    font-size: x-large;
+    border: none;
+    font-weight: bold;
+    background-color: var(--colorGris);
+  }
+  
+  .accordion-button:not(.collapsed) {
+    box-shadow: none ;
+  }
+  
+  .accordion-body {
+    font-size: large;
+    font-weight: 500;
+  }
+
+
+  
+  .accordion-body li {
+    margin-bottom: 8px;
+  }
+
+  .accordion-header {
+    background-color: var(--colorAzul);
+    border: 1px solid var(--colorAzul);
+  
+  }
+
+  /* Elimina el borde blanco alrededor del acordeón */
+.acordion .accordion-item {
+  border: none;
+ 
+}
+
+
+  /* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .preguntas-frecuentes {
+      width: 95%; 
+      padding: 15px;
+    }
+  
+    .preguntas-frecuentes h2 {
+      font-size: 1.5rem; 
+      margin-bottom: 15px;
+    }
+  
+    .accordion-button {
+      padding: 10px;
+      font-size: 1rem; 
+    }
+  
+    .accordion-body {
+      padding: 10px;
+    }
+  }
+  
+  /* Media queries para pantallas aún más pequeñas */
+  @media (max-width: 480px) {
+    .preguntas-frecuentes {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .preguntas-frecuentes h2 {
+      font-size: 1.3rem;
+    }
+  
+    .accordion-button {
+      font-size: 1rem;
+    }
+  }

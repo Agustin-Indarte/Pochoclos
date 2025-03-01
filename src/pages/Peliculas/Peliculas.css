@@ -1,0 +1,35 @@
+.pagina-peliculas{
+    min-height: 100vh;
+    background-color: var(--colorAzul);
+    margin-top: 100px;
+}
+
+.pagina-peliculas h2{
+    padding-top: 25px;
+    color: var(--colorRojo);
+    text-align: center;
+    font-weight: bolder;
+}
+
+.buscador-container {
+    display: flex;
+    justify-content: center;  /* Centra horizontalmente */
+    align-items: center;      /* Centra verticalmente si el contenedor tiene altura */
+    margin: 20px 0;           /* Espaciado arriba y abajo */
+}
+
+.buscador-peliculas {
+    width: 50%;              /* Ajusta el tamaño según necesites */      /* Limita el tamaño en pantallas grandes */
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid var(--colorRojo);
+    border-radius: 10px;
+    text-align: center;      /* Centra el texto dentro del input */
+}
+
+.mensaje-no-encontrado{
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
+}

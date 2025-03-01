@@ -27,33 +27,30 @@ function Profile() {
   }, []);
 
   return (
-<Container className="vh-100 d-flex flex-column justify-content-center align-items-center text-black">
+<div className="seccion-perfil vh-100 d-flex flex-column justify-content-center align-items-center text-black">
   
   
+  <img src="public\logo-pochoclos.png" alt="LogoPochoclos" />
+  <h2 className="my-3 fw-bold text-white">¿Quién está viendo?</h2>
 
-  <h1 className="mb-4 fw-bold text-white">¿Quién está viendo?</h1>
-
-  <Row className="d-flex flex-wrap justify-content-center align-items-center gap-4 bg-light rounded-2 p-4">
+  <Row className="d-flex flex-wrap justify-content-center align-items-center my-2">
     
     <Col xs={6} sm={4} md={3} lg="auto" className="text-center">
-      <div className="profile-circle" onClick={() => navigate("/")}>
-        <Image
-          src="src/images/6073874.png"
-          roundedCircle
-          width={100}
-          height={100}
+      <article className="profile-circle" onClick={() => navigate("/home")}>
+        <img
+          src="public\Perfil.png"
           className="profile-img"
           alt="Mi perfil"
         />
-      </div>
-      <p className="mt-2 text-center">Mi perfil</p>
+      </article>
+      <p className="mt-2 text-center text-light fw-bold">Team2</p>
     </Col>
 
     {/* Perfiles guardados en Firestore */}
     {profiles.map((profile) => (
       <Col key={profile.id} xs={6} sm={4} md={3} lg="auto" className="text-center">
-        <div className="profile-circle" onClick={() => navigate("/")}>
-          <Image
+        <article className="profile-circle" onClick={() => navigate("/home")}>
+          <img
             src={profile.photoURL || "src/images/default-profile.png"}
             roundedCircle
             width={100}
@@ -61,44 +58,46 @@ function Profile() {
             className="profile-img"
             alt={profile.name}
           />
-        </div>
-        <p className="mt-2 text-center">{profile.name}</p>
+        </article>
+        <p className="mt-2 text-center text-light fw-bold">{profile.name}</p>
       </Col>
     ))}
 
     {/* Perfil de niños */}
     <Col xs={6} sm={4} md={3} lg="auto" className="text-center">
-      <div className="profile-circle add-profile" onClick={() => navigate("/add-profile")}>
-        <div className="icon-circle">
-          <img src="src/images/15371680.png" alt="Niños" className="profile-img" />
-        </div>
-      </div>
-      <p className="mt-2 text-center">Niños</p>
+      <article className="profile-circle add-profile" onClick={() => navigate("/add-profile")}>
+        
+        <img
+          src="src/images/15371680.png"
+          className="niños-img"
+          alt="Niños"
+        />
+  
+      </article>
+      <p className="mt-2 text-center text-light fw-bold">Niños</p>
     </Col>
 
     {/* Botón para agregar un nuevo perfil */}
     <Col xs={6} sm={4} md={3} lg="auto" className="text-center">
-      <div className="profile-circle add-profile" onClick={() => navigate("/add-profile")}>
-        <div className="icon-circle">
-          <img src="src/images/1177577.png" alt="Añadir perfil" className="profile-img" />
-        </div>
-      </div>
-      <p className="mt-2 text-center">Añadir perfil</p>
+      <article className="profile-circle add-profile" onClick={() => navigate("/add-profile")}>
+          <img src="src/images/1177577.png" alt="Añadir perfil" className="añadir-img" />
+      </article>
+      <p className="mt-2 text-center text-light fw-bold">Añadir perfil</p>
     </Col>
   </Row>
 
   {/* Botón de Cerrar Sesión */}
   <Button
     variant="danger"
-    className="mt-4"
+    className="mt-2"
     onClick={async () => {
       await signOut(auth);
-      navigate("/Login");
+      navigate("/");
     }}
   >
     Cerrar Sesión
   </Button>
-</Container>
+</div>
  );
 }
 
