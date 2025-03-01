@@ -2,6 +2,7 @@
 import React from 'react';  
 import ModalPage from './pages/Modalagregarpelicula/modal';  
 
+
 const App = () => {  
   return (  
     <div>  
