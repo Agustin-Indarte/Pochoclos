@@ -22,7 +22,7 @@
     font-size: x-large;
     border: none;
     font-weight: bold;
-    background-color: var(--colorGris);
+    background-color: whitesmoke;
   }
   
   .accordion-button:not(.collapsed) {
@@ -42,8 +42,7 @@
 
   .accordion-header {
     background-color: var(--colorAzul);
-    border: 1px solid var(--colorAzul);
-  
+    border: 1px solid var(--colorAzul);  
   }
 
   /* Elimina el borde blanco alrededor del acordeón */
@@ -55,38 +54,34 @@
 
   /* Media queries para pantallas más pequeñas */
 @media (max-width: 768px) {
+  .acordion{
+    padding-top: 90px;
+  }
+
     .preguntas-frecuentes {
-      width: 95%; 
-      padding: 15px;
+      margin-top: 10px;
+      width: 90%; 
+      padding: 5px;
     }
   
     .preguntas-frecuentes h2 {
       font-size: 1.5rem; 
       margin-bottom: 15px;
     }
-  
-    .accordion-button {
-      padding: 10px;
-      font-size: 1rem; 
-    }
-  
-    .accordion-body {
-      padding: 10px;
-    }
   }
   
   /* Media queries para pantallas aún más pequeñas */
-  @media (max-width: 480px) {
-    .preguntas-frecuentes {
-      width: 100%;
-      padding: 10px;
+  @media (max-width: 576px) {
+    .acordion{
+      padding-top: 30px;
+      min-height: 65vh;
     }
-  
-    .preguntas-frecuentes h2 {
-      font-size: 1.3rem;
+
+    .acordion h2{
+      font-size: 1.5rem;
     }
-  
+
     .accordion-button {
-      font-size: 1rem;
-    }
+      font-size: 1.2rem;
+    } 
   }

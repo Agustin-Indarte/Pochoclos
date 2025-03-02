@@ -1,59 +1,124 @@
 .tabla {
   background-color: var(--colorAzul);
-  height: 80vh;
+  min-height: 80vh;
   padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.planes-pochocleros {
-  width: 75%;
-  margin: 20px auto;
-  padding: 20px;
+.titulo{
+  color: var(--colorBeige);
+  font-size: 1.5rem;
+}
+
+.BtnMensual, .BtnAnual{
+  flex: 1;
+  margin-left: 5px;
+  font-weight: 600;
+}
+
+.BtnMensual{
+  background-color: var(--colorAzulOscuro);
+  border: 2px solid var(--colorRojoOscuro);
+  color: var(--colorRojoOscuro);
+}
+
+.BtnMensual:hover{
+  background-color: var(--colorRojoOscuro);
+  border: 2px solid white;
   color: white;
 }
+
+.BtnAnual{
+  background-color: var(--colorRojoOscuro);
+  border: 2px solid whitesmoke;
+  color: whitesmoke;
+}
+
+.BtnAnual:hover{
+  background-color: var(--colorRojo);
+  border: 2px solid white;
+  color: white;
+}
+
+.equis{
+  color: var(--colorRojo);
+}
+
 
 .tabla h2 {
-  padding-top: 20px;
   text-align: center;
-  margin-bottom: 20px;
-  color: white;
+  color: var(--colorRojo);
+  margin-bottom: 30px;
+  font-weight: bold;
 }
 
+/* Contenedor principal de la tabla */
+.tabla-responsive {
+  width: 80%;
+  background-color: var(--colorAzul);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
 
+/* Fila de encabezado */
+.encabezado {
+  background-color: var(--colorAzulOscuro);
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
 
-.planes-pochocleros th,
-.planes-pochocleros td {
+/* Estilos generales de cada fila */
+.fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Primera columna (características) */
+.columna {
+  flex: 1.5;
   text-align: left;
-  vertical-align: middle;
+  padding: 8px;
 }
 
-.planes-pochocleros th {
-  color: var(--colorBeige);
-  font-size: x-large;
-  background-color: var(--colorAzul);
-}
-
-.planes-pochocleros thead tr th:nth-child(2),
-.planes-pochocleros thead tr th:nth-child(3) {
-  color: white;
+/* Columnas de los planes (Mensual y Anual) */
+.columna.planes {
+  flex: 1;
   text-align: center;
   font-weight: bold;
-  border-radius: 8%;
 }
 
-.planes-pochocleros th:nth-child(2),
-.planes-pochocleros th:nth-child(3),
-.planes-pochocleros td:nth-child(2),
-.planes-pochocleros td:nth-child(3) {
-  text-align: center;
-  color: white;
+
+/* Asegurar que las filas no se desordenen en móviles */
+@media (max-width: 576px) {
+
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  /* Contenedor principal de la tabla */
+  .tabla-responsive {
+    width: 95%;
+
+  }
+
+  .columna {
+    text-align: center;
+    font-size: .8rem;
+  }
+
+  .columna:first-child {
+    font-weight: bold;
+    text-align: left;
+  }
 }
 
-.planes-pochocleros tbody tr:last-child td {
-  font-weight: bold;
-}
-
-.planes-pochocleros td {
-  color: var(--colorBeige);
-  font-size: large;
-  background-color: var(--colorAzul);
-}

@@ -26,3 +26,24 @@
    font-size: 1.2rem;
    margin-right: 25px;
 }
+
+  /* MEDIA QUERY para dispositivos pequeños */
+  @media (max-width: 576px) {
+    .footer {
+      flex-direction: column; /* Elementos uno debajo del otro */
+      align-items: center;
+    }
+
+  
+    .img-footer {
+      margin-bottom: 10px;
+    }
+
+    .footer p{
+        font-size: 15px;
+    }
+  
+    .redes {
+      margin-top: 10px;
+    }
+  }

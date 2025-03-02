@@ -43,7 +43,7 @@ const BannerInicio=()=> {
             Iniciar Sesión
           </Button>
           </div>
-          <a href="" className='Ver-detalles'>Ver detalles</a>
+          <a href="#Detalles" className='Ver-detalles'>Ver detalles</a>
           
 
         </div>

@@ -4,12 +4,12 @@
   background-color: var(--colorAzulOscuro);
 }
 
-h1{
+.text-container h2{
   color: var(--colorRojoOscuro);
   font-weight: bold;
 }
 
-h4{
+.text-container h4{
   padding: 20px 0px 20px 0px;
   color: white;
 }
@@ -18,19 +18,22 @@ h4{
   padding: 20px 0px 20px 0px;
 }
 
-/* .pochoclosizq{
-  width: 20vw;
-  height: 80vh;
-  position: absolute;
-  top: 2%;
-  right: 75%;
 
+@media (max-width: 576px) {
+  .text-container{
+    padding: 30px 0px 20px 0px;
+  }
+
+  .text-container h2{
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+  
+  .text-container h4{
+    font-size: .9rem;
+  }
+
+  .text-container img{
+    width: 300px;
+  }
 }
-
-.pochoclosder{
-  width: 20vw;
-  height: 75vh;
-  position: absolute;
-  top: 2%;
-  left: 75%;
-} */

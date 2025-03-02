@@ -45,7 +45,7 @@ background-color: var(--colorAzul);
   object-fit: contain;
 }
 
-p {
+.seccion-perfil p {
   text-align: center; /* Esto ya es suficiente */
   margin-top: 5px; /* Espaciado entre la imagen y el texto */
 }

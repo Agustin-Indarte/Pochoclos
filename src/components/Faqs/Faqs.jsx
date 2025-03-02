@@ -8,45 +8,33 @@ function PreguntasFrecuentes() {
       <h2>Preguntas Frecuentes</h2>
       <Accordion className='preguntas-frecuentes' defaultActiveKey="0">
         <Accordion.Item eventKey="0">
-          <Accordion.Header>¿Qué incluye Pochoclos?</Accordion.Header>
+          <Accordion.Header>¿Qué es Pochoclos?</Accordion.Header>
           <Accordion.Body>
-            <p>Beneficios de la suscripción:</p>
-            <ul>
-              <li>Estrenos de películas, series originales y clásicos.</li>
-              <li>Hasta 4 pantallas a la vez.</li>
-              <li>Descarga de títulos, creación de perfiles y control parental.</li>
-            </ul>
+            <p>Pochoclos es tu plataforma de streaming para ver películas y series sin interrupciones. Te ofrecemos planes flexibles para que elijas cómo querés disfrutar del contenido, ya sea en tu tele, compu o celular.</p>
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="1">
-          <Accordion.Header>¿Cómo puedo pagar?</Accordion.Header>
+          <Accordion.Header>¿Cuáles son sus planes?</Accordion.Header>
           <Accordion.Body>
-            <p>Aceptamos distintos medios de pago:</p>
-            <ul>
-              <li>Tarjeta de credito</li>
-              <li>Tarjeta de debito</li>
-              <li>Mercado Pago</li>
-              <li>A traves de terceros (App Store de Apple, Mercado Libre y proovedores 
-                locales de TV, telefonía e internet)</li>
-            </ul>
+            <p>Tenemos planes mensuales y anuales con distintos beneficios. Todos incluyen acceso ilimitado al catálogo, pero el plan anual te da ventajas extra, como estrenos anticipados y más dispositivos conectados.</p>
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2">
-          <Accordion.Header>¿Dónde puedo ver?</Accordion.Header>
+          <Accordion.Header>¿Dónde lo puedo ver?</Accordion.Header>
           <Accordion.Body>
-            <p>Podrás utilizar Pochoclos en tu dispositivo móvil, navegador web, consola de videojuegos, decodificador y Smart TV.</p>
+            <p>Podés verlo en tu Smart TV, computadora, tablet o celular. Solo necesitás una conexión a internet y listo, maratón asegurado.</p>
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="3">
-          <Accordion.Header>¿Dónde puedo ver?</Accordion.Header>
+          <Accordion.Header>¿Puedo cancelar mi suscripción?</Accordion.Header>
           <Accordion.Body>
-            <p>Podrás utilizar Pochoclos en tu dispositivo móvil, navegador web, consola de videojuegos, decodificador y Smart TV.</p>
+            <p>Sí, podés dar de baja el servicio cuando quieras desde tu cuenta. Seguirás teniendo acceso hasta que termine el período que pagaste.</p>
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="4">
-          <Accordion.Header>¿Dónde puedo ver?</Accordion.Header>
+          <Accordion.Header>¿Hay algún tipo de descuento?</Accordion.Header>
           <Accordion.Body>
-            <p>Podrás utilizar Pochoclos en tu dispositivo móvil, navegador web, consola de videojuegos, decodificador y Smart TV.</p>
+            <p>Sí, cada tanto lanzamos promos y descuentos especiales. Te recomendamos estar atento a nuestra web y redes sociales para no perderte ninguna oferta.</p>
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
