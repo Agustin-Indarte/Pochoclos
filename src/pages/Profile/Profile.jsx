@@ -27,19 +27,20 @@ function Profile() {
   }, []);
 
   return (
-<div className="seccion-perfil vh-100 d-flex flex-column justify-content-center align-items-center text-black">
+<div className="seccion-perfil  vh-100  d-flex flex-column justify-content-center align-items-center text-black">
   
   
-  <img src="public\logo-pochoclos.png" alt="LogoPochoclos" />
+<img src="/logo-pochoclos.png" alt="Logo" className="img-fluid logo-img" />
+
   <h2 className="my-3 fw-bold text-white">¿Quién está viendo?</h2>
 
-  <Row className="d-flex flex-wrap justify-content-center align-items-center my-2">
+  <Row className="d-flex flex-xl-wrap-reverse justify-content-center align-items-center my-2">
     
-    <Col xs={6} sm={4} md={3} lg="auto" className="text-center">
+    <Col xs={4} sm={4} md={3} lg="auto" className="text-center">
       <article className="profile-circle" onClick={() => navigate("/home")}>
         <img
           src="public\Perfil.png"
-          className="profile-img"
+          className="profile-img mx"
           alt="Mi perfil"
         />
       </article>
@@ -48,7 +49,7 @@ function Profile() {
 
     {/* Perfiles guardados en Firestore */}
     {profiles.map((profile) => (
-      <Col key={profile.id} xs={6} sm={4} md={3} lg="auto" className="text-center">
+      <Col key={profile.id} xs={4} sm={4} md={3} lg="auto" className="text-center">
         <article className="profile-circle" onClick={() => navigate("/home")}>
           <img
             src={profile.photoURL || "src/images/default-profile.png"}
@@ -64,7 +65,7 @@ function Profile() {
     ))}
 
     {/* Perfil de niños */}
-    <Col xs={6} sm={4} md={3} lg="auto" className="text-center">
+    <Col xs={4} sm={4} md={3} lg="auto" className="text-center">
       <article className="profile-circle add-profile" onClick={() => navigate("/add-profile")}>
         
         <img
@@ -78,7 +79,7 @@ function Profile() {
     </Col>
 
     {/* Botón para agregar un nuevo perfil */}
-    <Col xs={6} sm={4} md={3} lg="auto" className="text-center">
+    <Col xs={4} sm={4} md={3} lg="auto" className="text-center">
       <article className="profile-circle add-profile" onClick={() => navigate("/add-profile")}>
           <img src="src/images/1177577.png" alt="Añadir perfil" className="añadir-img" />
       </article>
@@ -88,8 +89,9 @@ function Profile() {
 
   {/* Botón de Cerrar Sesión */}
   <Button
+  
     variant="danger"
-    className="mt-2"
+    className="btn-cerrar-sesion mt-2"
     onClick={async () => {
       await signOut(auth);
       navigate("/");
