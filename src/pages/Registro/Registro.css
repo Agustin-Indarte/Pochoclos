@@ -34,3 +34,9 @@
   margin: 0;
   padding: 0;
 }
+
+@media (max-width: 576px) {
+  .small-logo {
+    width: 300px; /* Tamaño del logo en dispositivos móviles */
+  }
+}
