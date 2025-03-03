@@ -76,8 +76,8 @@ const SignUpForm  = () => {
 }
   
   return (
-    <Container className="p-4 rounded" style={{ backgroundColor: '#CFCFCF', width: '100%', maxWidth: '350px', paddingBottom: '0.5rem' }}>
-      <h1 style={{ textAlign: 'center', fontSize: '20px', color: '#D90429', fontWeight: 'bold' }}>¡Elige tu plan pochoclero!</h1>
+    <Container className="rounded" style={{ backgroundColor: '#CFCFCF', width: '100%', maxWidth: '350px' }}>
+      <h1 style={{ textAlign: 'center', fontSize: '20px', color: '#D90429', fontWeight: 'bold', marginTop:"15px" }}>¡Elige tu plan pochoclero!</h1>
       <Formik
         initialValues={{
           plan: '',
