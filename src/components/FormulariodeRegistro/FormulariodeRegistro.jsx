@@ -1,12 +1,11 @@
-
 import React from 'react';
-import {Formik, Field, Form} from 'formik'
+import { Formik, Field, Form } from 'formik';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
 import { createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { auth } from '../../Firebase';
 
 const SignUpSchema = Yup.object().shape({
@@ -76,9 +75,8 @@ const SignUpForm  = () => {
 
 }
   
-    
   return (
-    <Container style={{ backgroundColor: '#CFCFCF', padding: '1rem', borderRadius: '10px', maxWidth: '350px', margin: '0 auto', marginTop: '0' }}>
+    <Container className="p-4 rounded" style={{ backgroundColor: '#CFCFCF', width: '100%', maxWidth: '350px', paddingBottom: '0.5rem' }}>
       <h1 style={{ textAlign: 'center', fontSize: '20px', color: '#D90429', fontWeight: 'bold' }}>¡Elige tu plan pochoclero!</h1>
       <Formik
         initialValues={{
@@ -96,12 +94,12 @@ const SignUpForm  = () => {
           <Form>
             <Row className="justify-content-center mb-3">
               <Col md={12} className="text-center">
-                <label style={{ fontWeight: 'bold', color: 'black' }}>
-                  <Field type="radio" name="plan" value="mensual" style={{ accentColor: '#AC011F' }} />
+                <label style={{ fontWeight: 'bold', color: 'black', fontSize: '20px', marginRight: '1rem' }}>
+                  <Field type="radio" name="plan" value="mensual" style={{ accentColor: '#AC011F', transform: 'scale(1.5)', marginRight: '0.5rem' }} />
                   Mensual
                 </label>
-                <label style={{ marginLeft: '1rem', fontWeight: 'bold', color: 'black' }}>
-                  <Field type="radio" name="plan" value="anual" style={{ accentColor: '#AC011F' }} />
+                <label style={{ fontWeight: 'bold', color: 'black', fontSize: '20px' }}>
+                  <Field type="radio" name="plan" value="anual" style={{ accentColor: '#AC011F', transform: 'scale(1.5)', marginRight: '0.5rem' }} />
                   Anual
                 </label>
               </Col>
@@ -125,19 +123,22 @@ const SignUpForm  = () => {
               </Col>
             </Row>
             <Row className="justify-content-center mb-3">
-              <Col md={6}>
+              <Col xs={12} sm={6}>
                 <Field name="creditCard" placeholder="Tarjeta de Crédito" className={`form-control ${touched.creditCard && errors.creditCard ? 'is-invalid' : ''}`} />
                 {touched.creditCard && errors.creditCard ? <div className="invalid-feedback">{errors.creditCard}</div> : null}
               </Col>
-              <Col md={6}>
+              <Col xs={12} sm={6}>
                 <Field name="securityCode" placeholder="Código de Seguridad" className={`form-control ${touched.securityCode && errors.securityCode ? 'is-invalid' : ''}`} />
                 {touched.securityCode && errors.securityCode ? <div className="invalid-feedback">{errors.securityCode}</div> : null}
               </Col>
             </Row>
             <Row className="justify-content-center mb-3">
               <Col md={12} className="text-center">
-                <Button type="submit" variant="danger" className="w-100" onClick={handleSubmit}>Suscribirse</Button>
-                <Button variant="danger" className="w-100 mt-2" onClick={handleGoogleLogin}>Iniciar sesión con Google</Button>
+                <Button type="submit" variant="danger" className="w-100" onClick={handleSubmit} style={{ border: '4px solid white' }}>Suscribirse</Button>
+                <Button variant="danger" className="w-100 mt-2" onClick={handleGoogleLogin} style={{ border: '4px solid white' }}>Suscribirse con Google</Button>
+                <p style={{ marginTop: '1rem', color: '#D90429' }}>
+                  Si ya te encuentras suscripto, <Link to="/login" style={{ color: '#AC011F' }}>Inicia Sesión</Link>
+                </p>
               </Col>
             </Row>
           </Form>
@@ -147,4 +148,6 @@ const SignUpForm  = () => {
   );};
 
 export default SignUpForm;
+
+
 

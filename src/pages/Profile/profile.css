@@ -1,11 +1,28 @@
-.seccion-perfil{
-background-color: var(--colorAzul);
+.seccion-perfil {
+  background-color: var(--colorAzul);
+  min-height: 100vh; /* Asegura que el contenido siempre ocupe la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem; /* Añade un poco de padding para evitar recortes en móviles */
 }
 
-.seccion-perfil h2{
+.seccion-perfil h2 {
   color: var(--colorBeige);
+  text-align: center;
 }
 
+.profile-circle {
+  width: clamp(100px, 20vw, 150px); /* Tamaño adaptable */
+  aspect-ratio: 1/1; /* Mantiene el círculo perfecto */
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--colorGris);
+}
 .profile-circle {
   width: 150px;
   height: 150px;
@@ -15,22 +32,24 @@ background-color: var(--colorAzul);
   justify-content: center;
   align-items: center;
   background-color: var(--colorGris);
+  transition: transform 0.3s ease-in-out; /* Transición suave */
 }
 
-.añadir-img, .niños-img {
-  height: 150px;
-  width: auto;
-  object-fit: cover;
+.profile-circle:hover {
+  transform: scale(1.1); /* Aumenta un 10% al pasar el cursor */
 }
 
-.profile-img {
-  height: 110px;
-  width: auto;
+
+.profile-img,
+.añadir-img,
+.niños-img {
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
 .icon-circle {
-  width: 100px; /* Ajusta el tamaño para que coincida con .profile-circle */
+  width: 100px;
   height: 100px;
   display: flex;
   justify-content: center;
@@ -45,7 +64,38 @@ background-color: var(--colorAzul);
   object-fit: contain;
 }
 
-.seccion-perfil p {
-  text-align: center; /* Esto ya es suficiente */
-  margin-top: 5px; /* Espaciado entre la imagen y el texto */
+/* Espaciado responsivo */
+
+.logo-img {
+  max-width: 100%; /* Evita que la imagen sea más grande que su contenedor */
+  height: auto; /* Mantiene la proporción */
+  object-fit: contain; /* Ajusta la imagen sin recortarla */
+}
+.btn-cerrar-sesion {
+  border: 2px solid white; /* Borde blanco de 2px */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+  font-weight: bold; /* Texto en negrita */
+  transition: all 0.3s ease-in-out; /* Transición suave */
+}
+
+.btn-cerrar-sesion:hover {
+  background-color: white; /* Fondo blanco en hover */
+  color: red; /* Texto rojo en hover */
+  border-color: red; /* Borde rojo en hover */
+}
+
+
+/* Ajuste en móviles */
+@media (max-width: 576px) {
+  .profile-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .profile-img,
+  .añadir-img,
+  .niños-img {
+    height: 80px;
+  }
 }
