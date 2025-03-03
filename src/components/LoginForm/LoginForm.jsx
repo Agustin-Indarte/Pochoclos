@@ -57,7 +57,8 @@ function LoginForm() {
         justifyContent: 'center',
         alignItems: 'flex-start', // Alinea al inicio superior
         minHeight: '100vh', // Ocupa toda la altura de la ventana
-        paddingTop: '20px' // Ajusta el margen superior
+        paddingTop: '',
+        marginBottom: '10px' // Ajusta el margen superior
       }}
     >
       <Card style={{ backgroundColor: "#CFCFCF", width: '400px', height: '400px' }} className="p-4 rounded">
@@ -94,8 +95,9 @@ function LoginForm() {
               <FontAwesomeIcon icon={faGoogle} size="lg" /> Inicia sesión con Google
             </Button>
           </div>
-          <div className="mt-2">
-                <a href="/registro" className="fw-bold mt-5 text-center">¡¡si no tenes cuenta registrate aca!! </a>
+          <div className="mb-5">
+            <p>¿Aun no te registraste?</p>
+                <a href="/registro" className="fw-bold  text-center">¡¡registrate aqui!! </a>
           </div>
         </Form>
       </Card>

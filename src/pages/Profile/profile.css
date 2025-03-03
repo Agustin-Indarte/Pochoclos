@@ -32,6 +32,7 @@
   justify-content: center;
   align-items: center;
   background-color: var(--colorGris);
+  cursor: pointer;
   transition: transform 0.3s ease-in-out; /* Transición suave */
 }
 
