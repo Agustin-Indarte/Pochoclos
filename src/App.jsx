@@ -1,7 +1,6 @@
-// App.jsx  
-import React from 'react';  
-import ModalPage from './pages/Modalagregarpelicula/modal';  
+ import React from 'react';   
 import Administracion from './pages/Administracion/Administracion';
+import './App.css'
 
 
 const App = () => {  

@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
 import './HeaderAdmin.css';
-import ModalPage from '../../../pages/Modalagregarpelicula/modal';
+import FormAgregar from '../FormAgregar/FormAgregar';
 
-function HeaderAdmin() {
+
+function HeaderAdmin({onAddMovie}) {
   return (
     <div className='container contenedorHeader mt-5'>
             <div className='row'>
@@ -10,8 +11,9 @@ function HeaderAdmin() {
             </div>
             <div className='row mt-5'>
                 <h2 className='col-7 '>LISTA DE PELICULAS</h2>
-                {/* <button className='col-4 btnNewMovie ms-auto'>NUEVA PELICULA</button> */}
-                <ModalPage/>
+                <div className='col-4 ms-auto'>
+                  <FormAgregar onAddMovie={onAddMovie}/> 
+                </div>                
             </div>
     </div>
   )
