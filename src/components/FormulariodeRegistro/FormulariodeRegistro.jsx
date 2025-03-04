@@ -11,7 +11,7 @@ import { auth } from '../../Firebase';
 const SignUpSchema = Yup.object().shape({
   email: Yup.string().email('Email inválido').required('Requerido'),
   username: Yup.string().required('Requerido'),
-  password: Yup.string().min(6, 'Contraseña muy corta').required('Requerido'),
+  password: Yup.string().min(8, 'Contraseña muy corta').required('Requerido'),
   creditCard: Yup.string().required('Requerido'),
   securityCode: Yup.string().min(3, 'Código inválido').required('Requerido'),
 });

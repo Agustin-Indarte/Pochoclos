@@ -25,7 +25,9 @@ const Peliculas = () => {
                 console.error("Error al obtener películas:", error);
             }
         };
-
+        /* Llamar a la funcion que obtiene las peliculas de martin del crud */
+        /* Guardar el resultado en una variable */
+        /* Llamar a set Peliculas Crud y guardar la variable */
         fetchPeliculas();
     }, []);
 

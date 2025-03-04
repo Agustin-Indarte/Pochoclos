@@ -3,8 +3,13 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
+import { getAuth, signOut } from "firebase/auth";
+
+
+
 
 function NavBar() {
+  const auth = getAuth(); // Asegúrate de que esto está definido
   const [showMenu, setShowMenu] = useState(false);
 
   return (
@@ -53,8 +58,20 @@ function NavBar() {
               <Link className="dropdown-item" to="/ajustes">Ajustes</Link>
               <Link className="dropdown-item" to="/registro">Suscripción</Link>
               <Link className="dropdown-item" to="/contacto">Contáctanos</Link>
-              <Link className="dropdown-item" to="/">Cerrar Sesión</Link>
               <Link className="dropdown-item" to="/admin">Administración</Link>
+              <Link
+                className="dropdown-item"
+                onClick={async () => {
+                  try {
+                    await signOut(auth);
+                    navigate("/");
+                  } catch (error) {
+                    console.error("Error al cerrar sesión:", error);
+                  }
+                }}
+              >
+                Cerrar Sesión
+              </Link>
             </div>
           )}
         </div>

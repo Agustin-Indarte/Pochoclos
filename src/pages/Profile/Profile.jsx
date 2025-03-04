@@ -89,7 +89,6 @@ function Profile() {
 
       {/* Botón de Cerrar Sesión */}
       <Button
-
         variant="danger"
         className="btn-cerrar-sesion mt-2"
         onClick={async () => {

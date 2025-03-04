@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { auth } from '../../Firebase'; // Asegúrate de que la ruta de Firebase sea correcta
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { Link } from "react-router-dom";
 
 // Esquema de validación con Yup
 const schema = yup.object().shape({
@@ -95,7 +96,9 @@ function LoginForm() {
             </Button>
           </div>
           <div className="mt-2">
-                <a href="/registro" className="fw-bold mt-5 text-center">¡¡si no tenes cuenta registrate aca!! </a>
+          <p style={{ marginTop: '1rem', color: '#D90429' }}>
+                  Si no tienes una cuenta, <Link to="/registro" style={{ color: '#AC011F' }}>Suscribete</Link>
+                </p>
           </div>
         </Form>
       </Card>
