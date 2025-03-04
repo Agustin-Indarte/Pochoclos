@@ -54,15 +54,15 @@ function Administracion() {
   }
 
   //para editar la pelicula
-  function onEditMovie(id, name, description, imgMovie){
+  function onEditMovie(id, name, description, imgMovie, category){
     console.log('onEditMovie id'+ id + name + description + imgMovie);
     dispatch({
       type: "edit",
       id,
       name,
       description,
-      imgMovie
-      
+      imgMovie,
+      category
     });
   }
 

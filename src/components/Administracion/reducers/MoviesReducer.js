@@ -40,7 +40,7 @@ export const moviesReducer = (movies, action) => {
         }
         case "edit" : {
             const filteredMovies = movies.map((movie) => {
-                return movie.id === action.id ? {...movie, name:action.name, description:action.description, imgMovie: action.imgMovie} : movie
+                return movie.id === action.id ? {...movie, name:action.name, description:action.description, imgMovie: action.imgMovie, category: action.category} : movie
             });
 
             return filteredMovies;
