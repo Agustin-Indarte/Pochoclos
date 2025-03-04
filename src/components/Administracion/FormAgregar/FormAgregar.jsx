@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './FormAgregar.css'
 
 const FormAgregar = ({ onAddMovie }) => {
     const [showModal, setShowModal] = useState(false);
@@ -24,7 +25,7 @@ const FormAgregar = ({ onAddMovie }) => {
     };
 
     return (
-        <div className="container mt-3">
+        <div className="container mt-3"> 
             {/* Botón para abrir el modal */}
             <button className=" btnNewMovie" onClick={() => setShowModal(true)}>
                 Agregar Película
@@ -36,7 +37,7 @@ const FormAgregar = ({ onAddMovie }) => {
                     <div className="modal-dialog">
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h5 className="modal-title">Agregar Película</h5>
+                                <h5 className="modalTitle">Agregar Película</h5>
                                 <button className="btn-close" onClick={() => setShowModal(false)}></button>
                             </div>
                             <div className="modal-body">
@@ -57,7 +58,7 @@ const FormAgregar = ({ onAddMovie }) => {
                                     {({ errors, touched }) => (
                                         <Form className="d-flex flex-column">
                                             <div>
-                                                <label htmlFor="id">Id</label>
+                                                <label htmlFor="id">Codigo</label>
                                                 <Field type="text" id="id" name="id" className={`form-control ${errors.id && touched.id ? 'is-invalid' : ''}`} />
                                                 <ErrorMessage component="div" name="id" className="invalid-feedback" />
                                             </div>
@@ -97,11 +98,11 @@ const FormAgregar = ({ onAddMovie }) => {
 
                                             <div>
                                                 <label htmlFor="published">Publicar</label>
-                                                <Field type="checkbox" id="published" name="published" className="form-check-input" />
+                                                <Field type="checkbox" id="published" name="published" className="form-check-input checkpubliched" />
                                             </div>
 
-                                            <button type="submit" className="btn btn-success mt-3">
-                                                Guardar Película
+                                            <button type="submit" className="btn btnAgregarMovie mt-3">
+                                                Agregar Película
                                             </button>
                                         </Form>
                                     )}

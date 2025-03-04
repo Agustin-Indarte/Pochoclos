@@ -1,0 +1,87 @@
+
+/* Modal */
+
+
+.modal-content {
+    background-color: white;
+    padding:5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modalTitle{
+    font-weight: bold;
+    color: #131523;
+}
+
+
+
+
+
+/* Estilos para el formulario */
+
+
+form label {
+    margin-bottom: 2px;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-control {
+    padding: 5px;
+    margin-bottom: 1px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btnAgregarMovie {
+    background-color: #252e72 ; /* Color de fondo azul */
+    color: white; /* Color del texto */
+    font-size: 16px; /* Tamaño de fuente */
+    padding: 12px 24px; /* Espaciado interno */
+    border: none; /* Elimina el borde por defecto */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Puntero al pasar el mouse */
+    transition: background-color 0.3s, transform 0.2s ease-in-out; /* Transiciones suaves */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Sombra suave */
+}
+
+/* Efecto de hover: Cambia el color de fondo y agrega una animación */
+.btnAgregarMovie:hover {
+    background-color: #131523 ; /* Color de fondo más oscuro al pasar el mouse */
+    color: white;
+    transform: translateY(-2px); /* Sube ligeramente el botón */
+}
+
+button.btn-secondary {
+    background-color: #D90429;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.btn-secondary:hover {
+    background-color: #ff0303;
+}
+
+/* Estilo para el contenedor del checkbox */
+.checkpubliched{
+    width: 20px; /* Tamaño del checkbox */
+    height: 20px; /* Tamaño del checkbox */
+    margin-left: 10px;
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+    border: 2px solid #007bff; /* Borde de color azul */
+    appearance: none; /* Elimina el estilo por defecto del checkbox */
+    background-color: white; /* Fondo blanco cuando no está seleccionado */
+    transition: all 0.3s ease; /* Transición suave para los cambios */
+}
+
+/* Estilo cuando el checkbox está marcado */
+.checkpubliched {
+    background-color: white; /* Fondo azul cuando está marcado */
+    border-color: #007bff; /* Borde azul cuando está marcado */
+}

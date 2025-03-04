@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import '../FormAgregar/FormAgregar.css'
 
 function FormModificar({onEditMovie, idEdit}) {
 
@@ -35,7 +36,7 @@ function FormModificar({onEditMovie, idEdit}) {
                           <div className="modal-dialog">
                               <div className="modal-content">
                                   <div className="modal-header">
-                                      <h5 className="modal-title text-black">Editar Película {idEdit}</h5>
+                                      <h5 className="modal-title modalTitle">Editar Película {idEdit}</h5>
                                       <button className="btn-close" onClick={() => setShowModal(false)}></button>
                                   </div>
                                   <div className="modal-body">
@@ -70,8 +71,8 @@ function FormModificar({onEditMovie, idEdit}) {
                                                       <ErrorMessage component="div" name="imgMovie" className="invalid-feedback" />
                                                   </div>
       
-                                                  <button type="submit" className="btn btn-success mt-3">
-                                                      Guardar Película
+                                                  <button type="submit" className="btn btnAgregarMovie mt-3">
+                                                      Editar Película
                                                   </button>
                                               </Form>
                                           )}
