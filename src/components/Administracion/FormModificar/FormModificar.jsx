@@ -68,41 +68,45 @@ function FormModificar({onEditMovie, idEdit}) {
                                           onSubmit={handleSubmit}
                                       >
                                           {({ errors, touched }) => (
-                                              <Form className="d-flex flex-column">
-                                                  <div>
-                                                    <img className='imgMovie' src={movieEdit.imgMovie} alt="" />
-                                                  </div>
-                                                  <div>
-                                                      <label htmlFor="name">Nombre</label>
-                                                      <Field type="text" id="name" name="name" className={`form-control ${errors.name && touched.name ? 'is-invalid' : ''}`} />
-                                                      <ErrorMessage component="div" name="name" className="invalid-feedback" />
+                                              <Form className="d-flex flex-column container text-start">
+                                                 <div className='row'>
+                                                            <div className='col-lg-4 col-sm-12 text-center'>
+                                                                <img className='imgMovie' src={movieEdit.imgMovie} alt="" />
+                                                            </div>
+                                                            <div className='col-lg-8 col-sm-12'>
+                                                                <div>
+                                                                <label htmlFor="name">Nombre</label>
+                                                                <Field type="text" id="name" name="name" className={`form-control ${errors.name && touched.name ? 'is-invalid' : ''}`} />
+                                                                <ErrorMessage component="div" name="name" className="invalid-feedback" />
+                                                                </div>
+
+                                                                <div>
+                                                                    <label htmlFor="category">Categoría</label>
+                                                                    <Field as="select" id="category" name="category" className={`form-control ${errors.category && touched.category ? 'is-invalid' : ''}`}>
+                                                                        <option value="seleccionar">Seleccionar</option>
+                                                                        <option value="Accion">Acción</option>
+                                                                        <option value="Animacion">Animación</option>
+                                                                        <option value="Ciencia ficcion">Ciencia ficción</option>
+                                                                        <option value="Comedia">Comedia</option>
+                                                                        <option value="Drama">Drama</option>
+                                                                        <option value="Fantasia">Fantasía</option>
+                                                                        <option value="Terror">Terror</option>
+                                                                    </Field>
+                                                                    <ErrorMessage component="div" name="category" className="invalid-feedback" />
+                                                                </div>
+                                                            </div>
                                                     </div>
 
-                                                    <div>
-                                                        <label htmlFor="category">Categoría</label>
-                                                        <Field as="select" id="category" name="category" className={`form-control ${errors.category && touched.category ? 'is-invalid' : ''}`}>
-                                                            <option value="seleccionar">Seleccionar</option>
-                                                            <option value="Accion">Acción</option>
-                                                            <option value="Animacion">Animación</option>
-                                                            <option value="Ciencia ficcion">Ciencia ficción</option>
-                                                            <option value="Comedia">Comedia</option>
-                                                            <option value="Drama">Drama</option>
-                                                            <option value="Fantasia">Fantasía</option>
-                                                            <option value="Terror">Terror</option>
-                                                        </Field>
-                                                        <ErrorMessage component="div" name="category" className="invalid-feedback" />
-                                                    </div>
-
-                                                    <div>
-                                                      <label htmlFor="description">Descripción</label>
-                                                      <Field as="textarea" id="description" name="description" className={`form-control ${errors.description && touched.description ? 'is-invalid' : ''}`} />
-                                                      <ErrorMessage component="div" name="description" className="invalid-feedback" />
-                                                  </div>
-      
-                                                  <div>
+                                                    <div className='mt-4'>
                                                       <label htmlFor="imgMovie">URL Imagen</label>
                                                       <Field type="text" id="imgMovie" name="imgMovie" className={`form-control ${errors.imgMovie && touched.imgMovie ? 'is-invalid' : ''}`} />
                                                       <ErrorMessage component="div" name="imgMovie" className="invalid-feedback" />
+                                                  </div>
+
+                                                    <div className='mb-2'>
+                                                      <label htmlFor="description">Descripción</label>
+                                                      <Field as="textarea" id="description" name="description" className={`form-control ${errors.description && touched.description ? 'is-invalid' : ''}`} />
+                                                      <ErrorMessage component="div" name="description" className="invalid-feedback" />
                                                   </div>
       
                                                   <button type="submit" className="btn btnAgregarMovie mt-3">
