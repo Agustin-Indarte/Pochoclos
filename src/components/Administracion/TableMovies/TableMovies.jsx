@@ -14,10 +14,8 @@ function TableMovies({movies,onDeleteMovie,onToggleDone, onTogglePublished,onEdi
         setIdEdit(fila.id); // Actualiza el idEdit con el id de la película seleccionada
     };
 
-    
-
   return (
-    <div className='container'>
+    <div className='container col-12'>
          <table className='tableMovies'>
             <thead>
             <tr>

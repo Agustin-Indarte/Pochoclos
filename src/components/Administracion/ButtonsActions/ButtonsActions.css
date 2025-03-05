@@ -4,7 +4,6 @@
   padding: 3px 3px;
   border-radius: 100%; /* Bordes redondeados */
   cursor: pointer;
-  margin: 5px;
   position: relative;
 }
 
@@ -40,7 +39,7 @@
   padding: 3px 3px;
   border-radius: 100%; /* Bordes redondeados */
   cursor: pointer;
-  margin: 5px;
+  margin-top: 5px;
   position: relative;
 }
 

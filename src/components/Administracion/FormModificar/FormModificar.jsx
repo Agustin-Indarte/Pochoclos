@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import '../FormAgregar/FormAgregar.css'
+import '../FormModificar/FormModificar.css'
 import { GetMoviesToLocalStorage } from '../helpers/GetMoviesToLocalStorage';
 
 function FormModificar({onEditMovie, idEdit}) {
@@ -41,7 +42,7 @@ function FormModificar({onEditMovie, idEdit}) {
   
   return (
     
-      <div className="container mt-3">
+      <div className="container">
         {/* Botón para abrir el modal */}
             <button className="btnEdit" onClick={() => setShowModal(true)}>
             🖊️
@@ -52,7 +53,7 @@ function FormModificar({onEditMovie, idEdit}) {
                           <div className="modal-dialog">
                               <div className="modal-content">
                                   <div className="modal-header">
-                                      <h5 className="modal-title modalTitle">Editar Película</h5>
+                                      <h5 className="modalTitle">Editar Película</h5>
                                       <button className="btn-close" onClick={() => setShowModal(false)}></button>
                                   </div>
                                   <div className="modal-body">
@@ -71,7 +72,7 @@ function FormModificar({onEditMovie, idEdit}) {
                                               <Form className="d-flex flex-column container text-start">
                                                  <div className='row'>
                                                             <div className='col-lg-4 col-sm-12 text-center'>
-                                                                <img className='imgMovie' src={movieEdit.imgMovie} alt="" />
+                                                                <img className='imgModalEdit' src={movieEdit.imgMovie} alt="" />
                                                             </div>
                                                             <div className='col-lg-8 col-sm-12'>
                                                                 <div>
@@ -115,11 +116,6 @@ function FormModificar({onEditMovie, idEdit}) {
                                               </Form>
                                           )}
                                       </Formik>
-                                  </div>
-                                  <div className="modal-footer">
-                                      <button className="btn btn-secondary" onClick={() => setShowModal(false)}>
-                                          Cerrar
-                                      </button>
                                   </div>
                               </div>
                           </div>
