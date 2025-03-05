@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { CardPelicula } from '../../components';
+import { CardPelicula } from '../..';
 import "./GridPelicula.css"
-import { GetMoviesToLocalStorage } from '../Administracion/helpers/GetMoviesToLocalStorage';
+import { GetMoviesToLocalStorage } from '../../Administracion/helpers/GetMoviesToLocalStorage';
 
 const GridPelicula = ({ buscador }) => {
     const [peliculasAPI, setPeliculasAPI] = useState([]);

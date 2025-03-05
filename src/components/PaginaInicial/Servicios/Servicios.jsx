@@ -67,7 +67,7 @@ function SeccionPeliculas() {
             >
                 {peliculas.map((pelicula) => (
                     <SwiperSlide key={pelicula.id}>
-                        <div className="contenedor-Cards">
+                        <div className="contenedor-Cards-Estrenos">
                         <img src={`${url_img + pelicula.poster_path}`} alt={pelicula.title} className='img-peliculas' />
                         </div>
                     </SwiperSlide>

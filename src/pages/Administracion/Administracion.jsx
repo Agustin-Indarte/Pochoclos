@@ -1,13 +1,11 @@
 import { useEffect, useReducer, useState } from 'react';
-import './Administracion.css';
-
 import { GetMoviesToLocalStorage } from '../../components/Administracion/helpers/GetMoviesToLocalStorage';
 import { AddMoviesToLocalStorage } from '../../components/Administracion/helpers/AddMoviesToLocalStorage';
 import HeaderAdmin from '../../components/Administracion/HeaderAdmin/HeaderAdmin';
 import TableMovies from '../../components/Administracion/TableMovies/TableMovies';
 import { moviesReducer } from '../../components/Administracion/reducers/MoviesReducer';
-import NavBar from '../../components/NavBar/NavBar';
-import Footer from '../../components/Footer/Footer';
+import { Footer, NavBar } from '../../components';
+
 
 function Administracion() {
   const initialMovie = GetMoviesToLocalStorage() || []; 
@@ -71,7 +69,7 @@ function Administracion() {
 
   return (
     <>
-      <NavBar/>
+     <NavBar></NavBar>
       <HeaderAdmin onAddMovie={onAddMovie} />
       <TableMovies  
             movies={movies} 
@@ -80,7 +78,7 @@ function Administracion() {
             onTogglePublished={onTogglePublished}
             onEditMovie={onEditMovie}        
       />
-      <Footer/>
+      <Footer></Footer>
 
     </>
   )

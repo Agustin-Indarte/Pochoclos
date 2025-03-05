@@ -21,7 +21,10 @@
     width: 710px;
     margin-left: 40px;
   }
-  
+  .contenedor-Cards-Estrenos img{
+    border: 3px solid white;
+    border-radius: 5%;
+  }
   .mySwiper-estrenos .swiper-slide img {
     max-height: 350px;
     object-fit: contain;

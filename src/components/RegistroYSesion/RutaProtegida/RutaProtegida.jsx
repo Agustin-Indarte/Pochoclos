@@ -1,6 +1,6 @@
 import { useAuthState} from 'react-firebase-hooks/auth';
 import { Navigate } from 'react-router-dom';
-import { auth} from '../../Firebase';
+import { auth} from '../../../Firebase';
 import { Spinner, Container } from 'react-bootstrap';
 
 function RutaProtegida({children}) {
@@ -13,7 +13,7 @@ if(loading){
   );
 }
 
-if(!user) return <Navigate to="/Registro"/>
+if(!user) return <Navigate to="/"/>
 
 
   return children
