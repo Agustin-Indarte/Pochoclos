@@ -21,7 +21,7 @@
 }
 
 
-.img-peliculas {
+.contenedor-Cards .img-peliculas {
     margin-inline: 2%;
     object-fit: cover;
     width: 90%;
@@ -31,9 +31,9 @@
     transition: filter 1s, transform 1s, box-shadow 1s; /* Agrega transform y box-shadow */
 }
 
-.img-peliculas:hover {
+.contenedor-Cards .img-peliculas:hover {
     transform: scale(1.06);
-    box-shadow: 3px 2px 15px -1px var(--colorRojo);
+    box-shadow: 0px 5px 20px -1px var(--colorRojo);
     cursor: pointer;
 }
 
