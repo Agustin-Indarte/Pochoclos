@@ -1,0 +1,68 @@
+.error404{
+    background-image: url(../../../public/Cine.jpeg);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    }
+    
+.contenido {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 58%;
+    height: 60%;
+    background-color: var(--colorBlanco);
+    border-radius: 1%;
+    }
+    
+
+.gif-container {
+    position: relative; /* Contenedor relativo para que los hijos se posicionen con respecto a él */
+    width: 100%; /* O ajusta el ancho según lo necesites */
+    height: 160px; /* Ajusta la altura del contenedor */
+  }
+
+ 
+.gif-404 {
+    position: absolute;
+    top: 60%; /* Ajusta según lo necesites */
+    left: 60%; /* Ajusta según lo necesites */
+    transform: translate(-50%, -50%); /* Centra la animación */
+    width: 35%; /* Ajusta el tamaño */
+    height: auto; /* Mantiene la relación de aspecto */
+  }
+  
+  .gif-pochoclos {
+    position: absolute; /* Para posicionarlo de manera absoluta */
+    top: 10px; /* Ajusta la posición vertical según sea necesario */
+    left: 15%; /* Ajusta la posición horizontal según sea necesario */
+    width: auto; /* Ajusta el tamaño */
+    height: 175px; /* Mantén la relación de aspecto */
+  }
+  
+
+.boton-inicio{
+    background-color: var(--colorRojoOscuro); 
+    color: var(--colorBeige); 
+    border: none; 
+    cursor: pointer; 
+    }
+
+.boton-inicio:hover {
+    background-color: var(--colorRojo);
+}
+
+
+
+/* Media queries para pantallas más pequeñas */
+
+
+
+@media (max-width: 768px) {
+   
+  }
+  
+  @media (max-width: 576px) {
+    
+  }
