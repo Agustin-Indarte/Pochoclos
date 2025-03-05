@@ -1,21 +1,67 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { CardPelicula } from '../../components';
 import "./GridPelicula.css"
+import { GetMoviesToLocalStorage } from '../Administracion/helpers/GetMoviesToLocalStorage';
 
-const GridPelicula = ({ peliculasAPI, peliculasCRUD }) => {
-    // 🔹 Combinamos películas del CRUD con las de la API
-    const todasLasPeliculas = [/* ...peliculasCRUD, */ ...peliculasAPI];
+const GridPelicula = ({ buscador }) => {
+    const [peliculasAPI, setPeliculasAPI] = useState([]);
+    const [peliculasCRUD, setPeliculasCRUD] = useState([]); // Aquí irán las películas del CRUD
+    const apiKey = "e845bcd33e2571e0313cbf204469c4fc";
 
-    // 🔹 Eliminamos duplicados (si hay películas con el mismo ID)
-    const peliculasUnicas = [...new Map(todasLasPeliculas.map(p => [p.id, p])).values()];
+    useEffect(() => {
+        const fetchPeliculas = async () => {
+            try {
+                const categorias = [28, 10751, 35, 10749]; // 🔹 Categorías elegidas
+                let peliculas = [];
+
+                for (const categoria of categorias) {
+                    const respuesta = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=es&with_genres=${categoria}&page=1`);
+                    const datos = await respuesta.json();
+                    peliculas = [...peliculas, ...datos.results];
+                }
+
+                setPeliculasAPI(peliculas);
+            } catch (error) {
+                console.error("Error al obtener películas:", error);
+            }
+        };
+
+        const CRUD = GetMoviesToLocalStorage();
+        setPeliculasCRUD(CRUD);
+
+        fetchPeliculas();
+    }, []);
+
+    // Combinamos las películas de la API y del CRUD
+    const PeliculasCombinadas = [...peliculasCRUD, ...peliculasAPI];
+
+    // Filtramos por el buscador antes de renderizar
+    const peliculasFiltradas = PeliculasCombinadas
+        .filter((pelicula, index, self) =>
+            pelicula &&
+            self.findIndex(p => p.id === pelicula.id) === index // Filtra duplicados por ID
+        )
+        .filter((pelicula) => {
+            const titulo = pelicula.title || pelicula.name || "";
+            return titulo.toLowerCase().includes(buscador.toLowerCase());
+        });
 
     return (
         <div className="grilla-peliculas">
-            {peliculasUnicas.map((pelicula, index) => (
-                <CardPelicula key={`pelicula-${pelicula.id || index}`} pelicula={pelicula} />
-            ))}
+            {peliculasFiltradas.length > 0 ? (
+                peliculasFiltradas.map((pelicula, index) => (
+                    <CardPelicula
+                        key={`pelicula-${pelicula.id || `custom-${index}`}`}
+                        pelicula={pelicula}
+                    />
+                ))
+            ) : (
+                <p className="mensaje-no-encontrado">No se encontraron películas.</p>
+            )}
         </div>
     );
 };
 
 export default GridPelicula;
+
+
