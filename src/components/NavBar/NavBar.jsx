@@ -58,7 +58,7 @@ function NavBar() {
               <Link className="dropdown-item" to="/ajustes">Ajustes</Link>
               <Link className="dropdown-item" to="/registro">Suscripción</Link>
               <Link className="dropdown-item" to="/contacto">Contáctanos</Link>
-              <Link className="dropdown-item" to="/admin">Administración</Link>
+              <Link className="dropdown-item" to="/administracion">Administración</Link>
               <Link
                 className="dropdown-item"
                 onClick={async () => {

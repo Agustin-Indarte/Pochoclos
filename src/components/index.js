@@ -14,3 +14,7 @@ export {default as Planes} from './Planes/Planes'
 export {default as Servicios} from './Servicios/Servicios'
 export {default as CardPelicula} from './CardPelicula/CardPelicula'
 export {default as GridPelicula} from './GridPelicula/GridPelicula'
+export {default as FormAgregar} from './Administracion/FormAgregar/FormAgregar';
+export {default as ButtonsActions} from './Administracion/ButtonsActions/ButtonsActions';
+export {default as HeaderAdmin} from './Administracion/HeaderAdmin/HeaderAdmin';
+export {default as TableMovies} from './Administracion/TableMovies/TableMovies';
