@@ -6,9 +6,9 @@ export const moviesReducer = (movies, action) => {
             return [
                 {
                     id: action.id,
-                    title: action.name,
+                    name: action.name,
                     category: action.category,
-                    overview: action.description,
+                    description: action.description,
                     imgMovie: action.imgMovie,
                     published: action.published,
                     favorite: false
