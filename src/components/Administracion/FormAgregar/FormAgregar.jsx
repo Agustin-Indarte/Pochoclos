@@ -25,7 +25,7 @@ const FormAgregar = ({ onAddMovie }) => {
     };
 
     return (
-        <div className="container mt-3"> 
+        <div className="container"> 
             {/* Botón para abrir el modal */}
             <button className=" btnNewMovie" onClick={() => setShowModal(true)}>
                 Agregar Película
@@ -40,7 +40,7 @@ const FormAgregar = ({ onAddMovie }) => {
                                 <h5 className="modalTitle">Agregar Película</h5>
                                 <button className="btn-close" onClick={() => setShowModal(false)}></button>
                             </div>
-                            <div className="modal-body">
+                            <div className="modal-body text-start">
                                 {/* Formulario con Formik */}
                                 <Formik
                                     initialValues={{
@@ -107,11 +107,6 @@ const FormAgregar = ({ onAddMovie }) => {
                                         </Form>
                                     )}
                                 </Formik>
-                            </div>
-                            <div className="modal-footer">
-                                <button className="btn btn-secondary" onClick={() => setShowModal(false)}>
-                                    Cerrar
-                                </button>
                             </div>
                         </div>
                     </div>

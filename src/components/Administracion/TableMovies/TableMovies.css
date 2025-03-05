@@ -72,3 +72,65 @@
   font-weight: bold;
   text-transform: uppercase;
 }
+
+
+
+  /* Media queries para tablets */
+  @media (max-width: 834px) {
+        /* Estilos para las cabeceras */
+        .tableMovies th {
+          padding: 2px 2px; /* Espaciado en las celdas */
+        }
+
+        /* Estilos para las celdas */
+      .tableMovies td {
+        padding: 5px 5px; /* Espaciado dentro de las celdas */
+      }
+      .tableMovies{
+        font-size: 10px;
+      }
+
+      .checkboxTable {
+        width: 20px;
+        height: 20px;
+      }
+
+      .checkboxTable:checked::before {
+        font-size: 15px;
+      }
+
+      .imgMovie{
+        width: 70px;
+        height: 100px;
+    }
+
+    }
+
+  /* Media queries para celulares */
+  @media (max-width: 428px) {
+    /* Estilos para las cabeceras */
+    .tableMovies th {
+      padding: 2px 2px; /* Espaciado en las celdas */
+    }
+
+    /* Estilos para las celdas */
+  .tableMovies td {
+    padding: 2px 2px; /* Espaciado dentro de las celdas */
+  }
+    .tableMovies{
+      font-size: 5px;
+    }
+    .checkboxTable {
+      width: 15px;
+      height: 15px;
+    }
+
+    .checkboxTable:checked::before {
+      font-size: 8px;
+    }
+
+    .imgMovie{
+      width: 35px;
+      height: 50px;
+    }
+  }

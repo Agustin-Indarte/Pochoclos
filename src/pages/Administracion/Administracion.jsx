@@ -6,10 +6,11 @@ import { AddMoviesToLocalStorage } from '../../components/Administracion/helpers
 import HeaderAdmin from '../../components/Administracion/HeaderAdmin/HeaderAdmin';
 import TableMovies from '../../components/Administracion/TableMovies/TableMovies';
 import { moviesReducer } from '../../components/Administracion/reducers/MoviesReducer';
+import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 
 function Administracion() {
-  const initialMovie = GetMoviesToLocalStorage() || []; // Se obtiene la lista de películas desde el localStorage o se inicializa como un arreglo vacío si no existe
-  // Se usa useReducer para gestionar el estado de las películas. `moviesReducer` maneja las actualizaciones y el estado inicial es `initialMovie
+  const initialMovie = GetMoviesToLocalStorage() || []; 
 
   const[movies, dispatch] = useReducer(moviesReducer, initialMovie)
   // Este useEffect se ejecuta cada vez que el estado `movies` cambia, guardando el estado actualizado en el localStorage
@@ -70,6 +71,7 @@ function Administracion() {
 
   return (
     <>
+      <NavBar/>
       <HeaderAdmin onAddMovie={onAddMovie} />
       <TableMovies  
             movies={movies} 
@@ -77,7 +79,9 @@ function Administracion() {
             onToggleDone={onToggleDone}
             onTogglePublished={onTogglePublished}
             onEditMovie={onEditMovie}        
-            />
+      />
+      <Footer/>
+
     </>
   )
 }

@@ -1,32 +1,23 @@
 
 /* Modal */
-
-
 .modal-content {
     background-color: white;
     padding:5px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .modalTitle{
     font-weight: bold;
     color: #131523;
 }
 
 
-
-
-
 /* Estilos para el formulario */
-
-
 form label {
     margin-bottom: 2px;
     font-size: 14px;
     color: #333;
 }
-
 .form-control {
     padding: 5px;
     margin-bottom: 1px;
@@ -85,3 +76,7 @@ button.btn-secondary:hover {
     background-color: white; /* Fondo azul cuando está marcado */
     border-color: #007bff; /* Borde azul cuando está marcado */
 }
+
+.btn-close {
+    font-size: 15px;
+  }
