@@ -14,3 +14,4 @@ export {default as Planes} from './Planes/Planes'
 export {default as Servicios} from './Servicios/Servicios'
 export {default as CardPelicula} from './CardPelicula/CardPelicula'
 export {default as GridPelicula} from './GridPelicula/GridPelicula'
+
