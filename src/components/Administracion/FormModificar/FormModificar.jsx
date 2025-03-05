@@ -24,8 +24,8 @@ function FormModificar({onEditMovie, idEdit}) {
 
       // Esquema de validación con Yup
       const validationSchema = Yup.object({    
-          name: Yup.string().required("El nombre es obligatorio"),
-          description: Yup.string().required("La descripción es obligatoria"),
+          name: Yup.string().max(20, "El codigo no puede tener más de 20 dígitos").required("El nombre es obligatorio"),
+          description: Yup.string().max(500, "El codigo no puede tener más de 500 dígitos").required("La descripción es obligatoria"),
           imgMovie: Yup.string().url("Debe ser una URL válida").required("La imagen es obligatoria"),
           category: Yup.string().notOneOf(["seleccionar"], "Debes seleccionar una categoría").required("Debes seleccionar una categoría"),
       });

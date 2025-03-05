@@ -9,9 +9,9 @@ const FormAgregar = ({ onAddMovie }) => {
 
     // Esquema de validación con Yup
     const validationSchema = Yup.object({
-        id: Yup.string().required("El ID es obligatorio"),
-        name: Yup.string().required("El nombre es obligatorio"),
-        description: Yup.string().required("La descripción es obligatoria"),
+        id: Yup.string().matches(/^\d+$/, "El codigo solo puede contener números").max(10, "El codigo no puede tener más de 10 dígitos").required("El codigo es obligatorio"),
+        name: Yup.string().max(20, "El codigo no puede tener más de 20 dígitos").required("El nombre es obligatorio"),
+        description: Yup.string().max(500, "El codigo no puede tener más de 500 dígitos").required("La descripción es obligatoria"),
         category: Yup.string().notOneOf(["seleccionar"], "Debes seleccionar una categoría").required("Debes seleccionar una categoría"),
         imgMovie: Yup.string().url("Debe ser una URL válida").required("La imagen es obligatoria"),
     });
