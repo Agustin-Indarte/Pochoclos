@@ -2,9 +2,12 @@ import React from 'react'
 import "./CardPelicula.css"
 import { Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom'
+
 
 
 const CardPelicula = ({ pelicula }) => {
+    const navigate=useNavigate()
     const titulo = pelicula.title || pelicula.name || "Título desconocido";
     const descripcion = pelicula.overview || pelicula.description || "Descripción no disponible";
     const url_img = "https://image.tmdb.org/t/p/original";
@@ -37,7 +40,7 @@ const CardPelicula = ({ pelicula }) => {
                     <div className='Card-reverso'>
                         <h4>{titulo}</h4>
                         <p>{descripcionCorta}</p>
-                        <Button>Ver Ahora</Button>
+                        <Button onClick={() => navigate("*")}>Ver Ahora</Button>
                     </div>
 
                 </div>

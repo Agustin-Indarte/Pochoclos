@@ -5,9 +5,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
+import { useNavigate } from 'react-router-dom'
 import "./CarruselPeliculas.css"
 
 const CarruselPeliculas = ({ categoriaId, titulo }) => {
+    const navigate=useNavigate()
     const [peliculas, setPeliculas] = useState([]);
     const apiKey = 'e845bcd33e2571e0313cbf204469c4fc';
     const url_img = 'https://image.tmdb.org/t/p/original';
@@ -46,7 +48,7 @@ const CarruselPeliculas = ({ categoriaId, titulo }) => {
                 {peliculas.map((pelicula) => (
                     <SwiperSlide key={pelicula.id}>
                         <div className="contenedor-Cards">
-                        <img src={`${url_img + pelicula.backdrop_path}`} alt={pelicula.title} className='img-peliculas' />
+                        <img src={`${url_img + pelicula.backdrop_path}`} alt={pelicula.title} className='img-peliculas' onClick={() => navigate("*")} />
                         </div>
                         <h3 className='titulo-peli text-light'>{pelicula.title}</h3>
                     </SwiperSlide>

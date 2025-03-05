@@ -3,10 +3,11 @@ import axios from 'axios'
 import { Carousel, Button, CarouselCaption } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from 'react-router-dom'
 import "./Destacadas.css"
 
 const Destacadas = () => {
-
+    const navigate=useNavigate()
     //Definimos con useState los estados para guardar las Peliculas,Generos y Carga
     const [peliculas, setPeliculas] = useState([])
     const [generos, setGeneros] = useState([])
@@ -113,7 +114,7 @@ const Destacadas = () => {
                             </div>
 
                             {/* Botón que ocupará el mismo ancho que los detalles */}
-                            <Button className='btn btn-verTrailer'>
+                            <Button className='btn btn-verTrailer'onClick={() => navigate("*")}>
                                 <FontAwesomeIcon icon={faPlay} /> Ver Trailer
                             </Button>
                         </div>

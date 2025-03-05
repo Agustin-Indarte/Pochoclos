@@ -13,7 +13,7 @@ if(loading){
   );
 }
 
-if(!user) return <Navigate to="/Registro"/>
+if(!user) return <Navigate to="/"/>
 
 
   return children
