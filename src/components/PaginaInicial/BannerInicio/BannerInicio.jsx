@@ -2,7 +2,6 @@ import React, {useState,useEffect} from 'react'
 import "./BannerInicio.css"
 import { Container, Button } from 'react-bootstrap'
 import { useNavigate } from "react-router-dom"
-
 const BannerInicio=()=> {
   
   const navigate=useNavigate()

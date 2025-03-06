@@ -2,8 +2,11 @@ import "./Error404.css";
 import React from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom"
+
 
 function Error404() {
+  const navigate=useNavigate()
   return (
     <div className="error404 d-flex justify-content-center">
       <img className="Fondo404" src="/Cine.jpeg" alt="Error404" />
@@ -15,7 +18,7 @@ function Error404() {
         <p className=" fw-bold  textoErro404" >la película no se encuentra disponible...</p>
         <p className=" fw-bold textoErro404 text-center">Mientras tanto, seguí disfrutando de otros pochoclos en la página principal.</p>
         <div className="">
-          <Button className="btn btn-danger btnErro404" href="/Home">Volver al Inicio</Button>
+          <Button className="btn btn-danger btnErro404" onClick={() => navigate("/home")}>Volver al Inicio</Button>
         </div>
       </div>
     </div>
