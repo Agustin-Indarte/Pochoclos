@@ -3,11 +3,16 @@ import axios from 'axios'
 import { Carousel, Button, CarouselCaption } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
-import { useNavigate } from 'react-router-dom'
 import "./Destacadas.css"
+import { ModalTrailer } from '../..';
 
 const Destacadas = () => {
-    const navigate=useNavigate()
+    const handleOpenModal = (movieId) => {
+        setSelectedMovieId(movieId);
+        setModalOpen(true);
+      };
+      const [modalOpen, setModalOpen] = useState(false);
+  const [selectedMovieId, setSelectedMovieId] = useState(null);
     //Definimos con useState los estados para guardar las Peliculas,Generos y Carga
     const [peliculas, setPeliculas] = useState([])
     const [generos, setGeneros] = useState([])
@@ -95,6 +100,8 @@ const Destacadas = () => {
 
     //Creamos y renderizamos el contenedor de las peliculas destacadas con un carousel que recorrera las peliculas populares seleccionadas y muestre la informacion obtenida (fondo,titulo,descripcion,raiting y categoria) ademas de un boton para ver el trailer
     return (
+        <>
+        
         <Carousel className='CarouselDestacadas'>
             {peliculas.map((pelicula) => (
                 <Carousel.Item className='itemCarouselDestacadas' key={pelicula.id}>
@@ -114,7 +121,7 @@ const Destacadas = () => {
                             </div>
 
                             {/* Botón que ocupará el mismo ancho que los detalles */}
-                            <Button className='btn btn-verTrailer'onClick={() => navigate("*")}>
+                            <Button className='btn btn-verTrailer' onClick={() => handleOpenModal(pelicula.id)}>
                                 <FontAwesomeIcon icon={faPlay} /> Ver Trailer
                             </Button>
                         </div>
@@ -122,6 +129,11 @@ const Destacadas = () => {
                 </Carousel.Item>
             ))}
         </Carousel>
+        <ModalTrailer isOpen={modalOpen} onClose={() => setModalOpen(false)} movieId={selectedMovieId} />
+        
+        
+        </>
+        
     )
 }
 export default Destacadas

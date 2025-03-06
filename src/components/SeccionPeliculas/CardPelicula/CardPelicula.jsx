@@ -1,12 +1,22 @@
-import React from 'react'
+import React,{useState} from 'react'
 import "./CardPelicula.css"
 import { Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom'
+import { ModalTrailer } from '../..';
 
 
 
 const CardPelicula = ({ pelicula }) => {
+
+    const handleOpenModal = (movieId) => {
+        setSelectedMovieId(movieId);
+        setModalOpen(true);
+      };
+      const [modalOpen, setModalOpen] = useState(false);
+  const [selectedMovieId, setSelectedMovieId] = useState(null);
+
+
     const navigate=useNavigate()
     const titulo = pelicula.title || pelicula.name || "Título desconocido";
     const descripcion = pelicula.overview || pelicula.description || "Descripción no disponible";
@@ -40,14 +50,14 @@ const CardPelicula = ({ pelicula }) => {
                     <div className='Card-reverso'>
                         <h4>{titulo}</h4>
                         <p>{descripcionCorta}</p>
-                        <Button onClick={() => navigate("*")}>Ver Ahora</Button>
+                        <Button onClick={() => handleOpenModal(pelicula.id)}>Ver Ahora</Button>
                     </div>
 
                 </div>
             </motion.div>
 
 
-
+            <ModalTrailer isOpen={modalOpen} onClose={() => setModalOpen(false)} movieId={selectedMovieId} />
 
         </>
 

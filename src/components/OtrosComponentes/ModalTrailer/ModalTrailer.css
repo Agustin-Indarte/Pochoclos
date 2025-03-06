@@ -1,0 +1,95 @@
+.modal-trailer {
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+  backdrop-filter: blur(10px); /* Aplica desenfoque al fondo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content-trailer {
+  background: var(--colorGris);
+  padding: 10px;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+  position: relative;
+}
+
+.close-button {
+  position: relative;
+  bottom:250px ;
+  left: 800px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.trailer {
+  width: 100%;
+  margin-top: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ajustar iframe */
+.video-Trailer {
+  width: 100%;
+  height: auto;  /* Hace que el iframe ajuste su altura automáticamente */
+  max-width: 800px;
+  aspect-ratio: 16 / 9; /* Mantiene la proporción del video */
+  border-radius: 8px;
+}
+
+/* 📱 Ajustes para tablets y móviles */
+@media (max-width: 768px) {
+  .modal-content-trailer {
+    width: 95%;
+  }
+
+  .video-Trailer {
+    max-width: 100%;
+  }
+
+  .trailer {
+    margin-top: 250px;
+  }
+
+  .close-button {
+    bottom:230px ;
+    left: 730px;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-content-trailer {
+    width: 100%;
+    border-radius: 0;
+    
+  }
+
+
+  .trailer {
+    display: block;
+    margin-top: 250px;
+    margin-left: 0;
+  }
+
+  .close-button {
+    bottom:10px ;
+    left: 310px;
+  }
+}
+
+
+
+  

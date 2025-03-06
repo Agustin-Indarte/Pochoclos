@@ -17,5 +17,6 @@ export {default as FormAgregar} from './Administracion/FormAgregar/FormAgregar';
 export {default as ButtonsActions} from './Administracion/ButtonsActions/ButtonsActions';
 export {default as HeaderAdmin} from './Administracion/HeaderAdmin/HeaderAdmin';
 export {default as TableMovies} from './Administracion/TableMovies/TableMovies';
-export{default as Error404} from './Error404/Error404'
+export{default as Error404} from './OtrosComponentes/Error404/Error404'
 export {default as GridPeliculaFavoritos} from './SeccionFavoritos/GridPeliculaFavoritos/GridPeliculaFavoritos'
+export {default as ModalTrailer} from './OtrosComponentes/ModalTrailer/ModalTrailer'
