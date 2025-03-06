@@ -24,16 +24,16 @@ function NavBar() {
 
         {/* Ícono de búsqueda en dispositivos pequeños */}
         <Nav className="d-block d-md-none justify-content-center me-4">
-          <Nav.Link href="/" className="text-uppercase">
+          <Link to="/" className="text-uppercase">
             <FaSearch size={20} />
-          </Nav.Link>
+          </Link>
         </Nav>
 
         {/* Menú de navegación */}
         <Nav className="d-none d-md-flex me-auto justify-content-start w-100 fw-bold align-items-end mt-3 fs-5">
-          <Nav.Link as={Link} to="/home" className="active text-uppercase">Inicio</Nav.Link>
-          <Nav.Link as={Link} to="/peliculas" className="text-uppercase">Buscar</Nav.Link>
-          <Nav.Link as={Link} to="/favoritos" className="text-uppercase">Favoritos</Nav.Link>
+          <Link  to="/home" className="active text-uppercase LinkPochoclo">Inicio</Link>
+          <Link  to="/peliculas" className="text-uppercase LinkPochoclo">Buscar</Link>
+          <Link  to="/favoritos" className="text-uppercase LinkPochoclo">Favoritos</Link>
         </Nav>
 
         {/* Menú de perfil */}

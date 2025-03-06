@@ -1,39 +1,48 @@
-.error404{
-    background-image: url(/Cine.jpeg);
-    height: 100vh;
-    width: 100vw;
-    background-size: cover;
-    background-position: center;
-    }
-    
-.contenido {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    }
-    
-    .tituloErro404{
-      font-size: 2.5rem;
-    }
+.error404 {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+}
 
-    .textoErro404{
-      font-size: 1.2rem;
-    }
+.Fondo404 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position:center;
+  z-index: -1;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.tituloErro404 {
+  font-size: 2.5rem;
+}
+
+.textoErro404 {
+  font-size: 1.2rem;
+}
 
 .gif-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%; /* O ajusta el ancho según lo necesites */
-    
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* O ajusta el ancho según lo necesites */
 
-  .gif-pochoclos {
-    height: 200px;
-    width: auto;
-  }
-  
+}
+
+.gif-pochoclos {
+  height: 200px;
+  width: auto;
+}
+
 
 
 
@@ -44,37 +53,37 @@
 @media (max-width: 768px) {
   .contenido {
     margin-top: 180px;
-    }
-    
-    .tituloErro404{
-      font-size: 2.5rem;
-    }
-
-    .textoErro404{
-      font-size: 1.2rem;
-    }
-
-    .gif-pochoclos {
-      height: 150px;
-      width: auto;
-    }
   }
-  
-  @media (max-width: 576px) {
-    .contenido {
-      margin-top: 130px;
-      }
-      
-      .tituloErro404{
-        font-size: 1.5rem;
-      }
-  
-      .textoErro404{
-        font-size: 1rem;
-      }
-  
-      .gif-pochoclos {
-        height: 100px;
-        width: auto;
-      }
+
+  .tituloErro404 {
+    font-size: 2.5rem;
   }
+
+  .textoErro404 {
+    font-size: 1.2rem;
+  }
+
+  .gif-pochoclos {
+    height: 150px;
+    width: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .contenido {
+    margin-top: 130px;
+  }
+
+  .tituloErro404 {
+    font-size: 1.5rem;
+  }
+
+  .textoErro404 {
+    font-size: 1rem;
+  }
+
+  .gif-pochoclos {
+    height: 100px;
+    width: auto;
+  }
+}

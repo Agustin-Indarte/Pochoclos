@@ -8,13 +8,15 @@
   width: auto;
 }
 
-.custom-Navbar .nav-link,
-.custom-Navbar .nav-link.active {
+.LinkPochoclo,
+.LinkPochoclo.active {
+  padding-inline: 5px;
   color: var(--colorBeige);
+  text-decoration: none;
 }
 
-.custom-Navbar .nav-link:hover,
-.custom-Navbar .nav-link.active:hover {
+.LinkPochoclo:hover,
+.LinkPochoclo.active:hover {
   color: var(--colorRojo);
 }
 

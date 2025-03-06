@@ -6,6 +6,7 @@ import { Button } from "react-bootstrap";
 function Error404() {
   return (
     <div className="error404 d-flex justify-content-center">
+      <img className="Fondo404" src="/Cine.jpeg" alt="Error404" />
       <div className="contenido ">
       <h2 className="  text-danger fw-bold tituloErro404">¡Ups,se cayeron los pochoclos!</h2>
         <div className="d-flex gif-container">
