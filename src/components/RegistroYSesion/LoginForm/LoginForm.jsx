@@ -7,7 +7,7 @@ import { createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } f
 import { Container, Form, Button, Alert, Card } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
-import { auth } from '../../../Firebase'; // Asegúrate de que la ruta de Firebase sea correcta
+import { auth } from '../../../firebase'; // Asegúrate de que la ruta de Firebase sea correcta
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
 
