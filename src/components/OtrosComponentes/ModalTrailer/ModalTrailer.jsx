@@ -4,7 +4,7 @@ import "./ModalTrailer.css";
 const ModalTrailer = ({ isOpen, onClose, movieId }) => {
   const [trailer, setTrailer] = useState(null);
   const [loading, setLoading] = useState(true);
-  const apiKey = "e845bcd33e2571e0313cbf204469c4fc"; // Agrega tu API Key
+  const API_KEY = "e845bcd33e2571e0313cbf204469c4fc"; // Agrega tu API Key
 
   useEffect(() => {
     if (!isOpen || !movieId) return; // No cargar si el modal está cerrado o no hay movieId
@@ -12,7 +12,7 @@ const ModalTrailer = ({ isOpen, onClose, movieId }) => {
     const fetchTrailer = async () => {
       try {
         const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${apiKey}`
+          `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${API_KEY}`
         );
         const data = await response.json();
 

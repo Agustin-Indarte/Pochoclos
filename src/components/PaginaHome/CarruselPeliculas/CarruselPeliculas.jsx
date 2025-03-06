@@ -21,13 +21,13 @@ const CarruselPeliculas = ({ categoriaId, titulo }) => {
 
     const navigate = useNavigate()
     const [peliculas, setPeliculas] = useState([]);
-    const apiKey = 'e845bcd33e2571e0313cbf204469c4fc';
+    const API_KEY = 'e845bcd33e2571e0313cbf204469c4fc';
     const url_img = 'https://image.tmdb.org/t/p/original';
 
     useEffect(() => {
         const obtenerPeliculas = async () => {
             try {
-                const respuesta = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=es&with_genres=${categoriaId}&page=1`);
+                const respuesta = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=es&with_genres=${categoriaId}&page=1`);
                 const datos = await respuesta.json();
                 setPeliculas(datos.results);
             } catch (error) {

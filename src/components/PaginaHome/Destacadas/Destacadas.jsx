@@ -24,10 +24,10 @@ const Destacadas = () => {
         //Funcion que hace la solicitud a la API, es asyn ya que trae los datos desde un alojamiento externo y puede demorar
         const pedirDatos = async () => {
             try {
-                const apiKey = "e845bcd33e2571e0313cbf204469c4fc" //Llave de acceso a la API
+                const API_KEY = "e845bcd33e2571e0313cbf204469c4fc" //Llave de acceso a la API
 
                 //Pedimos las peliculas más populares brindando el link de la api donde tiene que realizar la busqueda y nuestra clave de acceso
-                const peliculasRespuesta = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=es-ES&page=1`
+                const peliculasRespuesta = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=es-ES&page=1`
                 )
 
                 //Seleccionamos el rango de peliculas que queremos mostrar
@@ -55,7 +55,7 @@ const Destacadas = () => {
 
                 //Pedimos la lista de géneros desde la Api
                 const generosRespuesta = await axios.get(
-                    `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=es-ES`
+                    `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}&language=es-ES`
                 )
                 //Guardamos los generos en el estado y lo consultamos a traves de la consola
                 setGeneros(generosRespuesta.data.genres)

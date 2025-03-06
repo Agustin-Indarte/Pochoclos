@@ -6,7 +6,7 @@ import { MoviesPublished } from '../../Administracion/helpers/MoviesPublished';
 const GridPelicula = ({ buscador }) => {
     const [peliculasAPI, setPeliculasAPI] = useState([]);
     const [peliculasCRUD, setPeliculasCRUD] = useState([]); // Aquí irán las películas del CRUD
-    const apiKey = "e845bcd33e2571e0313cbf204469c4fc";
+    const API_KEY = "e845bcd33e2571e0313cbf204469c4fc";
 
     useEffect(() => {
         const fetchPeliculas = async () => {
@@ -15,7 +15,7 @@ const GridPelicula = ({ buscador }) => {
                 let peliculas = [];
 
                 for (const categoria of categorias) {
-                    const respuesta = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=es&with_genres=${categoria}&page=1`);
+                    const respuesta = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=es&with_genres=${categoria}&page=1`);
                     const datos = await respuesta.json();
                     peliculas = [...peliculas, ...datos.results];
                 }
