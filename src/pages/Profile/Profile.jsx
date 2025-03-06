@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { signOut, onAuthStateChanged } from "firebase/auth";
-import { auth, db } from "../../Firebase"
+import { getDocs, collection } from 'firebase/firestore';
+import { auth,db} from '../../Firebase';
 import { Button, Container, Image, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import './profile.css';
