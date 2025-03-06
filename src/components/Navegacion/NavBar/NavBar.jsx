@@ -18,7 +18,7 @@ function NavBar() {
         {/* Logo y marca */}
         <Navbar.Brand>
           <Link className="navbar-brand">
-            <img src="public\logo-pochoclos.png" alt="Logo Pochoclos" className="img  ms-2" />
+            <img src="/logo-pochoclos.png" alt="Logo Pochoclos" className="img  ms-2" />
           </Link>
         </Navbar.Brand>
 

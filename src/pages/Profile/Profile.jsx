@@ -40,7 +40,7 @@ function Profile() {
         <Col xs={4} sm={4} md={3} lg="auto" className="text-center">
           <article className="profile-circle" onClick={() => navigate("/home")}>
             <img
-              src="public\Perfil.png"
+              src="/Perfil.png"
               className="profile-img mx"
               alt="Mi perfil"
             />
@@ -70,7 +70,7 @@ function Profile() {
           <article className="profile-circle add-profile" onClick={() => navigate("*")}>
 
             <img
-              src="public\15371680.png"
+              src="/15371680.png"
               className="niños-img"
               alt="Niños"
             />
@@ -82,7 +82,7 @@ function Profile() {
         {/* Botón para agregar un nuevo perfil */}
         <Col xs={4} sm={4} md={3} lg="auto" className="text-center">
           <article className="profile-circle add-profile" onClick={() => navigate("*")}>
-            <img src="public\1177577.png" alt="Añadir perfil" className="añadir-img" />
+            <img src="/1177577.png" alt="Añadir perfil" className="añadir-img" />
           </article>
           <p className="mt-2 text-center text-light fw-bold">Añadir perfil</p>
         </Col>

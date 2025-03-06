@@ -44,7 +44,7 @@ function SeccionPeliculas() {
           </Col>
           <Col md={6}>
             <Image className='img-familia'
-              src="public\Familia.jpg" 
+              src="/Familia.jpg" 
               alt="Familia viendo películas"
             />
           </Col>

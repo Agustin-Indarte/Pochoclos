@@ -6,7 +6,7 @@ function Registro() {
   return (
     <div className='Registro-page'>
         <div className="bg-dark text-white">
-            <img src="public\logo-pochoclos.png" alt="Logo de la app" className="small-logo" />
+            <img src="/logo-pochoclos.png" alt="Logo de la app" className="small-logo" />
             <FormulariodeRegistro/>
         </div>
     </div>
