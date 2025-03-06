@@ -1,5 +1,5 @@
 .error404{
-    background-image: url(../../../public/Cine.jpeg);
+    background-image: url(/Cine.jpeg);
     height: 100vh;
     width: 100vw;
     background-size: cover;

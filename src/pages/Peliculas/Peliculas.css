@@ -1,5 +1,6 @@
 .pagina-peliculas{
     min-height: 100vh;
+    width: 100%;
     background-color: var(--colorAzul);
     margin-top: 100px;
 }

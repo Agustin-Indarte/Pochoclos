@@ -5,6 +5,7 @@ import HeaderAdmin from '../../components/Administracion/HeaderAdmin/HeaderAdmin
 import TableMovies from '../../components/Administracion/TableMovies/TableMovies';
 import { moviesReducer } from '../../components/Administracion/reducers/MoviesReducer';
 import { Footer, NavBar } from '../../components';
+import "./Administracion.css"
 
 
 function Administracion() {
@@ -69,8 +70,10 @@ function Administracion() {
 
   return (
     <>
+
      <NavBar></NavBar>
-      <HeaderAdmin onAddMovie={onAddMovie} />
+     <div className='Container-Administracion'>
+     <HeaderAdmin onAddMovie={onAddMovie} />
       <TableMovies  
             movies={movies} 
             onDeleteMovie={onDeleteMovie}
@@ -78,6 +81,7 @@ function Administracion() {
             onTogglePublished={onTogglePublished}
             onEditMovie={onEditMovie}        
       />
+     </div>
       <Footer></Footer>
 
     </>

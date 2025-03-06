@@ -1,6 +1,7 @@
 .seccion-perfil {
   background-color: var(--colorAzul);
   min-height: 100vh; /* Asegura que el contenido siempre ocupe la pantalla */
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

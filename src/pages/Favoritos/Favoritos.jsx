@@ -8,7 +8,7 @@ const Peliculas = () => {
     return (
         <>
             <NavBar />
-            <div className="pagina-peliculas">
+            <div className="pagina-peliculas h-100 w-100">
                 <h2>TUS PELÍCULAS FAVORTIAS</h2>
                 <div className='buscador-container'>
                     <input

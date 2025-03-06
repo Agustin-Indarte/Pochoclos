@@ -4,6 +4,7 @@
   background-size: cover; /* Hace que la imagen ocupe todo el ancho */
   background-position: center; /* Centra la imagen */
   height: 100vh; /* Hace que la altura ocupe toda la ventana del navegador */
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
