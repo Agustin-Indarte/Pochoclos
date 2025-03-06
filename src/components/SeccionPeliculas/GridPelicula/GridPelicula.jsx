@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { CardPelicula } from '../..';
 import "./GridPelicula.css"
-import { GetMoviesToLocalStorage } from '../../Administracion/helpers/GetMoviesToLocalStorage';
+import { MoviesPublished } from '../../Administracion/helpers/MoviesPublished';
 
 const GridPelicula = ({ buscador }) => {
     const [peliculasAPI, setPeliculasAPI] = useState([]);
@@ -26,7 +26,7 @@ const GridPelicula = ({ buscador }) => {
             }
         };
 
-        const CRUD = GetMoviesToLocalStorage();
+        const CRUD = MoviesPublished();
         setPeliculasCRUD(CRUD);
 
         fetchPeliculas();

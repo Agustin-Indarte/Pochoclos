@@ -18,3 +18,4 @@ export {default as ButtonsActions} from './Administracion/ButtonsActions/Buttons
 export {default as HeaderAdmin} from './Administracion/HeaderAdmin/HeaderAdmin';
 export {default as TableMovies} from './Administracion/TableMovies/TableMovies';
 export{default as Error404} from './Error404/Error404'
+export {default as GridPeliculaFavoritos} from './SeccionFavoritos/GridPeliculaFavoritos/GridPeliculaFavoritos'

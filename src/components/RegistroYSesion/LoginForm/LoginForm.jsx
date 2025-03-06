@@ -68,7 +68,7 @@ function LoginForm() {
         paddingTop: '20px' // Ajusta el margen superior
       }}
     >
-      <Card style={{ backgroundColor: "#CFCFCF", width: '400px', height: '450px' }} className="p-4 rounded">
+      <Card style={{ backgroundColor: "#CFCFCF", width: '400px', height: 'auto' }} className="p-4 rounded">
         <div className="text-center text-danger">
           <h1 className="fw-bold mt-0" style={{ fontSize: '18px' }}>¡Bienvenido a tu cine en casa!</h1>
           <h2 style={{ fontSize: '16px', color: '#151931' }}>Iniciá sesión y disfrutá de tus series y películas favoritas en cualquier momento. Prepará algo rico, acomodate y sumergite en el mejor entretenimiento desde tu hogar.</h2>
