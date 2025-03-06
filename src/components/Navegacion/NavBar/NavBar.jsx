@@ -24,7 +24,7 @@ function NavBar() {
 
         {/* Ícono de búsqueda en dispositivos pequeños */}
         <Nav className="d-block d-md-none justify-content-center me-4">
-          <Link to="/" className="text-uppercase">
+          <Link to="/peliculas" className="text-uppercase">
             <FaSearch size={20} />
           </Link>
         </Nav>

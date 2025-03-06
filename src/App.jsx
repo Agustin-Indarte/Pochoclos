@@ -8,7 +8,7 @@ import { RutaProtegida } from "./components";
 function App() {
   return (
         <BrowserRouter>
-          <Routes>
+        <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/registro" element={<Registro />} />
         <Route path="/login" element={<Login />} /> 
