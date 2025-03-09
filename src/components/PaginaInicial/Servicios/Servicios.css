@@ -1,76 +1,91 @@
 .seccion-Estrenos {
-    background-color: var(--colorAzulOscuro);
-    color: white;
-    padding: 40px 0;
-  }
-  
-  .seccion-Estrenos h2 {
-    text-align: left;
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--colorRojo);
-    margin-bottom: 20px;
-  }
-  
-  .seccion-Estrenos p {
-    font-size: 1.2rem;
-    text-align: left;
-  }
+  background-color: var(--colorAzulOscuro);
+  color: white;
+  padding: 40px 0;
+  width: 100%;
+  overflow-x: hidden;
+}
 
-  .img-familia{
-    width: 710px;
-    margin-left: 40px;
-  }
-  .contenedor-Cards-Estrenos img{
-    border: 3px solid white;
-    border-radius: 5%;
-  }
-  .mySwiper-estrenos .swiper-slide img {
-    max-height: 350px;
-    object-fit: contain;
-  }
-  
-  .mySwiper-estrenos .swiper-slide {
-    text-align: center;
-  }
-  
-  .mySwiper-estrenos .swiper-slide img {
-    width: auto;
-    height: auto;
-    object-fit: fill;
-  }
+.textos-estrenos {
+  margin-left: 130px;
+}
 
-  .mySwiper-estrenos .swiper-button-next {
-    margin-right: -1%;
-    height: 250px;
-    color: var(--colorRojoOscuro) ;
-    font-weight: bolder;
-    top: 5rem;
-    z-index: 1;
-  }
-  
-  .mySwiper-estrenos .swiper-button-prev {
-    margin-left: -1%;
-    height: 250px;
-    color: var(--colorRojoOscuro) ;
-    font-weight: bolder;
-    top: 5rem;
-    z-index: 1;
-  }
+.seccion-Estrenos h2 {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--colorRojo);
+  margin-bottom: 20px;
+}
+
+.seccion-Estrenos p {
+  font-size: 1.2rem;
+  text-align: left;
+
+}
+
+.img-familia {
+  width: 100%;
+  margin-left: 40px;
+  border-radius: 10px;
+}
+
+.mySwiper-estrenos {
+  width: 90%;
+}
+
+.contenedor-Cards-Estrenos img {
+  border: 3px solid white;
+  border-radius: 5%;
+}
+
+.mySwiper-estrenos .swiper-slide img {
+  max-height: 350px;
+  object-fit: contain;
+}
+
+.mySwiper-estrenos .swiper-slide {
+  text-align: center;
+}
+
+.mySwiper-estrenos .swiper-slide img {
+  width: auto;
+  height: auto;
+  object-fit: fill;
+}
+
+.mySwiper-estrenos .swiper-button-next {
+  margin-right: -1%;
+  height: 250px;
+  color: var(--colorRojoOscuro);
+  font-weight: bolder;
+  top: 5rem;
+  z-index: 1;
+}
+
+.mySwiper-estrenos .swiper-button-prev {
+  margin-left: -1%;
+  height: 250px;
+  color: var(--colorRojoOscuro);
+  font-weight: bolder;
+  top: 5rem;
+  z-index: 1;
+}
 
 
-  /* Media Queries para responsividad */
+/* Media Queries para responsividad */
 @media (max-width: 768px) {
   .seccion-Estrenos h2 {
     font-size: 1.4rem;
     margin-bottom: 10px;
   }
-  
+
+
   .seccion-Estrenos p {
     font-size: .8rem;
   }
 
-  .img-familia{
+  .img-familia {
     width: 350px;
     margin-left: 25px;
   }
@@ -84,15 +99,24 @@
     margin-right: -1%;
     top: 1rem;
   }
-  
+
   .mySwiper-estrenos .swiper-button-prev {
     margin-left: -1%;
     top: 1rem;
   }
+
+  .textos-estrenos {
+    margin-left: 30px;
+  }
 }
 
 @media (max-width: 576px) {
-  .img-familia{
+  .img-familia {
     display: none;
+  }
+
+  .textos-estrenos {
+    margin-left: 0px;
+    padding-inline: 20px;
   }
 }

@@ -10,8 +10,9 @@ function Inicio() {
       <Planes/>
       <Dispositivos/>
       <Faqs/>
-      </div>
       <Footer></Footer>
+      </div>
+     
       
     </>
   )

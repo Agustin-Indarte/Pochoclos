@@ -11,7 +11,7 @@ import './Servicios.css';
 
 function SeccionPeliculas() {
   const [peliculas, setPeliculas] = useState([]);
-  const API_KEY = 'eb27394fbc0774dc40d01f47dbf04343'; 
+  const API_KEY = 'eb27394fbc0774dc40d01f47dbf04343';
   const url_img = 'https://image.tmdb.org/t/p/original';
 
   useEffect(() => {
@@ -29,53 +29,56 @@ function SeccionPeliculas() {
   }, [API_KEY]);
 
   return (
-    <div className="seccion-Estrenos">
-      <Container>
+    <div className="seccion-Estrenos w-100 text-center">
+      <div>
         <Row className="align-items-center">
           <Col md={6}>
-            <h2>El mejor cine familiero en casa.</h2>
+          <div className='textos-estrenos'>
+          <h2>El mejor cine familiero en casa.</h2>
             <p>
               Desde risas hasta sustos, desde amores inolvidables hasta batallas épicas.
               En Pochoclos hay un universo de películas y series para disfrutar en familia.
               Acción, comedia, terror, drama, fantasía y mucho más, porque acá el menú es amplio
               y siempre hay algo para cada antojo cinematográfico.
             </p>
-            <p style={{color: 'var(--colorBeige)'}}>¿Qué se te antoja hoy?</p>
+            <p style={{ color: 'var(--colorBeige)' }}>¿Qué se te antoja hoy?</p>
+          </div>
           </Col>
-          <Col md={6}>
-            <Image className='img-familia'
-              src="/Familia.jpg" 
+          <Col md={6} className="">
+            <Image className="img-familia img-fluid"
+              src="/Familia.jpg"
               alt="Familia viendo películas"
+              
             />
           </Col>
         </Row>
         <Row className="mt-4">
           <Col>
-              <Swiper
-                slidesPerView={3}
-                spaceBetween={15}
-                navigation
-                pagination={{ clickable: true }}
-                breakpoints={{
-                    320: { slidesPerView: 1 }, 
-                    768: { slidesPerView: 2 },  
-                    1024: { slidesPerView: 3 }, 
-                    1280: { slidesPerView: 4 }, 
-                }}
-                modules={[Pagination, Navigation]}
-                className="mySwiper-estrenos"
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={15}
+              navigation
+              pagination={{ clickable: true }}
+              breakpoints={{
+                320: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+                1280: { slidesPerView: 4 },
+              }}
+              modules={[Pagination, Navigation]}
+              className="mySwiper-estrenos"
             >
-                {peliculas.map((pelicula) => (
-                    <SwiperSlide key={pelicula.id}>
-                        <div className="contenedor-Cards-Estrenos">
-                        <img src={`${url_img + pelicula.poster_path}`} alt={pelicula.title} className='img-peliculas' />
-                        </div>
-                    </SwiperSlide>
-                ))}
+              {peliculas.map((pelicula) => (
+                <SwiperSlide key={pelicula.id}>
+                  <div className="contenedor-Cards-Estrenos">
+                    <img src={`${url_img + pelicula.poster_path}`} alt={pelicula.title} className='img-peliculas' />
+                  </div>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </Col>
         </Row>
-      </Container>
+      </div>
     </div>
   );
 }

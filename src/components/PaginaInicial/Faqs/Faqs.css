@@ -1,12 +1,14 @@
   .acordion{
     background-color: var(--colorAzul);
-    min-height: 70vh;
-    max-height: 100vh;
+    width: 100%;
     padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
   }
   
   .preguntas-frecuentes {
-    margin: 0 auto;
     width: 60%;
     padding-bottom: 30px;
   }
