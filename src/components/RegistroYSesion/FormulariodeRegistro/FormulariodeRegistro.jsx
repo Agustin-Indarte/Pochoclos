@@ -23,7 +23,7 @@ const SignUpSchema = Yup.object().shape({
     .max(15, 'Máximo 16 caracteres')
     .required('Requerido'),
 
-    creditCard: Yup.string()
+  creditCard: Yup.string()
     .matches(/^\d{14,15}$/, 'Debe tener entre 14 y 15 dígitos y solo números')
     .required('Requerido'),
 
@@ -163,10 +163,22 @@ const SignUpForm = () => {
                 </Button>
 
                 <Button variant="danger" className="w-100 mt-2" onClick={handleGoogleLogin} style={{ border: '4px solid white' }}>Suscribirse con Google</Button>
-                <p style={{ marginTop: '1rem', color: '#D90429' }}>
-                  Si ya te encuentras suscripto, <Link to="/login" style={{ color: '#AC011F' }}>Inicia Sesión</Link>
-                </p>
+                <div style={{ marginTop: '1rem', textAlign: 'center', color: '#D90429' }}>
+                  <p>
+                    ¿Ya tienes una cuenta?  &nbsp;
+                    <Link to="/login" style={{ color: '#AC011F', fontWeight: 'bold' }}>
+                      Iniciá sesión
+                    </Link>
+                  </p>
+                  <p className='mb-0'>
+                    ¿No querés registrarte todavía? <br /> &nbsp;
+                    <Link to="/home" style={{ color: '#AC011F', fontWeight: 'bold' }}>
+                      Volver al inicio
+                    </Link>
+                  </p>
+                </div>
               </Col>
+
             </Row>
           </Form>
         )}

@@ -14,14 +14,14 @@ import { Link } from "react-router-dom";
 // Esquema de validación con Yup
 const schema = yup.object().shape({
   email: yup.string()
-      .email('Email inválido')
-      .max(29, 'Máximo 30 caracteres')
-      .required('Requerido'),
-  
-    password: yup.string()
-      .min(8, 'Debe tener al menos 8 caracteres')
-      .max(15, 'Máximo 16 caracteres')
-      .required('Requerido'),
+    .email('Email inválido')
+    .max(29, 'Máximo 30 caracteres')
+    .required('Requerido'),
+
+  password: yup.string()
+    .min(8, 'Debe tener al menos 8 caracteres')
+    .max(15, 'Máximo 16 caracteres')
+    .required('Requerido'),
 });
 
 function LoginForm() {
@@ -90,7 +90,7 @@ function LoginForm() {
             <Form.Control
               type="password"
               placeholder="Ingrese su contraseña"
-              {...register("password")} 
+              {...register("password")}
               isInvalid={!!errors.password}
             />
             {errors.password && <p className="text-danger">{errors.password.message}</p>}
@@ -104,16 +104,26 @@ function LoginForm() {
               <FontAwesomeIcon icon={faGoogle} size="lg" /> Inicia sesión con Google
             </Button>
           </div>
-          <div className="mt-2">
-          <p style={{ marginTop: '1rem', color: '#D90429' }}>
-                  Si no tienes una cuenta, <Link to="/registro" style={{ color: '#AC011F' }}>Suscribete</Link>
-                </p>
+          <div className="mt-2" style={{ color: '#D90429', textAlign: 'center' }}>
+            <p>
+              ¿Todavía no tenés una cuenta?&nbsp;
+              <Link to="/registro" style={{ color: '#AC011F', fontWeight: 'bold' }}>
+                Registrate
+              </Link>
+            </p>
+
+            <p className="mb-0">
+              ¿Preferís no iniciar sesión?&nbsp;
+              <Link to="/home" style={{ color: '#AC011F', fontWeight: 'bold' }}>
+                Volver al inicio
+              </Link>
+            </p>
           </div>
         </Form>
       </Card>
-      
+
     </Container>
-    
+
   );
 }
 
